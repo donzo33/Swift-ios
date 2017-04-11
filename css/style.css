@@ -24,19 +24,19 @@ html, body {
 	padding-top: 15%;
 }
 
-#titre {
+#accueil-title {
 	color : white;
 	font-size: 70px;
 }
 
 
-#slogan {
+#accueil-slogan {
 	color : white;
 	font-size: 50px;
 	font-weight: lighter;
 }
 
-#fleche {
+#accueil-fleche {
     height: 200px;
     position: relative;
     width: 200px;
