@@ -14,12 +14,13 @@ body {
    background-color: red;
    position: fixed;
    height: 100%;
+   transition: width 1s;
 }
 
 .menu-closed {
-   width: 16.7%;
+   width: 12%;
 }
 
-.menu-open {
-   width: 25%;
+.menu-opened {
+   width: 30%;
 }
