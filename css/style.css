@@ -9,6 +9,13 @@ html, body {
 	height: 100%;
 }
 
+#pages-container {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   margin-left: 60px;
+}
+
 #fond {
 	background : -webkit-linear-gradient(rgb(243, 173, 0), rgb(241, 81, 57));
 	height : 960px;
@@ -17,19 +24,19 @@ html, body {
 	padding-top: 15%;
 }
 
-#titre {
+#accueil-title {
 	color : white;
 	font-size: 70px;
 }
 
 
-#slogan {
+#accueil-slogan {
 	color : white;
 	font-size: 50px;
 	font-weight: lighter;
 }
 
-#fleche {
+#accueil-fleche {
     height: 200px;
     position: relative;
     width: 200px;
