@@ -7,11 +7,11 @@ $(function() {
       },
       toggleState: function() { // Fonction pour afficher/cacher le menu hamburger
          if (this.isMenuOpen) { // On utilise this pour accéder aux propriétés de menu lui meme
-            $("#menu").removeClass(this.cssStates.opened);
-            $("#menu").addClass(this.cssStates.closed); // On enléve l'ancienne classe et ajoute la nouvelle
+            $("#menu-content").removeClass(this.cssStates.opened);
+            $("#menu-content").addClass(this.cssStates.closed); // On enléve l'ancienne classe et ajoute la nouvelle
          } else {
-            $("#menu").removeClass(this.cssStates.closed);
-            $("#menu").addClass(this.cssStates.opened);
+            $("#menu-content").removeClass(this.cssStates.closed);
+            $("#menu-content").addClass(this.cssStates.opened);
          }
          this.isMenuOpen = !this.isMenuOpen; // On inverse le boolean
       }
