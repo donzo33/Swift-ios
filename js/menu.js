@@ -28,5 +28,6 @@ $(function() {
 
    $("#menu").click(function() {
       menu.toggleState();
+      $("#menu-button").toggleClass("active");
    });
 })
