@@ -9,6 +9,9 @@ $(function() {
          if (this.isMenuOpen) { // On utilise this pour accéder aux propriétés de menu lui meme
             $("#menu-content").removeClass(this.cssStates.opened);
             $("#menu-content").addClass(this.cssStates.closed); // On enléve l'ancienne classe et ajoute la nouvelle
+
+            $("#menu-button-top").removeClass("openButton");
+            $("#menu-button-top").addClass("closeButton");
          } else {
             $("#menu-content").removeClass(this.cssStates.closed);
             $("#menu-content").addClass(this.cssStates.opened);
