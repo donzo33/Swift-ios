@@ -1,0 +1,137 @@
+#menu {
+   background-color: red;
+   position: fixed;
+   height: 100%;
+   width: 88px;
+   transform: translateX(-8px);
+   transition: transform 300ms;
+   z-index: 10;
+}
+
+#menu:hover {
+   transform: translateX(0px);
+}
+
+#menu-content {
+   display: block;
+   position: fixed;
+   height: 100%;
+   width: 400px;
+   padding: 20px 10px 20px 10px;
+   background-color: white;
+   transform: translateX(-400px);
+   z-index: 9;
+}
+
+#menu-button-container {
+   position: fixed;
+   top: 45%;
+   left: 22px;
+   width: 60px;
+   height: 60px;
+}
+
+.menu-button-bar {
+   display: block;
+   width: 50px;
+   height: 8px;
+   background-color: white;
+   margin-top: 10px;
+   transform-origin: 0% 0%;
+}
+
+#menu-button-top.closeButton {
+   animation: menu-button-top-close 0.8s linear;
+   animation-fill-mode: forwards;
+}
+
+#menu-button-bottom.closeButton {
+   animation: menu-button-bottom-close 0.8s linear;
+   animation-fill-mode: forwards;
+}
+
+#menu-button-middle.closeButton {
+   animation: menu-button-middle-close 0.8s linear;
+   animation-fill-mode: forwards;
+}
+
+.menu-closed {
+   animation: menu-slide-out 0.5s ease-out;
+   animation-fill-mode: forwards;
+}
+
+.menu-opened {
+   animation: menu-slide-in 0.5s ease-out;
+   animation-fill-mode: forwards;
+   /* Animation fill mode permet de garder la position du menu aprés l'animation */
+}
+
+#menu-logo {
+   width: 150px;
+}
+
+#menu-logo-img {
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
+@keyframes menu-slide-in {
+   0% {
+      transform: translateX(-400px);
+   }
+   100% {
+      transform: translateX(80px);
+   }
+}
+
+@keyframes menu-slide-out {
+   0% {
+      transform: translateX(80px);
+   }
+   100% {
+      transform: translateX(-400px);
+   }
+}
+
+@keyframes menu-button-top-close {
+   0% {
+      background-color: white;
+      transform: rotateZ(0deg) translateY(0px) translateX(0px);
+   }
+   10% {
+      transform: rotateZ(45deg) translateY(0px) translateX(0px);
+   }
+   100% {
+      background-color: black;
+      transform: rotateZ(45deg) translateY(-10px) translateX(4px);
+      width: 55px;
+   }
+}
+
+@keyframes menu-button-bottom-close {
+   0% {
+      background-color: white;
+      transform: rotateZ(0deg) translateY(0px);
+   }
+   30% {
+      transform: rotateZ(0deg) translateY(0px);
+   }
+   100% {
+      background-color: black;
+      transform: rotateZ(-45deg) translateY(0px);
+      width: 60px;
+   }
+}
+
+@keyframes menu-button-middle-close {
+   0% {
+      opacity: 1;
+   }
+   30% {
+      opacity: 0.8;
+   }
+   100% {
+      opacity: 0;
+   }
+}
