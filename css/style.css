@@ -14,12 +14,92 @@ body {
    background-color: red;
    position: fixed;
    height: 100%;
+   width: 88px;
+   transform: translateX(-8px);
+   transition: transform 300ms;
+   z-index: 10;
+}
+
+#menu:hover {
+   transform: translateX(0px);
+}
+
+#menu-content {
+   display: block;
+   position: fixed;
+   height: 100%;
+   width: 400px;
+   padding: 20px 10px 20px 10px;
+   background-color: white;
+   transform: translateX(-400px);
+   z-index: 9;
+}
+
+#menu-button-container {
+   position: fixed;
+   top: 45%;
+   left: 14px;
+   width: 60px;
+   height: 60px;
+}
+
+.menu-button-bar {
+   display: block;
+   width: 60px;
+   height: 10px;
+   background-color: white;
+   margin-top: 10px;
+}
+
+#menu-button-top .closeButton {
+   animation: menu-button-top-close 0.3s linear;
+   animation-fill-mode: forwards;
 }
 
 .menu-closed {
-   width: 16.7%;
+   animation: menu-slide-out 0.5s ease-out;
+   animation-fill-mode: forwards;
 }
 
-.menu-open {
-   width: 25%;
+.menu-opened {
+   animation: menu-slide-in 0.5s ease-out;
+   animation-fill-mode: forwards;
+   /* Animation fill mode permet de garder la position du menu aprés l'animation */
+}
+
+#menu-logo {
+   width: 150px;
+}
+
+#menu-logo-img {
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
+@keyframes menu-slide-in {
+   0% {
+      transform: translateX(-400px);
+   }
+   100% {
+      transform: translateX(80px);
+   }
+}
+
+@keyframes menu-slide-out {
+   0% {
+      transform: translateX(80px);
+   }
+   100% {
+      transform: translateX(-400px);
+   }
+}
+
+@keyframes menu-button-top-close {
+   0% {
+      transform: rotateX(0deg);
+   }
+   100% {
+      transform: rotateX(45deg);
+   }
 }
