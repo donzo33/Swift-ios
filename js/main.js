@@ -1,6 +1,4 @@
-$(function() {
-   
-})
+
 
 /*Changement du fond avec mouse hover
 
