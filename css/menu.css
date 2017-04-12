@@ -3,14 +3,21 @@
    --menu-width-positive: 325px;
 }
 
+body{
+    margin : 0;
+}
+
 #menu {
-   background-color: #e8e3c0;
+   background-color: white;
    position: fixed;
    height: 100%;
    width: 88px;
    transform: translateX(-8px);
    transition: transform 300ms;
    z-index: 10;
+   -webkit-box-shadow: 2px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px 0px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 #menu:hover {
@@ -26,6 +33,9 @@
    padding: 20px 10px 20px 10px;
    transform: translateX(var(--menu-width-negative));
    z-index: 9;
+   -webkit-box-shadow: 2px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    2px 0px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         2px 0px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 #menu-button-container {
@@ -80,11 +90,11 @@
    width: 80%;
    height: 50px;
    font: bold 20px "Roboto";
-   background-color: #f9d7a9;
+   color : grey;
    margin-top: 40px;
    line-height: 50px;
    text-align: center;
-   transition: background-color 320ms;
+   transition: color 320ms;
    transform: translateX(0px);
 }
 
@@ -97,7 +107,7 @@
 }
 
 .menu-links-items:hover {
-   background-color: #ddbf96;
+   color : black;
 }
 
 #menu-logo {
@@ -116,4 +126,24 @@
 .menu-logo-img-slide-in {
    animation: menu-logo-img-slide-in 0.6s ease-out;
    /*animation-fill-mode: forwards;*/
+}
+
+#menu-link-facebook {
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top : 50%;
+}
+
+#logo-facebook {
+    height :15%;
+    width : 15%;
+    border-radius: 15%;
+    margin-right: 5%;
+}
+
+#logo-telephone {
+    height : 15%;
+    width : 15%;
+    border-radius: 5px;
 }
