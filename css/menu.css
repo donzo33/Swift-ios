@@ -4,7 +4,7 @@
 }
 
 #menu {
-   background-color: red;
+   background-color: #e8e3c0;
    position: fixed;
    height: 100%;
    width: 88px;
@@ -18,12 +18,12 @@
 }
 
 #menu-content {
+   background-color: #f2f2f2;
    display: block;
    position: fixed;
    height: 100%;
    width: var(--menu-width-positive);
    padding: 20px 10px 20px 10px;
-   background-color: white;
    transform: translateX(var(--menu-width-negative));
    z-index: 9;
 }
@@ -45,16 +45,6 @@
    animation: menu-slide-in 0.5s ease-out;
    animation-fill-mode: forwards;
    /* Animation fill mode permet de garder la position du menu aprés l'animation */
-}
-
-#menu-logo {
-   width: 150px;
-}
-
-#menu-logo-img {
-   display: block;
-   width: 100%;
-   height: auto;
 }
 
 @keyframes menu-slide-in {
@@ -90,11 +80,11 @@
    width: 80%;
    height: 50px;
    font: bold 20px "Roboto";
-   background-color: lightblue;
+   background-color: #f9d7a9;
    margin-top: 40px;
    line-height: 50px;
    text-align: center;
-   transition: background-color 1.6s;
+   transition: background-color 320ms;
    transform: translateX(0px);
 }
 
@@ -107,33 +97,23 @@
 }
 
 .menu-links-items:hover {
-   background-color: blue;
+   background-color: #ddbf96;
 }
 
-.menu-links-slide-in-left {
-   animation: menu-links-slide-in-left 1s ease-out;
-   animation-fill-mode: forwards;
+#menu-logo {
+   width: 150px;
+   height: 150px;
 }
 
-.menu-links-slide-in-right {
-   animation: menu-links-slide-in-right 1s ease-out;
-   animation-fill-mode: forwards;
+#menu-logo-img {
+   width: 100%;
+   height: 100%;
+   background-image: url("../img/logo.png");
+   background-size: cover;
+   /*transform: trans*/
 }
 
-@keyframes menu-links-slide-in-left {
-   0% {
-      transform: translateX(-400px);
-   }
-   100% {
-      transform: translateX(0px);
-   }
-}
-
-@keyframes menu-links-slide-in-right {
-   0% {
-      transform: translateX(400px);
-   }
-   100% {
-      transform: translateX(0px);
-   }
+.menu-logo-img-slide-in {
+   animation: menu-logo-img-slide-in 0.6s ease-out;
+   /*animation-fill-mode: forwards;*/
 }

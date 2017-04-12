@@ -11,9 +11,12 @@ $(function() {
             $("#menu-content").addClass(this.cssStates.closed); // On enléve l'ancienne classe et ajoute la nouvelle
          } else {
             // Si le menu est fermé (il va s'ouvrir) on lance l'anim des links
-            $(".menu-links-items-left").addClass("menu-links-slide-in-left");
-            $(".menu-links-items-right").addClass("menu-links-slide-in-right");
+            $(".menu-links-items-left").addClass("animated bounceInLeft");
+            $(".menu-links-items-right").addClass("animated bounceInRight");
             
+            // Du logo
+            $("#menu-logo-img").addClass("bounceInDown");
+
             // Et du menu en lui meme
             $("#menu-content").removeClass(this.cssStates.closed);
             $("#menu-content").addClass(this.cssStates.opened);
@@ -25,7 +28,7 @@ $(function() {
    };
 
    $("#menu").click(function() {
-      menu.toggleState(); // On ouvre le menu
+      menu.toggleState(); // On ouvre/ferme le menu
    });
 
    $("#pages-container").click(function() {
@@ -38,9 +41,16 @@ $(function() {
    $("#menu-content").on('webkitAnimationEnd oanimationend msAnimationEnd animationend',
       function(e) {
          if (!menu.isOpen) {
-            $(".menu-links-items-left").removeClass("menu-links-slide-in-left");
-            $(".menu-links-items-right").removeClass("menu-links-slide-in-right");
+            $(".menu-links-items-left").removeClass("bounceInLeft");
+            $(".menu-links-items-right").removeClass("bounceInRight");
          }
+      }
+   );
+
+   $("#menu-logo-img").on('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+      function(e) {
+         $("#menu-logo-img").removeClass("bounceInDown");
+         $("#menu-logo-img").addClass("tada");
       }
    );
 
