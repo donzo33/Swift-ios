@@ -18,14 +18,13 @@
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
-  background-color: #FFFFFF;
+  background-color: black;
   width: 44px;
   height: 2px;
 }
 #menu-button span {
   position: relative;
   display: inline-block;
-  float: left;
   margin-top: 13.33333333px;
 }
 #menu-button span:before,
