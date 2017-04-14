@@ -1,0 +1,202 @@
+@font-face {
+   font-family: Helvetica-Light;
+   src: url(Font/helvetica-light.ttf);
+}
+
+body {
+   font-family: Helvetica-Light;
+   width: 100%;
+   height: 100%;
+}
+.container-fluid {
+    padding-right: 0;
+}
+
+#pages-container {
+   width: 100%;
+}
+
+/* Style accueil container */
+
+#fond {
+   background: -webkit-linear-gradient(rgb(243, 173, 0), rgb(241, 81, 57));
+   width: 100%;
+   height: 100%;
+   position : fixed;
+   align-content: center;
+   text-align: center;
+   padding-top: 15%;
+}
+
+#accueil-container {
+   height : 100%;
+   width:100%;
+   align-content: center;
+   text-align: center;
+   margin-top:45%;
+   position : relative;
+}
+
+#accueil-title {
+   color: white;
+   font-size: 70px;
+}
+
+#accueil-slogan {
+   color: white;
+   font-size: 50px;
+   font-weight: lighter;
+}
+
+#accueil-fleche {
+   height: 200px;
+   position: relative;
+   width: 200px;
+   align-content: center;
+   text-align: center;
+   margin: auto;
+   padding-bottom: 0;
+}
+
+@keyframes bouncing {
+   0% {
+      bottom: 0;
+   }
+   50% {
+      bottom: 20px;
+   }
+   100% {
+      bottom: 0;
+   }
+}
+
+.arrow {
+   animation: bouncing 1s infinite ease-in-out;
+   bottom: 0;
+   display: block;
+   height: 50px;
+   left: 50%;
+   margin-left: -25px;
+   position: absolute;
+   width: 50px;
+}
+
+/* Style questionnaire container */
+
+#questionnaire-container {
+    font-family: Helvetica-Light;
+    height: 100%;
+    width:100%;
+    align-content: center;
+    background: white;
+    position : relative;
+    padding-right: 2%;
+    padding-left: 7%;
+    padding-bottom: 2%;
+}
+
+
+#questionnaire {
+    font-family: Helvetica-Light;
+    height :100%;
+    width : 100%;
+    background-color: papayawhip;
+  -webkit-box-shadow: 0px 9px 78px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 9px 78px -10px rgba(0,0,0,0.75);
+box-shadow: 0px 9px 78px -10px rgba(0,0,0,0.75);
+padding : 2%;  
+}
+
+
+.question {
+
+color : black;
+font-family: Helvetica-Light;
+font-size: 20px;
+text-align: center;
+
+}
+
+.questions {
+    width: 50%;
+    
+}
+
+.questionnaire-response {
+    height: 18%;
+    width: 30%;
+    border-radius: 20px;
+    transition: background-color 1s;
+    opacity: 0.5;
+}
+
+.questionnaire-response:hover{
+    background-color:#F4A443;
+    opacity: 1;
+}
+
+.responses-validation {
+   text-align: center;
+}
+
+#button-correction {
+    text-align: center;
+    margin-top : 10%;
+}
+
+/* Style programme container */
+
+#programme-container .text-title{ 
+   text-align: center;
+   color: white;
+   
+}
+
+#programme-container p, h1 {
+    font-size: 16px;
+    color:white;
+
+}
+
+#programme-container {
+    background :white;
+    padding-top: 18px;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    position:relative;
+    padding-right: 2%;
+    padding-left: 7%;
+    padding-bottom: 2%;
+}
+
+.programme1-container {
+    height: 315px;
+
+    
+}
+
+.presentation {
+    padding-top: 5px;
+    padding-left: 50px;
+    height: 200px;
+    width: 200px;
+    background-color: #FFA53A;
+}
+
+.presentation1 {
+    padding-top: 20px;
+    height: 200px;
+    background-color: #FFA53A; 
+    }
+
+.programme2-container {
+    height: 320px;
+    padding-right: 2%;
+}
+
+.presentation2 {
+    padding-top: 13px;
+    height: 300px;
+    background-color: #FFA53A;
+}
