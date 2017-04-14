@@ -1,0 +1,63 @@
+#menu-button {
+  display: inline-block;
+  position: relative;
+  width: 44px;
+  height: 28.66666667px;
+  cursor: pointer;
+  padding: 0;
+}
+#menu-button span,
+#menu-button span:before,
+#menu-button span:after {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  background-color: black;
+  width: 44px;
+  height: 2px;
+}
+#menu-button span {
+  position: relative;
+  display: inline-block;
+  margin-top: 13.33333333px;
+}
+#menu-button span:before,
+#menu-button span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+#menu-button span:before {
+  top: -13.33333333px;
+}
+#menu-button span:after {
+  top: 13.33333333px;
+}
+/* Ninja Button */
+#menu-button.active span {
+  background-color: transparent;
+}
+#menu-button.active span:before,
+#menu-button.active span:after {
+  top: 0;
+}
+#menu-button.active span:before {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+}
+#menu-button.active span:after {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+}
