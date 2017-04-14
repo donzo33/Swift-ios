@@ -3,7 +3,13 @@
    --menu-width-positive: 325px;
 }
 
+@font-face {
+   font-family: Helvetica-Light;
+   src: url(Font/helvetica-light.ttf);
+}
+
 body{
+    font-family: Helvetica-Light;
     margin : 0;
 }
 
@@ -83,17 +89,43 @@ body{
    overflow: hidden;
    margin-top: 50px;
 }
+#menu-links a {
+    color: grey;
+}
+
+#menu-links a:link {
+   text-decoration: none;
+}
+
+#menu-links a:visited {
+   text-decoration: none;
+}
+
+#menu-links a:hover {
+   text-decoration: none;
+   color: black;
+   transition: color 320ms;
+   transform: translateX(0px);
+   
+   
+}
+
+#menu-links a:active {
+   text-decoration: none;
+}
 
 .menu-links-items {
    display: block;
    margin: 0 auto;
    width: 80%;
    height: 50px;
-   font: bold 20px "Roboto";
+   font: bold;
+   font-size: 25px;
    color : grey;
    margin-top: 40px;
    line-height: 50px;
    text-align: center;
+   cursor : pointer;
    transition: color 320ms;
    transform: translateX(0px);
 }
@@ -106,9 +138,6 @@ body{
    transform: translateX(400px);
 }
 
-.menu-links-items:hover {
-   color : black;
-}
 
 #menu-logo {
    width: 150px;
