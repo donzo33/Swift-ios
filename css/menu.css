@@ -106,8 +106,6 @@ body{
    color: black;
    transition: color 320ms;
    transform: translateX(0px);
-   
-   
 }
 
 #menu-links a:active {
@@ -138,7 +136,6 @@ body{
    transform: translateX(400px);
 }
 
-
 #menu-logo {
    width: 150px;
    height: 150px;
@@ -149,15 +146,13 @@ body{
    height: 100%;
    background-image: url("../img/logo.png");
    background-size: cover;
-   /*transform: trans*/
 }
 
 .menu-logo-img-slide-in {
    animation: menu-logo-img-slide-in 0.6s ease-out;
-   /*animation-fill-mode: forwards;*/
 }
 
-#menu-link-facebook {
+#menu-link-contact {
     display : flex;
     flex-direction: row;
     justify-content: center;
