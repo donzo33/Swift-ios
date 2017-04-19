@@ -1,4 +1,5 @@
 #dates {
+    font-family: Helvetica;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -8,15 +9,18 @@
     background: url(../img/calendrier.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    font-weight: 10px;
+    font-weight: bold;
 }
 
 #candidater {
+    font-family: Helvetica-Light;
     background-color: #fba858;
     color: white;
     border-radius : 5px;
     box-shadow: none;
-    width:120px;
+    width:150px;
     height:46px;
     border : none;
+    font-size: large;
+    font-weight : bold;
 }
