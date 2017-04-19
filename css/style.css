@@ -3,6 +3,10 @@
    src: url(Font/helvetica-light.ttf);
 }
 
+*, * : after, *:before {
+    box-sizing : border-border;
+}
+
 body {
    font-family: Helvetica-Light;
    width: 100%;
