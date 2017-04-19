@@ -3,6 +3,7 @@
    color: white;
 }
 
+
 #programme {
    background-image: url("../img/programmebgd.jpg");
    background-size: 100%;
@@ -27,25 +28,26 @@
 .presentation {
    padding-top: 5px;
    padding-left: 50px;
-   height: 200px;
-   width: 200px;
+   height: 300px;
+   width: 250px;
    background-color: #FFA53A;
 }
 
 .presentation1 {
    padding-top: 20px;
-   height: 200px;
+   height: 300px;
+   width: 255px;
    background-color: #FFA53A;
 }
 
 .programme2-container {
-   height: 320px;
+   height: 315px;
    padding-right: 2%;
    opacity: 0.8;
 }
 
 .presentation2 {
    padding-top: 13px;
-   height: 300px;
+   height: 200px;
    background-color: #FFA53A;
 }
