@@ -26,23 +26,18 @@ body {
 
 /* Style accueil container */
 
-#fond {
-   background: -webkit-linear-gradient(rgb(243, 173, 0), rgb(241, 81, 57));
-   width: 100%;
-   height: 100%;
-   position: fixed;
-   align-content: center;
-   text-align: center;
-   padding-top: 15%;
-}
 
 #accueil {
-   height: 100%;
+background: -webkit-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+background: -moz-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+background: -o-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+background: linear-gradient(to bottom left, rgb(241, 94, 151), rgb(243, 173, 0));
+   height: 100vh;
    width: 100%;
    align-content: center;
    text-align: center;
-   margin-top: 45%;
    position: relative;
+   padding-top: 15%;
 }
 
 #accueil-title {
