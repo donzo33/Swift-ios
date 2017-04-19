@@ -5,7 +5,7 @@
    align-content: center;
    background: white;
    position: relative;
-   padding: 20px 10px 20px 10px;
+   padding: 0px 10px 20px 10px;
 }
 
 #questionnaire {
@@ -19,6 +19,14 @@
    padding: 2%;
 }
 
+#questionnaire-questions-row {
+   padding: 0 15px 0 15px;
+}
+
+.question {
+   padding-top: 20px;
+}
+
 .question-text {
    color: black;
    font-family: Helvetica-Light;
@@ -27,16 +35,26 @@
 }
 
 .question-answer {
-   height: 18%;
+   font-size: 18px;
+   color: white;
    width: 30%;
-   border-radius: 20px;
-   transition: background-color 1s;
-   opacity: 0.5;
+   margin: 0 5px 0 5px;
+   padding: 5px 5px 5px 5px;
+   text-align: center;
+   background-color: #96315d;
+   transition: background-color 400ms;
 }
 
 .question-answer:hover {
-   background-color: #F4A443;
-   opacity: 1;
+   background-color: #c6417b;
+}
+
+.question-wrong {
+   background-color: #d34339;
+}
+
+.question-right {
+   background-color: #91e234;
 }
 
 .responses-validation {
