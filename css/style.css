@@ -8,13 +8,15 @@ body {
    width: 100%;
    height: 100%;
 }
+
 .container-fluid {
-    padding-right: 0;
+   padding-right: 0;
 }
 
 #pages-container {
    width: 100%;
 }
+
 
 /* Style accueil container */
 
@@ -22,26 +24,26 @@ body {
    background: -webkit-linear-gradient(rgb(243, 173, 0), rgb(241, 81, 57));
    width: 100%;
    height: 100%;
-   position : fixed;
+   position: fixed;
    align-content: center;
    text-align: center;
    padding-top: 15%;
 }
 
-#accueil-container {
-   height : 100%;
-   width:100%;
+#accueil {
+   height: 100%;
+   width: 100%;
    align-content: center;
    text-align: center;
-   margin-top:45%;
-   padding-left : 3%;
-   position : relative;
+   margin-top: 45%;
+   padding-left: 3%;
+   position: relative;
 }
 
 #accueil-title {
    color: white;
    font-size: 70px;
-   padding-left : 3%;
+   padding-left: 3%;
 }
 
 #accueil-slogan {
@@ -49,7 +51,7 @@ body {
    font-size: 50px;
    font-weight: lighter;
    flex-wrap: wrap;
-   padding-left : 3%;
+   padding-left: 3%;
 }
 
 #accueil-fleche {
