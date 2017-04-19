@@ -1,0 +1,22 @@
+#dates {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position:relative;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background: url(../img/calendrier.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-weight: 10px;
+}
+
+#candidater {
+    background-color: #fba858;
+    color: white;
+    border-radius : 5px;
+    box-shadow: none;
+    width:120px;
+    height:46px;
+    border : none;
+}
