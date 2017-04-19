@@ -2,20 +2,52 @@
 // Il sera ensuite dynamiquement ajouté a la page lors du chargement
 var questions = [
    {
-      question: "Ma premiere question est ?",
+      question: "Si une valeur est amenée à être modifiée plusieurs fois,il préférable d’utiliser?",
       answers: [
-         {text: "Reponse 1", answer: false},
-         {text: "Reponse 2", answer: true},
-         {text: "Reponse 3", answer: false}
+         {text: "Une constante (let)", answer: false},
+         {text: "Une variable (var)", answer: true},
+         {text: "Une condition (if)", answer: false}
       ]
    },{
-      question: "Ma deuxiéme question est ?",
+      question: "Quel valeur est ici un booléen ssssssssssssssssssssssssssssssssssssssssssssssss?",
       answers: [
-         {text: "Reponse 1", answer: false},
-         {text: "HReponse 2", answer: false},
-         {text: "HHReponse 3", answer: true}
+         {text: "Hello World !", answer: false},
+         {text: "42", answer: false},
+         {text: "false", answer: true}
+      ]
+   }, {
+      question: "Quelle sera la valeur de la variable resultat après le code [var resultat = 10/3] ?",
+      answers: [
+         {text: "3", answer: true},
+         {text: "3,33", answer: false},
+         {text: "Undefined", answer: false}
+      ]
+   }, {
+      question: "je dispose d’une variable age qui a pour valeur 18, cette condition est-elle vérifiée ? [if age >= 18]",
+      answers: [
+         {text: "oui", answer: false},
+         {text: "non", answer: true},
+         {text: "La réponse D", answer: false}
+      ]
+   }, {
+      question: "Quelle est la particularité d’une boucle repeat … while ?",
+      answers: [
+         {text: "Cette boucle a pour particularité de toujours s’exécuter au minimum une fois", answer: true},
+         {text: "Elle peut ne jamais s’exécuter si la condition de la boucle n’est pas vérifiée dès le départ", answer: false},
+         {text: "Cette boucle n’existe pas dans le langage Swift", answer: false}
+      ]
+   }, {
+      question: "Laquelle de ces boucles pourrait afficher les multiples de deux de 0 compris à 10 compris (0, 2, 4, 6, 8, 10) ?",
+      answers: [
+         {text: "for i = 1; i < 10; i = i+2", answer: false},
+         {text: "for i = 0; i <= 10; i = i+2", answer: true},
+         {text: "for i = 0; i <= 10; i++", answer: false}
       ]
    },
+
+
+
+
 ];
 
 var studentResult = [];

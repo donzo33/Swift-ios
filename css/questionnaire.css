@@ -35,11 +35,13 @@
 }
 
 .question-answer {
+   
+    height:100px;
    font-size: 18px;
    color: white;
    width: 30%;
    margin: 0 5px 0 5px;
-   padding: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
    text-align: center;
    background-color: #96315d;
    transition: background-color 400ms;
