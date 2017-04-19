@@ -45,18 +45,23 @@
    text-align: center;
    background-color: #96315d;
    transition: background-color 400ms;
+   animation-duration: 600ms;
 }
 
-.question-answer:hover {
+.question-answer-alive:hover {
    background-color: #c6417b;
 }
 
 .question-wrong {
-   background-color: #d34339;
+   background-color: #d34339 !important;
 }
 
 .question-right {
-   background-color: #91e234;
+   background-color: #91e234 !important;
+}
+
+.question-disabled {
+   background-color: #a3a3a3;
 }
 
 .responses-validation {
