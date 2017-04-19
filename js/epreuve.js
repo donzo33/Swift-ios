@@ -37,8 +37,13 @@ $(function() {
          class: 'question-answers row'
       }).appendTo(path);
 
+      // On parcours le tableau des réponses et on les ajoute (data-answer est utilisé pour retrouver la bonne réponse)
       for (let iA = 0; iA < a.length; iA++) {
          $(".question-answers", path).append("<div data-answer='" + a[iA].answer + "' class='question-answer col-xs-4'>" + a[iA].text + "</div>");
       }
    }
+
+   $(".question-answer").click(function(origin) {
+      var isGoodAnswer = origin.target.dataset.answer; // On utilise le dataset pour retrouver
+   })
 })
