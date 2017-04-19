@@ -1,15 +1,15 @@
-#programme-container .text-title {
+#programme .text-title {
    text-align: center;
    color: white;
 }
 
-#programme-container p,
+#programme p,
 h1 {
    font-size: 16px;
    color: white;
 }
 
-#programme-container {
+#programme {
    background-image: url("../img/programmebgd.jpg");
    background-size: 100%;
    background-repeat: no-repeat;
