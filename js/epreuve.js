@@ -116,6 +116,14 @@ $(function() {
       for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
          var node = $("#" + qAnswers[i].id);
          node.removeClass("question-answer-alive");
+         console.log(node[0].dataset.answer + " / " + node[0].id + " / " + origin.target.id);
+
+         if (node[0].dataset.answer == "true" && node[0].id != origin.target.id) {
+            console.log("YO DOG");
+            // Si on tombe sur une bonne réponse qui n'a pas été choisie par l'utilisateur
+            setTimeout(() => $("#" + qAnswers[i].id).addClass("question-right-fail"), 500);
+         }
+
          setTimeout(() => $("#" + qAnswers[i].id).addClass("question-disabled"), 500);
       }
 

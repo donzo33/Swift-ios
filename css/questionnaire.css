@@ -43,7 +43,7 @@
    color: 255;
    width: 30%;
    margin: 0 5px 0 5px;
-  padding: 5px 5px 5px 5px;
+   padding: 5px 5px 5px 5px;
    text-align: center;
    background-color: #ff6600;
    transition: background-color 400ms;
@@ -60,6 +60,10 @@
 
 .question-right {
    background-color: #91e234 !important;
+}
+
+.question-right-fail {
+   background-color: #598922 !important;
 }
 
 .question-disabled {
