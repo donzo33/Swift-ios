@@ -34,18 +34,22 @@ body {
    align-content: center;
    text-align: center;
    margin-top:45%;
+   padding-left : 3%;
    position : relative;
 }
 
 #accueil-title {
    color: white;
    font-size: 70px;
+   padding-left : 3%;
 }
 
 #accueil-slogan {
    color: white;
    font-size: 50px;
    font-weight: lighter;
+   flex-wrap: wrap;
+   padding-left : 3%;
 }
 
 #accueil-fleche {
@@ -161,6 +165,7 @@ text-align: center;
 #programme-container {
     background-image: url("../img/programmebgd.jpg");
     background-size:100%;
+    background-repeat: no-repeat;
     background-position: bottom;
     padding-top: 18px;
     height: 100%;
@@ -176,8 +181,6 @@ text-align: center;
     height: 315px;
     opacity : 0.8;
     padding-right: 2%;
-
-    
 }
 
 .presentation {

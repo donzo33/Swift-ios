@@ -157,22 +157,38 @@ body{
    /*animation-fill-mode: forwards;*/
 }
 
-#menu-link-facebook {
+#menu-links-reseaux {
     display : flex;
     flex-direction: row;
     justify-content: center;
     margin-top : 50%;
 }
 
+#menu-links-reseaux a{
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width : 100%;
+}
+
 #logo-facebook {
-    height :15%;
-    width : 15%;
+    height : 60%;
+    width : 60%;
     border-radius: 15%;
-    margin-right: 5%;
+    margin-right: 2%;
 }
 
 #logo-telephone {
-    height : 15%;
-    width : 15%;
+    height : 60%;
+    width : 60%;
     border-radius: 5px;
+}
+
+
+#logo-twitter {
+    height : 60%;
+    width : 60%;
+    border-radius: 5px;
+    margin-right: 2%;
 }
