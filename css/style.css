@@ -43,7 +43,8 @@ body {
 
 #accueil-slogan {
    color: white;
-   margin-top: 15px;
+   margin: 15px 0px 0px 0px;
+   padding: 0px 20px 0px 20px;
    font-size: 50px;
    font-weight: lighter;
    flex-wrap: wrap;
