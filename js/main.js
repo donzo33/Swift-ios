@@ -1,14 +1,14 @@
 
 
-/*Changement du fond avec mouse hover
+/*//Changement du fond avec mouse hover
 
 var originalBG = '',
     lightColor = 'fff',
     gradientSize = 5;
 
-$('#fond')
+$('#accueil')
 .mousemove(function(e) {
-    originalBG = $("#fond").css("background");
+    originalBG = $("#accueil").css("background");
     x  = e.pageX - this.offsetLeft;
     y  = e.pageY - this.offsetTop;
     xy = x + " " + y;
@@ -24,3 +24,13 @@ $('#fond')
         $(this).css({ background: originalBG });
 });
 */
+
+$(function() {
+    $('a.page-scroll').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
