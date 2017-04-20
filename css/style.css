@@ -28,10 +28,10 @@ body {
 
 
 #accueil {
-background: -webkit-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
-background: -moz-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
-background: -o-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
-background: linear-gradient(to bottom left, rgb(241, 94, 151), rgb(243, 173, 0));
+   background: -webkit-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+   background: -moz-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+   background: -o-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+   background: linear-gradient(to bottom left, rgb(241, 94, 151), rgb(243, 173, 0));
    height: 100vh;
    width: 100%;
    align-content: center;
