@@ -1,0 +1,86 @@
+#contact {
+    height : 100%;
+    width : 100%;
+    color:white;
+    position: relative;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:rgb(53, 56, 58);
+    padding : 2%
+}
+
+#information{
+    display : flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top :2%;
+}
+
+#information div{
+    display : flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#contact div a {
+    color: grey;
+}
+
+#contact div a:link {
+   text-decoration: none;
+}
+
+#contact div a:visited {
+   text-decoration: none;
+}
+
+#contact div a:hover {
+   text-decoration: none;
+   color: white;
+   transition: color 320ms;
+   transform: translateX(0px); 
+}
+
+#contact div a:active {
+   text-decoration: none;
+}
+
+#newsletter {
+    display : block;
+}
+
+#newsletter h3 {
+    margin : 2%;
+}
+
+#submit-news {
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    box-shadow: none;
+    border: none;
+}
+
+#button {
+    background-color: #fba858;
+    color: white;
+    box-shadow: none;
+    border: none;
+    width : 120px;
+    height:46px;
+    padding: 0;
+}
+
+#input-news {
+    resize:horizontal;
+    width:480px; 
+    height:46px;
+    border: none;
+    box-shadow: none;
+}
+
+#contact img {
+    margin : auto;
+    margin-top: -70px;
+}
