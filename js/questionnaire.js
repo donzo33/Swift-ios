@@ -72,11 +72,11 @@ $(function() {
       for (let iA = 0; iA < a.length; iA++) {
          $(".question-answers", path).append("<div id='q" + i + "a" + iA + "' data-question-id='" + i + "' data-answer='" + a[iA].answer +
             "' class='question-answer question-answer-alive animated col-xs-4'>" + 
-            "<span class='question-answer-text'>" + a[iA].text + "</span></div>");
+            "<span class='question-answer-text unselectable'>" + a[iA].text + "</span></div>");
       }
    }
 
-   $(".question-answer").click(function(origin) {
+   $(".question-answer, .question-answer-text").click(function(origin) {
       if (!(typeof origin.target.dataset.answer === "string" && typeof origin.target.dataset.questionId === "string")) {
          return null; // Protection
       }
