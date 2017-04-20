@@ -99,7 +99,20 @@ body {
     padding: 20px;
     text-align: center;
     border: 1px solid #888;
-    width: 400px;
+    width: 350px;
+}
+
+.modal-content p {
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+    margin: auto;
+}
+
+#modalphone {
+    color:green;
+    margin : 2%;
+    font-size: xx-large;
 }
 
 /* The Close Button */
