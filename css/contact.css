@@ -78,9 +78,13 @@
     height:46px;
     border: none;
     box-shadow: none;
+    color : black;
+    padding : 1%;
 }
 
 #contact img {
-    margin : auto;
-    margin-top: -70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-top: -85px;
 }
