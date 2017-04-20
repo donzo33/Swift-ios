@@ -2,197 +2,182 @@
 <html>
 
 <head>
-      <title>Formation Swift/iOS - Wild Code School</title>
-      <link rel="icon" href="img/logo.png">
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-      <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-      <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="css/menu.css">
-      <link rel="stylesheet" href="css/questionnaire.css">
-      <link rel="stylesheet" href="css/programme.css">
-      <link rel="stylesheet" href="css/contact.css">
-      <link rel="stylesheet" href="css/dates.css">
-      <link rel="stylesheet" href="css/inscription.css">
-      <link rel="stylesheet" href="css/menuButton.css">
+   <title>Formation Swift/iOS - Wild Code School</title>
+   <link rel="icon" href="img/logo.png">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/menu.css">
+   <link rel="stylesheet" href="css/questionnaire.css">
+   <link rel="stylesheet" href="css/programme.css">
+   <link rel="stylesheet" href="css/contact.css">
+   <link rel="stylesheet" href="css/dates.css">
+   <link rel="stylesheet" href="css/inscription.css">
+   <link rel="stylesheet" href="css/menuButton.css">
 </head>
 
 <body id="page-top" dat-spy="scroll">
 
-      <!--Menu Samy-->
-      <div id="menu" class="">
-            <div id="menu-button-container">
-                  <a id="menu-button" title="menu"><span></span></a>
-            </div>
+   <!--Menu Samy-->
+   <div id="menu" class="">
+      <div id="menu-button-container">
+         <a id="menu-button" title="menu"><span></span></a>
+      </div>
+   </div>
+
+   <div id="menu-content">
+      <div id="menu-logo" class="row center-block">
+         <a href="#accueil">
+            <div id="menu-logo-img" class="animated"></div>
+         </a>
+      </div>
+      <div id="menu-links">
+         <div id="menu-links-programme" class="menu-links-items menu-links-items-right"><a href="#programme">PROGRAMME</a></div>
+         <div id="menu-links-epreuve" class="menu-links-items menu-links-items-right"><a href="#questionnaire">TEST DE COMPÉTENCES</a></div>
+         <div id="menu-links-dates" class="menu-links-items menu-links-items-right"><a href="#dates">PROCHAINES SESSIONS</a></div>
+         <div id="menu-links-inscription" class="menu-links-items menu-links-items-right"><a href="#inscription">INSCRIPTION</a></div>
+         <div id="menu-links-reseaux">
+            <a href="https://twitter.com/WildSchool_Tlse"><span class="fa fa-twitter"></span></a>
+            <a href="https://www.facebook.com/Wild-Code-School-1749693668643474/"><span class="fa fa-facebook"></span></a>
+            <a href="https://wildcodeschool.fr/contact/"><span class="fa fa-phone"></span></a>
+         </div>
+      </div>
+      <div id="menu-footer" class="row"></div>
+   </div>
+   <!--Fin Menu-->
+
+   <div id="pages-container" class="container-fluid">
+      <!--Vos divs page ici-->
+      <div id="accueil" class="container-fluid">
+         <img class="row" src="img/new-logo.png" alt="logo">
+         <div class="row" id="accueil-title">Swift / iOS</div>
+         <div class="row" id="accueil-slogan">Formation intensive proposée par la Wild Code School</div>
+         <div class="row" id="page-scroll-container">
+            <a class="page-scroll" href="#programme">
+               <img class="arrow" src="img/1491935828_DoubleChevronDown.png" />
+            </a>
+         </div>
       </div>
 
-      <div id="menu-content">
-            <div id="menu-logo" class="row center-block">
-                  <a href="#accueil">
-                        <div id="menu-logo-img" class="animated"></div>
-                  </a>
+      <div id="programme" class="container-fluid">
+         <div class="programme1-container row">
+            <div class="presentation1 col-md-3 col-xs-3 col-md-offset-1">
+               <p class="text-title">
+                  <h1><b>Swift / Ios</b></h1>
+                  les bases du langage (classes, structures, propriétés, protocoles, closures …)<br> gestion de la mémoire (ARC, auto-release pool, comptage de références, …) threading et Grand Central Dispatch les principales classes du SDK présentation
+                  de Cocoa Touch
+               </p>
             </div>
-            <div id="menu-links">
-                  <div id="menu-links-programme" class="menu-links-items menu-links-items-right"><a href="#programme">PROGRAMME</a></div>
-                  <div id="menu-links-epreuve" class="menu-links-items menu-links-items-right"><a href="#questionnaire">TEST DE COMPÉTENCES</a></div>
-                  <div id="menu-links-dates" class="menu-links-items menu-links-items-right"><a href="#dates">PROCHAINES SESSIONS</a></div>
-                  <div id="menu-links-inscription" class="menu-links-items menu-links-items-right"><a href="#inscription">INSCRIPTION</a></div>
-                  <div id="menu-links-reseaux">
-                        <a href="https://twitter.com/WildSchool_Tlse"><span class="fa fa-twitter"></span></a>
-                        <a href="https://www.facebook.com/Wild-Code-School-1749693668643474/"><span class="fa fa-facebook"></span></a>
-                        <a href="https://wildcodeschool.fr/contact/"><span class="fa fa-phone"></span></a>
-                  </div>
+            <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
+               <p class="text-present">
+                  <h1>Xcode</h1> prise en main de l’environnement de développement et de construction des interfaces graphiques storyboard principaux contrôles graphiques et classes associées contraintes segue gestions de différentes tailles d'écrans ressources
+                  embarquées
+               </p>
             </div>
-            <div id="menu-footer" class="row"></div>
-      </div>
-      <!--Fin Menu-->
+            <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
+               <p class="text-present">
+                  <h1>Structure et construction</h1> cycle de vie d’une application iOS modèle MVC d'iOS view controllers et cycle de vie d'une vue navigations standards navigation custom touch et multi touch les gesture recognizers animations
+               </p>
+            </div>
+         </div>
 
-      <div id="pages-container" class="container-fluid">
-            <!--Vos divs page ici-->
+         <div class="programme2-container row">
+            <div class="presentation2 col-xs-6 col-md-4 col-xs-offset-1">
+               <p class="text-programme">
+                  <h1>Acées fichier et données</h1>différentes solutions de lecture / écriture de fichiers<br/> mise en place de SQLite<br/> introduction à Core Data
 
+               </p>
+            </div>
+            <div class="presentation2 col-xs-6 col-md-4 col-xs-offset-2">
+               <p class="text-programme">
+                  <h1>Communication HTTP</h1>sessions requêtes HTTP (GET, POST, … et download) manipulation du JSON
 
-            <div id="accueil" class="container-fluid">
-                  <div id="fond">
-                        <img src="img/new-logo.png" alt="logo">
-                        <div class="row" id="accueil-title">Swift / iOS</div>
-                        <div class="row" id="accueil-slogan">Formation intensive proposée par la Wild Code School</div>
-                  </div>
-                  <div class="row" id="accueil-fleche">
-                        <a class="page-scroll" href="#programme">
-                              <img class="arrow" src="img/1491935828_DoubleChevronDown.png" />
-                        </a>
-                  </div>
+               </p>
             </div>
 
-            <div id="programme" class="container-fluid">
-                  <div class="programme1-container row">
-                        <div class="presentation1 col-md-3 col-xs-3 col-md-offset-1">
-                              <p class="text-title">
-                                    <h1><b>Swift / Ios</b></h1>
-                                    les bases du langage (classes, structures, propriétés, protocoles, closures …)<br> gestion
-                                    de la mémoire (ARC, auto-release pool, comptage de références, …) threading et Grand
-                                    Central Dispatch les principales classes du SDK présentation de Cocoa Touch
-                              </p>
-                        </div>
-                        <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
-                              <p class="text-present">
-                                    <h1>Xcode</h1> prise en main de l’environnement de développement et de construction des interfaces
-                                    graphiques storyboard principaux contrôles graphiques et classes associées contraintes
-                                    segue gestions de différentes tailles d'écrans ressources embarquées
-                              </p>
-                        </div>
-                        <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
-                              <p class="text-present">
-                                    <h1>Structure et construction</h1> cycle de vie d’une application iOS modèle MVC d'iOS view
-                                    controllers et cycle de vie d'une vue navigations standards navigation custom touch et
-                                    multi touch les gesture recognizers animations
-                              </p>
-                        </div>
-                  </div>
+         </div>
+         <div class="programme3 row">
+            <div class="presentation2 col-xs-6 col-md-5 col-xs-offset-3">
+               <p class="text-programme">
+                  <h1>Notions avancées</h1>multimédia (photos, vidéos, son, …) dessiner dans une vue manipulation d'images géolocalisation notifications les modes background autorisés sur iOS autres capteurs interagir et partager des contenus avec d'autres
+                  applications Tester, instrumenter et publier tests unitaires et graphiques instrumentation et analyse des performances, de la mémoire et de l'exécution diffusion en beta test via TestFlight publication d'une release sur l'App Store
 
-                  <div class="programme2-container row">
-                        <div class="presentation2 col-xs-6 col-md-4 col-xs-offset-1">
-                              <p class="text-programme">
-                                    <h1>Acées fichier et données</h1>différentes solutions de lecture / écriture de fichiers<br/>                                    mise en place de SQLite<br/> introduction à Core Data
-
-                              </p>
-                        </div>
-                        <div class="presentation2 col-xs-6 col-md-4 col-xs-offset-2">
-                              <p class="text-programme">
-                                    <h1>Communication HTTP</h1>sessions requêtes HTTP (GET, POST, … et download) manipulation
-                                    du JSON
-
-                              </p>
-                        </div>
-
-                  </div>
-                  <div class="programme3 row">
-                        <div class="presentation2 col-xs-6 col-md-5 col-xs-offset-3">
-                              <p class="text-programme">
-                                    <h1>Notions avancées</h1>multimédia (photos, vidéos, son, …) dessiner dans une vue manipulation
-                                    d'images géolocalisation notifications les modes background autorisés sur iOS autres
-                                    capteurs interagir et partager des contenus avec d'autres applications Tester, instrumenter
-                                    et publier tests unitaires et graphiques instrumentation et analyse des performances,
-                                    de la mémoire et de l'exécution diffusion en beta test via TestFlight publication d'une
-                                    release sur l'App Store
-
-                              </p>
-                        </div>
-                  </div>
+               </p>
             </div>
-
-
-            <div id="questionnaire" class="container">
-                  <div id="questionnaire-container" class="container-fluid">
-                        <div id="questionnaire-questions-row" class="row">
-
-                        </div>
-                  </div>
-            </div>
-
-            <div id="dates" class="content-section text-center">
-                  <h1>Prochaine session de formation</h1>
-                  <h2>Du 29 mai au 21 juillet 2017</h2>
-                  <button id="candidater">JE CANDIDATE</button>
-            </div>
-
-            <div id="inscription" class="container-fluid text-center">
-            </div>
-
-            <div id="contact" class="container-fluid text-center">
-                  <a href="#accueil">
-                        <img class="aligncenter" src="https://wildcodeschool.fr/wp-content/uploads/2016/05/cropped-naviconWCS-300x300.png" alt=""
-                              width="80px" height="80px">
-                  </a>
-                  <div id="newsletter" class="row container-fluid">
-                        <h3 class="row">Des News Tech et Wild dans votre inbox - Abonnez-vous à notre newsletter</h3>
-                        <div id="submit-news" class="row">
-                              <input id="input-news" type="e-mail" placeholder="Renseigner votre e-mail"><input id="button"
-                                    type="submit" value="GO WILD">
-                        </div>
-                  </div>
-                  <div id="information">
-                        <div id="wcs">
-                              <h4>La Wild Code School</h4>
-                              <a href="https://wildcodeschool.fr/questcequela-wildcodeschool/">Le concept</a>
-                              <a href="https://wildcodeschool.fr/nos-formations-initiation-approfondissement-developpeur/">Notre programme</a>
-                              <a href="https://wildcodeschool.fr/candidat/">Comment candidater</a>
-                              <a href="https://wildcodeschool.fr/faq/">FAQ</a>
-                        </div>
-                        <div id="nos-ecoles">
-                              <h4>Nos Écoles</h4>
-                              <a href="https://wildcodeschool.fr/toulouse/">Toulouse</a>
-                              <a href="https://wildcodeschool.fr/la-loupe/">La Loupe</a>
-                              <a href="https://wildcodeschool.fr/fontainebleau/">Fontainebleau</a>
-                              <a href="https://wildcodeschool.fr/orleans/">Orléans</a>
-                              <a href="https://wildcodeschool.fr/bordeaux/">Bordeaux</a>
-                              <a href="https://wildcodeschool.fr/lyon/">Lyon</a>
-                              <a href="https://wildcodeschool.fr/lille/">Lille</a>
-                              <a href="https://wildcodeschool.fr/strasbourg/">Strasbourg</a>
-                              <a href="https://wildcodeschool.fr/paris/">Paris</a>
-                        </div>
-                        <div id="propos">
-                              <h4>À propos</h4>
-                              <a href="https://wildcodeschool.fr/contact/">Nous contacter</a>
-                              <a href="https://wildcodeschool.fr/equipe/">Notre équipe</a>
-                              <a href="https://wildcodeschool.fr/offres-emplois/">Offres d'emploi</a>
-                              <a href="https://wildcodeschool.fr/recruter-un-developpeur/">Recruter un développeur</a>
-                              <a href="https://wildcodeschool.fr/developper-un-projet/">Développer un projet</a>
-                              <a href="https://wildcodeschool.fr/nous-soutenir/">Nous soutenir</a>
-                        </div>
-                  </div>
-            </div>
-      </div>
+         </div>
       </div>
 
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-      <script src="js/main.js" type="text/javascript"></script>
-      <script src="js/menu.js" type="text/javascript"></script>
-      <script src="js/questionnaire.js" type="text/javascript"></script>
+
+      <div id="questionnaire" class="container">
+         <div id="questionnaire-container" class="container-fluid">
+            <div id="questionnaire-questions-row" class="row">
+
+            </div>
+         </div>
+      </div>
+
+      <div id="dates" class="content-section text-center">
+         <h1>Prochaine session de formation</h1>
+         <h2>Du 29 mai au 21 juillet 2017</h2>
+         <button id="candidater">JE CANDIDATE</button>
+      </div>
+
+      <div id="inscription" class="container-fluid text-center">
+      </div>
+
+      <div id="contact" class="container-fluid text-center">
+         <a href="#accueil">
+            <img class="aligncenter" src="https://wildcodeschool.fr/wp-content/uploads/2016/05/cropped-naviconWCS-300x300.png" alt="" width="80px" height="80px">
+         </a>
+         <div id="newsletter" class="row container-fluid">
+            <h3 class="row">Des News Tech et Wild dans votre inbox - Abonnez-vous à notre newsletter</h3>
+            <div id="submit-news" class="row">
+               <input id="input-news" type="e-mail" placeholder="Renseigner votre e-mail"><input id="button" type="submit" value="GO WILD">
+            </div>
+         </div>
+         <div id="information">
+            <div id="wcs">
+               <h4>La Wild Code School</h4>
+               <a href="https://wildcodeschool.fr/questcequela-wildcodeschool/">Le concept</a>
+               <a href="https://wildcodeschool.fr/nos-formations-initiation-approfondissement-developpeur/">Notre programme</a>
+               <a href="https://wildcodeschool.fr/candidat/">Comment candidater</a>
+               <a href="https://wildcodeschool.fr/faq/">FAQ</a>
+            </div>
+            <div id="nos-ecoles">
+               <h4>Nos Écoles</h4>
+               <a href="https://wildcodeschool.fr/toulouse/">Toulouse</a>
+               <a href="https://wildcodeschool.fr/la-loupe/">La Loupe</a>
+               <a href="https://wildcodeschool.fr/fontainebleau/">Fontainebleau</a>
+               <a href="https://wildcodeschool.fr/orleans/">Orléans</a>
+               <a href="https://wildcodeschool.fr/bordeaux/">Bordeaux</a>
+               <a href="https://wildcodeschool.fr/lyon/">Lyon</a>
+               <a href="https://wildcodeschool.fr/lille/">Lille</a>
+               <a href="https://wildcodeschool.fr/strasbourg/">Strasbourg</a>
+               <a href="https://wildcodeschool.fr/paris/">Paris</a>
+            </div>
+            <div id="propos">
+               <h4>À propos</h4>
+               <a href="https://wildcodeschool.fr/contact/">Nous contacter</a>
+               <a href="https://wildcodeschool.fr/equipe/">Notre équipe</a>
+               <a href="https://wildcodeschool.fr/offres-emplois/">Offres d'emploi</a>
+               <a href="https://wildcodeschool.fr/recruter-un-developpeur/">Recruter un développeur</a>
+               <a href="https://wildcodeschool.fr/developper-un-projet/">Développer un projet</a>
+               <a href="https://wildcodeschool.fr/nous-soutenir/">Nous soutenir</a>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+   <script src="js/main.js" type="text/javascript"></script>
+   <script src="js/menu.js" type="text/javascript"></script>
+   <script src="js/questionnaire.js" type="text/javascript"></script>
 </body>
 
 </html>
