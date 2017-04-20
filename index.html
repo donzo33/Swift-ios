@@ -32,10 +32,10 @@
                   <div id="menu-logo-img" class="animated"></div>
             </div>
             <div id="menu-links">
-                  <div id="menu-links-programme" class="menu-links-items menu-links-items-right"><a href="#programme-container">PROGRAMME</a></div>
-                  <div id="menu-links-epreuve" class="menu-links-items menu-links-items-right"><a href="#questionnaire-container">EPREUVE</a></div>
-                  <div id="menu-links-dates" class="menu-links-items menu-links-items-right"><a href="#dates-container">DATES</a></div>
-                  <div id="menu-links-inscription" class="menu-links-items menu-links-items-right"><a href="#inscription-container">INSCRIPTION</a></div>
+                  <div id="menu-links-programme" class="menu-links-items menu-links-items-right"><a href="#programme">PROGRAMME</a></div>
+                  <div id="menu-links-epreuve" class="menu-links-items menu-links-items-right"><a href="#questionnaire">EPREUVE</a></div>
+                  <div id="menu-links-dates" class="menu-links-items menu-links-items-right"><a href="#dates">DATES</a></div>
+                  <div id="menu-links-inscription" class="menu-links-items menu-links-items-right"><a href="#inscription">INSCRIPTION</a></div>
                   <div id="menu-links-reseaux">
                         <a href="https://twitter.com/WildSchool_Tlse"><img id="logo-twitter" src="img/twitter-logo.jpeg" alt="twitter"></a>
                         <a href=""><img id="logo-facebook" src="img/facebook-button.png" alt="facebook"></a>
@@ -63,40 +63,61 @@
 
             <div id="programme" class="container-fluid">
                   <div class="programme1-container row">
-                        <div class="presentation col-lg-3 col-md-4">
+                        <div class="presentation1 col-md-3 col-xs-3 col-md-offset-1">
                               <p class="text-title">
                                     <h1><b>Swift / Ios</b></h1>
+                                    les bases du langage (classes, structures, propriétés, protocoles, closures …)<br> gestion
+                                    de la mémoire (ARC, auto-release pool, comptage de références, …) threading et Grand
+                                    Central Dispatch les principales classes du SDK présentation de Cocoa Touch
                               </p>
                         </div>
-                        <div class="presentation1 col-lg-9 col-md-6 col-lg-offset-1">
-                              <p class="text-present">ipsum dolor sit amet, consectetu Donec non est quis elit maximus ultricies in sed tellus. Vestibulum
-                                    egestas ullamcorper faucibus. Maecenas ornare neque sit amet consequat vulputate. Vestibulum
-                                    eu molestie dapibus, nunc ut tincidunt aliquet, purus tellus vulputate eros, in dignissim
-                                    arcu mauris sed ante. Aliquam rutrum tempus odio, in efficitur velit sollicitudin ut.</p>
+                        <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
+                              <p class="text-present">
+                                    <h1>Xcode</h1> prise en main de l’environnement de développement et de construction des interfaces
+                                    graphiques storyboard principaux contrôles graphiques et classes associées contraintes
+                                    segue gestions de différentes tailles d'écrans ressources embarquées
+                              </p>
+                        </div>
+                        <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
+                              <p class="text-present">
+                                    <h1>Structure et construction</h1> cycle de vie d’une application iOS modèle MVC d'iOS view
+                                    controllers et cycle de vie d'une vue navigations standards navigation custom touch et
+                                    multi touch les gesture recognizers animations
+                              </p>
                         </div>
                   </div>
 
                   <div class="programme2-container row">
-                        <div class="presentation2 col-lg-12 col-md-12 col-xs-12">
-                              <p class="text-programme"> Ut commodo at sapien viverra rutrum. Fusce consequat purus eget arcu mattis convallis. Morbi
-                                    imperdiet sit amet metus non consectetur. Cras vitae nisl mauris. In sem magna, vulputate
-                                    vitae congue nec, porttitor ut est. Duis at bibendum mi. Sed commodo purus sed tellus
-                                    dictum, quis blandit risus mollis. Duis felis ante, volutpat sed fermentum lobortis,
-                                    rutrum eu sapien. Nulla facilisi. Nunc viverra dui sed risus vehicula elementum.<br>                                    Aenean lacinia, eros non pretium faucibus, magna tortor accumsan enim, id laoreet justo
-                                    nunc et neque. Vestibulum eleifend dolor diam, ut vestibulum diam suscipit at. Phasellus
-                                    nulla arcu, luctus a feugiat a, volutpat a turpis. Integer ac odio finibus, vulputate
-                                    sem id, elementum enim. Phasellus tempus magna ac elementum ornare. Morbi tristique tellus
-                                    metus, nec vulputate turpis mattis non. Integer consequat ligula eget nulla convallis,
-                                    a varius augue rhoncus. Nulla congue libero ut metus porttitor ornare. Nulla facilisi.
-                                    Fusce varius risus nisi, vitae malesuada tortor luctus non.tortor accumsan enim, id laoreet
-                                    justo nunc et neque. Vestibulum eleifend dolor diam, ut vestibulum diam suscipit at.
-                                    Phasellus nulla arcu, luctus a feugiat a, volutpat a turpis. Integer ac odio finibus,
-                                    vulputate sem id, elementum enim. Phasellus tempus magna ac elementum ornare. Morbi tristique
-                                    tellus metus, nec vulputate turpis mattis non. Integer consequat ligula eget nulla convallis,
-                                    a varius augue rhoncus. Nulla.</p>
+                        <div class="presentation2 col-xs-6 col-md-4 col-xs-offset-1">
+                              <p class="text-programme">
+                                    <h1>Acées fichier et données</h1>différentes solutions de lecture / écriture de fichiers<br/>                                    mise en place de SQLite<br/> introduction à Core Data
+
+                              </p>
+                        </div>
+                        <div class="presentation2 col-xs-6 col-md-4 col-xs-offset-2">
+                              <p class="text-programme">
+                                    <h1>Communication HTTP</h1>sessions requêtes HTTP (GET, POST, … et download) manipulation
+                                    du JSON
+
+                              </p>
+                        </div>
+
+                  </div>
+                  <div class="programme3 row">
+                        <div class="presentation2 col-xs-6 col-md-5 col-xs-offset-3">
+                              <p class="text-programme">
+                                    <h1>Notions avancées</h1>multimédia (photos, vidéos, son, …) dessiner dans une vue manipulation
+                                    d'images géolocalisation notifications les modes background autorisés sur iOS autres
+                                    capteurs interagir et partager des contenus avec d'autres applications Tester, instrumenter
+                                    et publier tests unitaires et graphiques instrumentation et analyse des performances,
+                                    de la mémoire et de l'exécution diffusion en beta test via TestFlight publication d'une
+                                    release sur l'App Store
+
+                              </p>
                         </div>
                   </div>
             </div>
+
 
             <div id="questionnaire" class="container">
                   <div id="questionnaire-container" class="container-fluid">
