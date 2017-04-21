@@ -5,22 +5,23 @@
 
 
 #programme {
-   background-image: url("../img/programmebgd.jpg");
-   background-size: 100%;
+   background-image: url("http://bennettfeely.com/gradients/img/gradient_24.png");
+   background-size: auto 100%;
    background-repeat: no-repeat;
    background-position: bottom;
-   padding-top: 2%;
    height: 100%;
    width: 100%;
    align-content: center;
    position: relative;
+   padding-top: 2%;
    padding-right: 2%;
    padding-left: 7%;
-   padding-bottom: 2%;
+   padding-bottom: 20%;
+   
 }
 
 .programme1-container {
-   height: 315px;
+   height: 420px;
    opacity: 0.8;
    padding-right: 2%;
 }
@@ -28,26 +29,87 @@
 .presentation {
    padding-top: 5px;
    padding-left: 50px;
-   height: 300px;
+   height: 410px;
    width: 250px;
-   background-color: #FFA53A;
+   
 }
 
 .presentation1 {
    padding-top: 20px;
-   height: 300px;
+   height: 450px;
    width: 255px;
-   background-color: #FFA53A;
+   
+ 
+}
+.imgswift {
+   width: 130px;
+  height: 130px;
+  max-width : 100%;
+  height: auto;
+  display: block;
+}
+.imgxcode {
+  width: 130px;
+  height: 130px;
+  max-width : 100%;
+  height: auto;
+  display: block;
+}
+.row {
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 .programme2-container {
-   height: 315px;
+   padding-top: 100px;
+   height: 250px;
    padding-right: 2%;
    opacity: 0.8;
+   
 }
 
 .presentation2 {
    padding-top: 13px;
-   height: 200px;
-   background-color: #FFA53A;
+   height: 250px;
+  
+}
+.imgbd {
+  width: 100px;
+  height: 100px;
+  max-width : 100%;
+  height: auto;
+  display: block;
+}
+.programme3-container {
+   padding-top: 150px;
+   height: 350px;
+   padding-right: 15%;
+   opacity: 0.8;
+
+}
+.presentation3 {
+   padding-top: 13px;
+   height: 400px;
+
+
+}
+.custom-counter {
+  margin: 1;
+  padding: 0;
+  list-style-type: none;
+}
+
+.custom-counter li {
+
+  margin-bottom: 15px;
+}
+.custom-counter li::before {
+  content: counter(step-counter);
+  margin-right: 5px;
+  font-size: 30%;
+  background-color: rgb(0,200,200);
+  color: rgb(0,200,200);
+  font-weight: bold;
+  padding: 4px 4px;
+  border-radius: 3px;
 }

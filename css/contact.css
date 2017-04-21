@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: space-around;
     background-color:rgb(53, 56, 58);
-    padding : 2%
+    padding : 2%;
 }
 
 #information{
@@ -78,9 +78,13 @@
     height:46px;
     border: none;
     box-shadow: none;
+    color : black;
+    padding : 1%;
 }
 
 #contact img {
-    margin : auto;
-    margin-top: -70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-top: -85px;
 }
