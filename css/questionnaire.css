@@ -101,10 +101,18 @@
 }
 
 #questionnaire-title {
-    
-    display: block;
+   font-family: Helvetica-Light;
+    display: flex;
     text-align: center;
-     color: floralwhite;
-   
+    justify-content: center;
+     color:white;
+     margin-bottom : 20px;  
+}
+
+#questionnaire-icon img {
+    height: 120px;
+    width: 120px;
+    position: center;
+    margin-right : 30px;
 }
 
