@@ -45,7 +45,7 @@ $(function() { // Document ready
    typeSlogan(); // ah oui oui
 
 // Animation de scroll
-   $('a').bind('click', function(event) {
+   $('.scroll').bind('click', function(event) {
       var $anchor = $(this);
       $('html, body').stop().animate({
          scrollTop: $($anchor.attr('href')).offset().top
