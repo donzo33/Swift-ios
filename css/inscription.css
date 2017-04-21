@@ -14,3 +14,8 @@
 #inscription .modal-header {
     border:none;
 }
+
+#btn-envoyer {
+    background-color: #fba858;
+    border-color: #fba858;
+}
