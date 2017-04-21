@@ -44,7 +44,7 @@ var sloganTimers = [{ // Le total des letters doit être égal à la length ici 
 $(function() { // Document ready
    typeSlogan(); // ah oui oui
 
-   // Animation de scroll
+// Animation de scroll
    $('.scroll').bind('click', function(event) {
       var $anchor = $(this);
       $('html, body').stop().animate({
