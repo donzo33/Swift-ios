@@ -20,9 +20,8 @@
 </head>
 
 <body id="page-top" dat-spy="scroll">
-      <!-- Modal telephone -->
       <div id="myModal" class="modal">
-            <!-- Modal content -->
+
             <div class="modal-content">
                   <span class="close">&times;</span>
 
@@ -50,9 +49,9 @@
                   <div id="menu-links-dates" class="menu-links-items menu-links-items-right"><a href="#dates">PROCHAINES SESSIONS</a></div>
                   <div id="menu-links-inscription" class="menu-links-items menu-links-items-right"><a href="#inscription">INSCRIPTION</a></div>
                   <div id="menu-links-reseaux">
-                        <a href="https://twitter.com/WildSchool_Tlse"><span class="fa fa-twitter"></span></a>
-                        <a href="https://www.facebook.com/Wild-Code-School-1749693668643474/"><span class="fa fa-facebook"></span></a>
-                        <a id="phone"><span class="fa fa-phone"></span></a>
+                        <a class="scroll" href="https://twitter.com/WildSchool_Tlse"><span class="fa fa-twitter"></span></a>
+                        <a class="scroll" href="https://www.facebook.com/Wild-Code-School-1749693668643474/"><span class="fa fa-facebook"></span></a>
+                        <a class="scroll" id="phone"><span class="fa fa-phone"></span></a>
                   </div>
             </div>
             <div id="menu-footer" class="row"></div>
@@ -64,9 +63,9 @@
 
             <div id="accueil" class="container-fluid"> <img class="row" src="img/new-logo.png" alt="logo">
                   <div class="row" id="accueil-title">Swift / iOS</div>
-                  <div class="row" id="accueil-slogan">Formation intensive proposée par la Wild Code School</div>
+                  <div class="row" id="accueil-slogan"></div> <!-- Géré dans Main.js -->
                   <div class="row" id="page-scroll-container">
-                        <a class="page-scroll" href="#programme"> <img class="arrow" src="img/1491935828_DoubleChevronDown.png" /> </a>
+                        <a class="scroll" class="page-scroll" href="#programme"> <img class="arrow" src="img/1491935828_DoubleChevronDown.png" /> </a>
                   </div>
             </div>
             <!-- FIN PAGE ACCEUIL !-->
@@ -184,18 +183,45 @@
             <div id="dates" class="container-fluid content-section text-center">
                   <h1>Prochaine session de formation</h1>
                   <h2>Du 29 mai au 21 juillet 2017</h2>
-                  <button id="candidater">JE CANDIDATE</button>
+                  <a href="#myModal2" data-toggle="modal"><button id="candidater">JE CANDIDATE</button></a>
             </div>
 
             <div id="inscription" class="container-fluid text-center">
-
+                  <div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                              <div class="modal-content">
+                                    <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                          <h3 id="myModalLabel">CANDIDATER</h3>
+                                    </div>
+                                          <form class="form-horizontal col-sm-12">
+                                                <div class="form-group"><label>Nom et prénoms</label><input class="form-control required" placeholder="Your name"
+                                                            data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters."
+                                                            type="text"></div>
+                                                <div class="form-group"><label>E-Mail</label><input class="form-control email" placeholder="email@you.com (Pour que l'on puisse vous recontacter.')"
+                                                            data-placement="top" data-trigger="manual" data-content="Ce doit etre un mail valide (user@gmail.com)"
+                                                            type="text"></div>
+                                                <div class="form-group"><label>Téléphone</label><input class="form-control phone" placeholder="0600997788"
+                                                            data-placement="top" data-trigger="manual" type="text"></div>
+                                                <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.."
+                                                            data-placement="top" data-trigger="manual"></textarea></div>
+                                                <div class="form-group"><button type="submit" class="btn btn-success pull-right">Envoyer la candidature!</button>
+                                                      <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p>
+                                                </div>
+                                          </form>
+                                    <div class="modal-footer">
+                                          <button class="btn" data-dismiss="modal" aria-hidden="true">Annuler</button>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
 
 
             </div>
 
             <div id="contact" class="container-fluid text-center">
                   <a href="#accueil">
-                        <img id="logo-wild" class="aligncenter" src="https://wildcodeschool.fr/wp-content/uploads/2016/05/cropped-naviconWCS-300x300.png"
+                        <img id="logo-wild" class="aligncenter scroll" src="https://wildcodeschool.fr/wp-content/uploads/2016/05/cropped-naviconWCS-300x300.png"
                               alt="" width="80px" height="80px">
                   </a>
                   <div id="newsletter" class="row container-fluid">
