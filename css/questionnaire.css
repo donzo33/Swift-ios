@@ -1,10 +1,11 @@
 #questionnaire {
    font-family: Helvetica-Light;
-    background: -webkit-linear-gradient(rgb(243, 173, 0), rgb(241, 81, 57));
+    background:linear-gradient(to bottom left, rgb(40, 40, 40),rgb(53, 56, 58));
    position: relative;
    height: 100%;
    width: 100%;
    padding: 2%;
+ 
 }
 
 #questionnaire-container {
@@ -24,18 +25,14 @@
    padding: 10px 10px 20px 10px;
 }
 
-.question-inner {
-   background-color: white;
-   padding: 10px 10px 10px 10px;
-}
-
 .question-text {
    color: black;
    font-family: Helvetica-Light;
    font-size: 20px;
    text-align: center;
    height:50px;
-   margin-bottom: 2px;
+   margin-bottom: 15px;
+ 
 }
 
 .question-answers {
@@ -43,27 +40,33 @@
    margin: 0 auto;
 }
 
+.question-inner {
+   background-color: #5DC8CD;
+   padding: 15px 15px 15px 15px;   
+}
+
 .question-answer {
-   height: 100px;
-   line-height: 90px;
+   height: 80px;
+   line-height: 60px;
    font-size: 18px;
    width: 31%;
    margin: 0 5px 0 5px;
    padding: 5px 5px 5px 5px;
    text-align: center;
-   background-color: #F27822;
+   background-color: white;
+   border-radius: 15px;
    transition: background-color 400ms;
    animation-duration: 600ms;
+}
+
+.question-answer-alive:hover {
+   background-color:lightgray;
 }
 
 .question-answer-text {
    display: inline-block;
    vertical-align: middle;
    line-height: normal;
-}
-
-.question-answer-alive:hover {
-   background-color: #F15337;
 }
 
 .question-wrong {
@@ -95,3 +98,20 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+#questionnaire-title {
+   font-family: Helvetica-Light;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+     color:white;
+     margin-bottom : 20px;  
+}
+
+#questionnaire-icon img {
+    height: 120px;
+    width: 120px;
+    position: center;
+    margin-right : 30px;
+}
+
