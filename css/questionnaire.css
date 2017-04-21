@@ -1,6 +1,6 @@
 #questionnaire {
    font-family: Helvetica-Light;
-    background:linear-gradient(to bottom left, rgb(255, 41, 122), rgb(14, 142, 194));
+    background:linear-gradient(to bottom left, rgb(40, 40, 40),rgb(53, 56, 58));
    position: relative;
    height: 100%;
    width: 100%;
@@ -22,9 +22,13 @@
 }
 
 .question {
-   padding: 10px 0px 30px 0px;
-   background: lightgray;
+   padding: 10px 10px 20px 10px;
+}
 
+.question-inner {
+   background-color: rgba(255, 255, 255, 0.8);
+   padding: 15px 15px 15px 15px;
+   
 }
 
 .question-text {
@@ -33,12 +37,14 @@
    font-size: 20px;
    text-align: center;
    height:50px;
-   margin-bottom: 2px;
+   margin-bottom: 15px;
+ 
 }
 
 .question-answers {
    display: block;
    margin: 0 auto;
+  
 }
 
 .question-answer {
@@ -49,7 +55,7 @@
    margin: 0 5px 0 5px;
    padding: 5px 5px 5px 5px;
    text-align: center;
-   background-color: #F27822;
+   background-color: #dad7f7;
    transition: background-color 400ms;
    animation-duration: 600ms;
 }
@@ -61,7 +67,7 @@
 }
 
 .question-answer-alive:hover {
-   background-color: #F15337;
+   background-color: #bbb8d3;
 }
 
 .question-wrong {
