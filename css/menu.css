@@ -194,7 +194,7 @@ body{
 }
 
 .fa {
-    font-size : 2vw;
+    font-size : 3vw;
   transition: all .125s ease-in-out;
 }
 
@@ -246,7 +246,7 @@ body{
   color: green;
 }
 
-span:hover {
+#menu-links-reseaux > a > span:hover {
   -webkit-animation: bump .25s ease-in-out;
   -moz-animation: bump .25s ease-in-out;
   animation: bump .25s ease-in-out;

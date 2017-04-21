@@ -1,2 +1,21 @@
 
 
+#inscription .modal-content {
+    width : 100%;
+    text-align: left;
+}
+
+#inscription .modal-body {
+    width : 100%;
+    height: 100%;
+    
+}
+
+#inscription .modal-header {
+    border:none;
+}
+
+#btn-envoyer {
+    background-color: #fba858;
+    border-color: #fba858;
+}
