@@ -59,10 +59,16 @@ $(function() {
       }).appendTo(path);
       path = "#question-n-" + i;
 
+      jQuery('<div/>', { // On crée le div de la question
+         id: 'question-inner-n-' + i,
+         class: 'question-inner'
+      }).appendTo(path);
+      path = "#question-inner-n-" + i;
+
       jQuery('<div/>', { // Le div du texte de la question
          class: 'question-text'
       }).appendTo(path);
-      $(".question-text", path).append(q.question);
+      $(".question-text", path).append("<span>" + q.question + "</span>");
 
       jQuery('<div/>', { // Le div qui va contenir les réponses
          class: 'question-answers row'
@@ -104,7 +110,7 @@ $(function() {
                answer.removeClass("flipInX");
                isGoodAnswer ? answer.addClass("tada") : answer.addClass("jello");
             } else if (answer.hasClass("tada") || answer.hasClass("jello")) {
-               var qAnswers = origin.target.offsetParent.childNodes[1].childNodes; // Wtf?
+               var qAnswers = origin.target.offsetParent.firstChild.childNodes[1].childNodes; // Wtf?
                for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
                   var node = $("#" + qAnswers[i].id);
                   if (node[0].dataset.answer == "true" && node[0].id != origin.target.id) {
@@ -119,7 +125,8 @@ $(function() {
       );
 
       // On enléve la classe 'alive' pour désactiver le hover
-      var qAnswers = origin.target.offsetParent.childNodes[1].childNodes; // Wtf?
+      var qAnswers = origin.target.offsetParent.firstChild.childNodes[1].childNodes; // Wtf? (On récupére la liste des réponses)
+      
       for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
          var node = $("#" + qAnswers[i].id);
          node.removeClass("question-answer-alive");
