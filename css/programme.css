@@ -5,18 +5,19 @@
 
 
 #programme {
-   background-image: url("../img/programmebgd.jpg");
+   background-image: url("http://bennettfeely.com/gradients/img/gradient_24.png");
    background-size: auto 100%;
    background-repeat: no-repeat;
    background-position: bottom;
-   padding-top: 2%;
    height: 100%;
    width: 100%;
    align-content: center;
    position: relative;
+   padding-top: 2%;
    padding-right: 2%;
    padding-left: 7%;
-   padding-bottom: 2%;
+   padding-bottom: 20%;
+   
 }
 
 .programme1-container {
@@ -30,54 +31,82 @@
    padding-left: 50px;
    height: 410px;
    width: 250px;
-   background-color: #FFA53A;
+   
 }
 
 .presentation1 {
    padding-top: 20px;
-   height: 410px;
+   height: 450px;
    width: 255px;
-   background-color: #FFA53A;
+   
+ 
+}
+.imgswift {
+   width: 130px;
+  height: 130px;
+  max-width : 100%;
+  height: auto;
+  display: block;
+}
+.imgxcode {
+  width: 130px;
+  height: 130px;
+  max-width : 100%;
+  height: auto;
+  display: block;
+}
+.row {
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
 .programme2-container {
+   padding-top: 100px;
    height: 250px;
    padding-right: 2%;
    opacity: 0.8;
+   
 }
 
 .presentation2 {
    padding-top: 13px;
    height: 250px;
-   background-color: #FFA53A;
+  
+}
+.imgbd {
+  width: 100px;
+  height: 100px;
+  max-width : 100%;
+  height: auto;
+  display: block;
 }
 .programme3-container {
-   padding-top: 13px;
-   height: 250px;
-   padding-right: 2%;
+   padding-top: 150px;
+   height: 350px;
+   padding-right: 15%;
    opacity: 0.8;
 
 }
 .presentation3 {
    padding-top: 13px;
    height: 400px;
-   background-color: #FFA53A;
+
 
 }
 .custom-counter {
-  margin: 0;
+  margin: 1;
   padding: 0;
   list-style-type: none;
 }
 
 .custom-counter li {
 
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .custom-counter li::before {
   content: counter(step-counter);
   margin-right: 5px;
-  font-size: 20%;
+  font-size: 30%;
   background-color: rgb(0,200,200);
   color: rgb(0,200,200);
   font-weight: bold;
