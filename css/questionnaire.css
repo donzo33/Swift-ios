@@ -2,7 +2,7 @@
    font-family: Helvetica-Light;
     background:linear-gradient(to bottom left, rgb(40, 40, 40),rgb(53, 56, 58));
    position: relative;
-   height: 100%;
+   height: 100vh;
    width: 100%;
    padding: 2%;
  
@@ -25,12 +25,6 @@
    padding: 10px 10px 20px 10px;
 }
 
-.question-inner {
-   background-color: rgba(255, 255, 255, 0.8);
-   padding: 15px 15px 15px 15px;
-   
-}
-
 .question-text {
    color: black;
    font-family: Helvetica-Light;
@@ -44,30 +38,35 @@
 .question-answers {
    display: block;
    margin: 0 auto;
-  
+}
+
+.question-inner {
+   background-color: rgb(159, 233, 252);
+   padding: 15px 15px 15px 15px;  
 }
 
 .question-answer {
-   height: 100px;
-   line-height: 90px;
+   height: 80px;
+   line-height: 60px;
    font-size: 18px;
    width: 31%;
    margin: 0 5px 0 5px;
    padding: 5px 5px 5px 5px;
    text-align: center;
-   background-color: #dad7f7;
+   background-color: white;
+   border-radius: 15px;
    transition: background-color 400ms;
    animation-duration: 600ms;
+}
+
+.question-answer-alive:hover {
+   background-color:lightgray;
 }
 
 .question-answer-text {
    display: inline-block;
    vertical-align: middle;
    line-height: normal;
-}
-
-.question-answer-alive:hover {
-   background-color: #bbb8d3;
 }
 
 .question-wrong {
@@ -101,10 +100,19 @@
 }
 
 #questionnaire-title {
-    
-    display: block;
+   font-family: Helvetica-Light;
+    display: flex;
     text-align: center;
-     color: floralwhite;
-   
+    justify-content: center;
+     color:white;
+     margin-bottom : 20px;  
+     font-weight: lighter;
+}
+
+#questionnaire-icon img {
+    height: 120px;
+    width: 120px;
+    position: center;
+    margin-right : 30px;
 }
 
