@@ -39,7 +39,7 @@
 
       <div id="menu-content">
             <div id="menu-logo" class="row center-block">
-                  <a href="#accueil">
+                  <a class="scroll" href="#accueil">
                         <div id="menu-logo-img" class="animated"></div>
                   </a>
             </div>
@@ -76,9 +76,9 @@
                   <div class="programme1-container row">
                         <!-- premiére ROW contenant 3 block !-->
                         <div class="presentation1 col-md-3 col-xs-4 col-md-offset-1">
-                              <p class="text-title">
-                                    <img src="img/2000px-Swift_logo.svg.png" class="imgp" alt="swift_formation">
-                                    <h1><b>Swift / Ios</b></h1>
+                              <p class="text-programme">
+                                    <!-- image !--><img src="img/2000px-Swift_logo.svg.png" class="imgp" alt="swift_formation">
+                                    <h1><b>Swift / iOS</b></h1>
                                     <ul class="custom-counter">
                                           <li>Les bases du langage (classes, structures, propriétés, protocoles, closures …)</li>
                                           <li>Gestion de la mémoire (ARC, auto-release pool, comptage de références, …)</li>
@@ -89,8 +89,8 @@
                               </p>
                         </div>
                         <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
-                              <p class="text-present">
-                                    <img src="img/Xcode.png" class="imgp" alt="Xcode_swift_formation">
+                              <p class="text-programme">
+                                    <!-- image !--><img src="img/Xcode.png" class="imgp" alt="Xcode_swift_formation">
                                     <h1><b>Xcode</b></h1>
                                     <ul class="custom-counter">
                                           <li>Prise en main de l’environnement de développement et de construction des interfaces</li>
@@ -104,10 +104,10 @@
                                     </ul>
                               </p>
                         </div>
-                        <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
-                              <p class="text-present">
-                                    <img src="img/structure.png" class="imgp" alt="base_de_donnee_swift_formation">
-                                    <h1><b>Structure et construction</b></h1>
+                        <div class="presentation1 col-xs-5 col-md-3 col-xs-offset-1">
+                              <p class="text-programme">
+                                    <!-- image !--><img src="img/structure.png" class="imgp" alt="base_de_donnee_swift_formation">
+                                    <h2><b>Structure et construction</b></h2>
                                     <ul class="custom-counter">
                                           <li>Cycle de vie d’une application iOS</li>
                                           <li>Modèle MVC d'iOS view</li>
@@ -122,10 +122,10 @@
                         </div>
                   </div>
                   <div class="programme2-container row">
-                        <!-- deuxieme ROW contenant 2 blocks !-->
+                        <!-- deuxieme ROW contenant 23 blocks !-->
                         <div class="presentation2 col-xs-4 col-md-3 col-xs-offset-1">
                               <p class="text-programme">
-                                    <img src="img/bd-small.png" class="imgp" alt="base_de_donnee_swift_formation">
+                                    <!-- image !--><img src="img/bd-small.png" class="imgp" alt="base_de_donnee_swift_formation">
                                     <h2><b>Accées fichier et données<b></h2>
                                     <ul class="custom-counter">
                                           <li>Différentes solutions de lecture / écriture de fichiers</li>
@@ -133,11 +133,9 @@
                                           <li>Introduction à Core Data</li>
                               </p>
                         </div>
-                         <div class="programme3-container">
-                        <!-- troisieme et derniere ROW contenant 1 block !-->
                         <div class="presentation3 col-xs-4 col-md-3 col-xs-offset-1">
                               <p class="text-programme">
-                                    <img src="img/appstore.png" class="imgp" alt="base_de_donnee_swift_formation">
+                                  <!-- image !-->  <img src="img/appstore.png" class="imgp" alt="base_de_donnee_swift_formation">
                                     <h2><b>Notions avancées</b></h2>
                                     <ul class="custom-counter">
                                           <li>Multimédia (photos, vidéos, son, …)</li>
@@ -152,14 +150,15 @@
                                           <li>Tests unitaires et graphiques </li>
                                           <li>Instrumentation et analyse des performances, de la mémoire et de l'exécution</li>
                                           <li>Diffusion en beta test via TestFlight</li>
-                                          <li>Publication d'une release sur l'App Store</li></b>
+                                          <li>Publication d'une release sur l'App Store</li>
+                                          </b>
                                     </ul>
                               </p>
+
                         </div>
-                  </div>
-                        <div class="presentation2 col-xs-3 col-md-3 col-xs-offset-1">
+                        <div class="presentation2 col-xs-4 col-md-3 col-xs-offset-1">
                               <p class="text-programme">
-                                    <img src="img/reseau.png" class="imgp" alt="base_de_donnee_swift_formation">
+                                    <!-- image !--><img src="img/reseau.png" class="imgp" alt="base_de_donnee_swift_formation">
                                     <h2><b>Communication HTTP</b></h2>
                                     <ul class="custom-counter">
                                           <li>Sessions</li>
@@ -169,7 +168,7 @@
                               </p>
                         </div>
                   </div>
-                 
+
             </div>
             <!-- FIN DE LA PAGE PROGRAMME !-->
 
@@ -276,11 +275,12 @@
       </div>
 
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
       <script src="js/main.js" type="text/javascript"></script>
       <script src="js/menu.js" type="text/javascript"></script>
       <script src="js/questionnaire.js" type="text/javascript"></script>
+      <script src="js/programme.js" type="text/javascript"></script>
 </body>
 
 </html>

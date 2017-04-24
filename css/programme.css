@@ -20,6 +20,7 @@
    
 }
 
+
 .programme1-container {
    height: 420px;
    padding-right: 2%;
@@ -54,27 +55,18 @@
 .programme2-container {
    padding-top: 200px;
    height: 250px;
-   padding-right: 2%;
-   
+   padding-right: 2%; 
 }
 
 .presentation2 {
-
-   height: 250px;
-  
+   height: 250px; 
 }
 
-.programme3-container {
-   
+.programme3-container {  
    height: 250px;
    padding-left: 0%;
-
 }
-.presentation3 {
-   height: 400px;
 
-
-}
 .custom-counter {
   margin: 1;
   padding: 0;
@@ -82,7 +74,7 @@
 }
 
 .custom-counter li {
-
+   font-weight: bold;
   margin-bottom: 15px;
 }
 .custom-counter li::before {
