@@ -19,6 +19,7 @@
 
 #questionnaire-questions-container {
    padding: 0 15px 0 15px;
+   height: 40%;
 }
 
 .question {
@@ -43,6 +44,7 @@
 .question-inner {
    background-color: rgb(159, 233, 252);
    padding: 15px 15px 15px 15px;  
+   border-radius: 10px;
 }
 
 .question-answer {

@@ -13,7 +13,8 @@ var questions = [{
    answers: [
       { text: "Hello World !", answer: false },
       { text: "42", answer: false },
-      { text: "false", answer: true }
+      { text: "false", answer: true },
+      { text: "La Réponse D", answer: false }
    ]
 }, {
    question: "Quelle sera la valeur de la variable resultat après le code [var resultat = 10/3] ?",
@@ -58,7 +59,7 @@ function newQuestion(i) {
 
    jQuery('<div/>', { // On crée le div de la question
       id: 'question-n-' + i,
-      class: 'question col-xs-12 col-lg-6'
+      class: 'question col-xs-12'
    }).appendTo(path);
    path = "#question-n-" + i;
 
