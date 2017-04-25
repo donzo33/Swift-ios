@@ -46,8 +46,8 @@ var questions = [{
    ]
 }, ];
 
-
-var studentResult = [], actualQuestion = 0;
+var studentResult = [],
+   actualQuestion = 0;
 
 function newQuestion(i) {
    var path = "#questionnaire-questions-container",
@@ -58,16 +58,16 @@ function newQuestion(i) {
    $("#questionnaire-questions-container").empty();
 
    jQuery('<div/>', { // On crée le div de la question
-      id: 'question-n-' + i,
+      id: 'question',
       class: 'question col-xs-12'
    }).appendTo(path);
-   path = "#question-n-" + i;
+   path = "#question";
 
    jQuery('<div/>', { // On crée le div de la question
-      id: 'question-inner-n-' + i,
+      id: 'question-inner',
       class: 'question-inner'
    }).appendTo(path);
-   path = "#question-inner-n-" + i;
+   path = "#question-inner";
 
    jQuery('<div/>', { // Le div du texte de la question
       class: 'question-text'
@@ -84,72 +84,90 @@ function newQuestion(i) {
          "' class='question-answer question-answer-alive animated col-xs-6'>" +
          "<span class='question-answer-text unselectable'>" + a[iA].text + "</span></div>");
    }
+
+   $(".question-answer").click(onAnswerClick);
+   setTimeout(() => $("#question").css("transform", "translateX(0px)"), 50);
+
 }
 
 $(function() {
    newQuestion(actualQuestion);
+})
 
-   $(".question-answer, .question-answer-text").click(function(origin) {
-      if (!(typeof origin.target.dataset.answer === "string" && typeof origin.target.dataset.questionId === "string")) {
-         return null; // Protection
-      }
+function onAnswerClick(origin) {
+   if (!(typeof origin.target.dataset.answer === "string" && typeof origin.target.dataset.questionId === "string")) {
+      return null; // Protection
+   }
 
-      // ---- Déclaration
-      var isGoodAnswer = (origin.target.dataset.answer == 'true'); // On utilise le dataset pour retrouver l'id et si c une bonne réponse
-      var id = parseInt(origin.target.dataset.questionId);
-      // ---------------
+   // ---- Déclaration
+   var isGoodAnswer = (origin.target.dataset.answer == 'true'); // On utilise le dataset pour retrouver l'id et si c une bonne réponse
+   var id = parseInt(origin.target.dataset.questionId);
+   // ---------------
 
-      if (!(typeof isGoodAnswer === "boolean" && typeof id === "number")) {
-         return null; // Protection
-      } else if (studentResult[id] != "unanswered") { // else if plutot que ou par lisibilité
-         return null; // Si la question a déja été répondue alors on ne fait rien
-      }
+   if (!(typeof isGoodAnswer === "boolean" && typeof id === "number")) {
+      return null; // Protection
+   } else if (studentResult[id] != "unanswered") { // else if plutot que ou par lisibilité
+      return null; // Si la question a déja été répondue alors on ne fait rien
+   }
 
-      //----- On peut débuter le traitement------
-      
-      studentResult[id] = isGoodAnswer ? "right" : "wrong"; // On ajoute sa réponse a ses résultats
+   //----- On peut débuter le traitement------
 
-      var answer = $("#" + origin.target.id);
-      answer.addClass("flipOutX"); // On lance l'anim
-      answer.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', // On lui ajoute un callback de fin d'anim
-         function(e) {
-            if (answer.hasClass("flipOutX")) {
-               answer.removeClass("flipOutX");
-               answer.addClass("flipInX");
-            } else if (answer.hasClass("flipInX")) {
-               answer.removeClass("flipInX");
-               isGoodAnswer ? answer.addClass("tada") : answer.addClass("jello");
-            } else if (answer.hasClass("tada") || answer.hasClass("jello")) {
-               var qAnswers = origin.target.offsetParent.firstChild.childNodes[1].childNodes; // Wtf?
-               for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
-                  var node = $("#" + qAnswers[i].id);
-                  if (node[0].dataset.answer == "true" && node[0].id != origin.target.id) {
-                     // Si on tombe sur une bonne réponse qui n'a pas été choisie par l'utilisateur
-                     setTimeout(() => $("#" + qAnswers[i].id).addClass("question-right-fail"), 100);
-                  } else if (node[0].dataset.answer == "false" && node[0].id != origin.target.id) {
-                     setTimeout(() => $("#" + qAnswers[i].id).addClass("question-wrong"), 100);
-                  }
+   studentResult[id] = isGoodAnswer ? "right" : "wrong"; // On ajoute sa réponse a ses résultats
+   console.log(studentResult[id]);
+
+   var answer = $("#" + origin.target.id);
+   answer.addClass("flipOutX"); // On lance l'anim
+   answer.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', // On lui ajoute un callback de fin d'anim
+      function(e) {
+         if (answer.hasClass("flipOutX")) {
+            answer.removeClass("flipOutX");
+            answer.addClass("flipInX");
+         } else if (answer.hasClass("flipInX")) {
+            answer.removeClass("flipInX");
+            isGoodAnswer ? answer.addClass("tada") : answer.addClass("jello");
+         } else if (answer.hasClass("tada") || answer.hasClass("jello")) {
+            var qAnswers = origin.target.offsetParent.firstChild.childNodes[1].childNodes; // Wtf?
+            for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
+               var node = $("#" + qAnswers[i].id);
+               if (node[0].dataset.answer == "true" && node[0].id != origin.target.id) {
+                  // Si on tombe sur une bonne réponse qui n'a pas été choisie par l'utilisateur
+                  setTimeout(() => $("#" + qAnswers[i].id).addClass("question-right-fail"), 100);
+               } else if (node[0].dataset.answer == "false" && node[0].id != origin.target.id) {
+                  setTimeout(() => $("#" + qAnswers[i].id).addClass("question-wrong"), 100);
                }
             }
          }
-      );
-
-      // On enléve la classe 'alive' pour désactiver le hover
-      var qAnswers = origin.target.offsetParent.firstChild.childNodes[1].childNodes; // Wtf? (On récupére la liste des réponses)
-
-      for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
-         var node = $("#" + qAnswers[i].id);
-         node.removeClass("question-answer-alive");
       }
+   );
 
-      // On lance les animations de réponse
-      if (isGoodAnswer) {
-         setTimeout(() => answer.addClass("question-right"), 500);
-      } else {
-         setTimeout(() => answer.addClass("question-wrong"), 500);
-      }
+   // On enléve la classe 'alive' pour désactiver le hover
+   var qAnswers = $(".question-answers")[0].childNodes; // Wtf? (On récupére la liste des réponses)
+   for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
+      var node = $("#" + qAnswers[i].id);
+      node.removeClass("question-answer-alive");
+   }
 
-      actualQuestion++;
-      setTimeout(() => newQuestion(actualQuestion), 4000);
-   })
-})
+   // On lance les animations de réponse
+   if (isGoodAnswer) {
+      setTimeout(() => answer.addClass("question-right"), 500);
+   } else {
+      setTimeout(() => answer.addClass("question-wrong"), 500);
+   }
+
+   // On fait avancer la progress bar 
+   actualQuestion++;
+   var percentage = actualQuestion / questions.length;
+   
+   var progressBar = $("#questionnaire-progress", "#questionnaire-progress-container")[0];
+   console.log(progressBar);
+   console.log(progressBar.css());
+   progressBar.style.width = percentage + "%";
+
+
+
+   setTimeout(function() {
+      var question = $("#question");
+      question.css("transform", "translateX(-1500px)");
+   }, 3500);
+   setTimeout(() => newQuestion(actualQuestion), 5200);
+}

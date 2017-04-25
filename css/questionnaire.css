@@ -24,6 +24,9 @@
 
 .question {
    padding: 10px 10px 20px 10px;
+
+   transform: translateX(1500px);
+   transition: transform 1s ease-in;
 }
 
 .question-text {
@@ -33,7 +36,6 @@
    text-align: center;
    height:50px;
    margin-bottom: 15px;
- 
 }
 
 .question-answers {
