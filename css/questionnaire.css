@@ -17,7 +17,7 @@
    padding: 20px 10px 20px 10px;
 }
 
-#questionnaire-questions-row {
+#questionnaire-questions-container {
    padding: 0 15px 0 15px;
 }
 
@@ -49,8 +49,8 @@
    height: 80px;
    line-height: 60px;
    font-size: 18px;
-   width: 31%;
-   margin: 0 5px 0 5px;
+   width: 46%;
+   margin: 5px 5px 5px 5px;
    padding: 5px 5px 5px 5px;
    text-align: center;
    background-color: white;
