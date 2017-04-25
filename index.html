@@ -39,7 +39,7 @@
 
       <div id="menu-content">
             <div id="menu-logo" class="row center-block">
-                  <a href="#accueil">
+                  <a class="scroll" href="#accueil">
                         <div id="menu-logo-img" class="animated"></div>
                   </a>
             </div>
@@ -48,6 +48,7 @@
                   <div id="menu-links-epreuve" class="menu-links-items menu-links-items-right"><a class="scroll" href="#questionnaire">TEST DE COMPÉTENCES</a></div>
                   <div id="menu-links-dates" class="menu-links-items menu-links-items-right"><a class="scroll" href="#dates">PROCHAINES SESSIONS</a></div>
                   <div id="menu-links-inscription" class="menu-links-items menu-links-items-right"><a class="scroll" href="#inscription">INSCRIPTION</a></div>
+                  <div id="menu-links-contact" class="menu-links-items menu-links-items-right"><a class="scroll" href="#contact">LA WILD CODE SCHOOL</a></div>
                   <div id="menu-links-reseaux">
                         <a class="scroll" href="https://twitter.com/WildSchool_Tlse"><span class="fa fa-twitter"></span></a>
                         <a class="scroll" href="https://www.facebook.com/Wild-Code-School-1749693668643474/"><span class="fa fa-facebook"></span></a>
@@ -60,7 +61,6 @@
 
       <div id="pages-container" class="container-fluid">
             <!--Vos divs page ici-->
-
             <div id="accueil" class="container-fluid"> <img class="row" src="img/new-logo.png" alt="logo">
                   <div class="row" id="accueil-title">Swift / iOS</div>
                   <div class="row" id="accueil-slogan"></div>
@@ -76,9 +76,9 @@
                   <div class="programme1-container row">
                         <!-- premiére ROW contenant 3 block !-->
                         <div class="presentation1 col-md-3 col-xs-4 col-md-offset-1">
-                              <p class="text-title">
-                                    <img src="img/swift-logo.png" class="imgswift" alt="swift_formation">
-                                    <h1><b>Swift / Ios</b></h1>
+                              <p class="text-programme">
+                                    <!-- image !--><img src="img/2000px-Swift_logo.svg.png" class="imgp" alt="swift_formation">
+                                    <h1><b>Swift / iOS</b></h1>
                                     <ul class="custom-counter">
                                           <li>Les bases du langage (classes, structures, propriétés, protocoles, closures …)</li>
                                           <li>Gestion de la mémoire (ARC, auto-release pool, comptage de références, …)</li>
@@ -89,9 +89,9 @@
                               </p>
                         </div>
                         <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
-                              <p class="text-present">
-                                    <img src="img/Xcode.png" class="imgxcode" alt="Xcode_swift_formation">
-                                    <h1>Xcode</h1>
+                              <p class="text-programme">
+                                    <!-- image !--><img src="img/Xcode.png" class="imgp" alt="Xcode_swift_formation">
+                                    <h1><b>Xcode</b></h1>
                                     <ul class="custom-counter">
                                           <li>Prise en main de l’environnement de développement et de construction des interfaces</li>
                                           <li>Graphiques</li>
@@ -104,10 +104,10 @@
                                     </ul>
                               </p>
                         </div>
-                        <div class="presentation1 col-xs-4 col-md-3 col-xs-offset-1">
-                              <p class="text-present">
-                                    <img src="img/bd-small.png" class="imgbd" alt="base_de_donnee_swift_formation">
-                                    <h1>Structure et construction</h1>
+                        <div class="presentation1 col-xs-5 col-md-3 col-xs-offset-1">
+                              <p class="text-programme">
+                                    <!-- image !--><img src="img/structure.png" class="imgp" alt="base_de_donnee_swift_formation">
+                                    <h2><b>Structure et construction</b></h2>
                                     <ul class="custom-counter">
                                           <li>Cycle de vie d’une application iOS</li>
                                           <li>Modèle MVC d'iOS view</li>
@@ -122,33 +122,21 @@
                         </div>
                   </div>
                   <div class="programme2-container row">
-                        <!-- deuxieme ROW contenant 2 blocks !-->
-                        <div class="presentation2 col-xs-6 col-md-4 col-xs-offset-1">
+                        <!-- deuxieme ROW contenant 23 blocks !-->
+                        <div class="presentation2 col-xs-4 col-md-3 col-xs-offset-1">
                               <p class="text-programme">
-                                    <h1>Accées fichier et données</h1>
+                                    <!-- image !--><img src="img/bd-small.png" class="imgp" alt="base_de_donnee_swift_formation">
+                                    <h2><b>Accées fichier et données<b></h2>
                                     <ul class="custom-counter">
                                           <li>Différentes solutions de lecture / écriture de fichiers</li>
                                           <li>Mise en place de SQLite</li>
                                           <li>Introduction à Core Data</li>
-
                               </p>
                         </div>
-                        <div class="presentation2 col-xs-6 col-md-4 col-xs-offset-2">
+                        <div class="presentation3 col-xs-4 col-md-3 col-xs-offset-1">
                               <p class="text-programme">
-                                    <h1>Communication HTTP</h1>
-                                    <ul class="custom-counter">
-                                          <li>Sessions</li>
-                                          <li>Requêtes HTTP (GET, POST, … et download)</li>
-                                          <li>Manipulation du JSON</li>
-                                    </ul>
-                              </p>
-                        </div>
-                  </div>
-                  <div class="programme3-container row">
-                        <!-- troisieme et derniere ROW contenant 1 block !-->
-                        <div class="presentation3 col-xs-6 col-md-5 col-xs-offset-3">
-                              <p class="text-programme">
-                                    <h1>Notions avancées</h1>
+                                  <!-- image !-->  <img src="img/appstore.png" class="imgp" alt="base_de_donnee_swift_formation">
+                                    <h2><b>Notions avancées</b></h2>
                                     <ul class="custom-counter">
                                           <li>Multimédia (photos, vidéos, son, …)</li>
                                           <li>Dessiner dans une vue</li>
@@ -163,24 +151,40 @@
                                           <li>Instrumentation et analyse des performances, de la mémoire et de l'exécution</li>
                                           <li>Diffusion en beta test via TestFlight</li>
                                           <li>Publication d'une release sur l'App Store</li>
+                                          </b>
+                                    </ul>
+                              </p>
+
+                        </div>
+                        <div class="presentation2 col-xs-4 col-md-3 col-xs-offset-1">
+                              <p class="text-programme">
+                                    <!-- image !--><img src="img/reseau.png" class="imgp" alt="base_de_donnee_swift_formation">
+                                    <h2><b>Communication HTTP</b></h2>
+                                    <ul class="custom-counter">
+                                          <li>Sessions</li>
+                                          <li>Requêtes HTTP (GET, POST, … et download)</li>
+                                          <li>Manipulation du JSON</li>
                                     </ul>
                               </p>
                         </div>
                   </div>
+
             </div>
             <!-- FIN DE LA PAGE PROGRAMME !-->
 
             <!-- DEBUT PAGE QUESTIONNAIRE !-->
             <div id="questionnaire" class="container">
                   <div id="questionnaire-container" class="container-fluid">
+
                         <div id="questionnaire-title" class="row">
                               <div id="questionnaire-icon">
                                     <img src="img/test-icon.png" alt="Test">
                               </div>
                               <div class="questionnaire-title-text">
-                                    <h1>Avez vous les compétences ? </br>Tester vos connaissances avec ce questionnaire</h1>
+                                    <h1>Avez vous les compétences ? </br><em>Tester vos connaissances avec ce questionnaire</em></h1>
                               </div>
                         </div>
+
                         <div id="questionnaire-questions-row" class="row">
                         </div>
                   </div>
@@ -211,7 +215,7 @@
                                                       data-placement="top" data-trigger="manual" type="text"></div>
                                           <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Votre message ici.."
                                                       data-placement="top" data-trigger="manual"></textarea></div>
-                                          <div class="form-group"><button type="submit" class="btn btn-success pull-right">Envoyer la candidature!</button>
+                                          <div class="form-group"><button id="btn-envoyer" type="submit" class="btn btn-success pull-right">Envoyer la candidature!</button>
                                                 <p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p>
                                           </div>
                                     </form>
@@ -225,7 +229,7 @@
             </div>
 
             <div id="contact" class="container-fluid text-center">
-                  <a href="#accueil">
+                  <a class="scroll" href="#accueil">
                         <img id="logo-wild" class="aligncenter scroll" src="https://wildcodeschool.fr/wp-content/uploads/2016/05/cropped-naviconWCS-300x300.png"
                               alt="" width="80px" height="80px">
                   </a>
@@ -271,11 +275,12 @@
       </div>
 
       <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
       <script src="js/main.js" type="text/javascript"></script>
       <script src="js/menu.js" type="text/javascript"></script>
       <script src="js/questionnaire.js" type="text/javascript"></script>
+      <script src="js/programme.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@ var questions = [{
       { text: "Une condition (if)", answer: false }
    ]
 }, {
-   question: "Quel valeur est ici un booléen ssssssssssssssssssssssssssssssssssssssssssssssss?",
+   question: "Quel valeur est ici un booléen ?",
    answers: [
       { text: "Hello World !", answer: false },
       { text: "42", answer: false },
@@ -31,8 +31,8 @@ var questions = [{
 }, {
    question: "Quelle est la particularité d’une boucle repeat … while ?",
    answers: [
-      { text: "Cette boucle a pour particularité de toujours s’exécuter au minimum une fois", answer: true },
-      { text: "Elle peut ne jamais s’exécuter si la condition de la boucle n’est pas vérifiée dès le départ", answer: false },
+      { text: "Elle a pour particularité de toujours s’exécuter au minimum une fois", answer: true },
+      { text: "Elle ne s’exécutera pas si la condition n’est pas vérifiée dès le départ", answer: false },
       { text: "Cette boucle n’existe pas dans le langage Swift", answer: false }
    ]
 }, {
