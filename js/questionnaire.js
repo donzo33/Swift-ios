@@ -7,7 +7,8 @@ var questions = [{
       { text: "Une variable (var)", answer: false },
       { text: "Une condition (if)", answer: false },
       { text: "La Réponse D", answer: true }
-   ]
+   ],
+   correction: "Une variable est une association clé valeur et permet de facilement garder et modifier une valeur au cours du temps."
 }, {
    question: "Quel valeur est ici un booléen ?",
    answers: [
@@ -15,7 +16,8 @@ var questions = [{
       { text: "42", answer: false },
       { text: "false", answer: true },
       { text: "La Réponse D", answer: false }
-   ]
+   ],
+   correction: ""
 }, {
    question: "Quelle sera la valeur de la variable resultat après le code [var resultat = 10/3] ?",
    answers: [
@@ -49,7 +51,47 @@ var questions = [{
 var studentResult = [],
    actualQuestion = 0;
 
-function newQuestion(i) {
+
+$(function() {
+   createQuestion(0);
+
+   $("#arrow").click(function(e) {
+      e.preventDefault();
+      newQuestion(actualQuestion);
+   });
+
+   $("#questionnaire-solution").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      if ($("#questionnaire-solution").hasClass('fadeIn')) {
+         $("#questionnaire-solution").removeClass('fadeIn');
+      } else {
+         $("#questionnaire-solution").css('visibility', 'hidden');
+         $("#questionnaire-solution").removeClass('fadeOut');
+      }
+   });
+})
+
+function showSolution() {
+   $("#questionnaire-solution").css('visibility', 'visible');
+   $("#questionnaire-solution").addClass('fadeIn');
+   $("#questionnaire-correction").empty();
+   $("#questionnaire-correction").append(questions[actualQuestion].correction || "Désolé nous n'avons pas d'explications pour cette réponse.");
+}
+
+function hideSolution() {
+   $("#questionnaire-solution").addClass('fadeOut');
+}
+
+function newQuestion() {
+   // On lance l'animation et on améne la nouvelle question lorsque l'animation se termine
+   actualQuestion++;
+   hideSolution();
+   $("#question").css("transform", "translateX(-1500px)");
+   $("#question").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+      createQuestion(actualQuestion);
+   });
+}
+
+function createQuestion(i) {
    var path = "#questionnaire-questions-container",
       q = questions[i],
       a = q.answers;
@@ -87,12 +129,7 @@ function newQuestion(i) {
 
    $(".question-answer").click(onAnswerClick);
    setTimeout(() => $("#question").css("transform", "translateX(0px)"), 50);
-
 }
-
-$(function() {
-   newQuestion(actualQuestion);
-})
 
 function onAnswerClick(origin) {
    if (!(typeof origin.target.dataset.answer === "string" && typeof origin.target.dataset.questionId === "string")) {
@@ -111,9 +148,7 @@ function onAnswerClick(origin) {
    }
 
    //----- On peut débuter le traitement------
-
    studentResult[id] = isGoodAnswer ? "right" : "wrong"; // On ajoute sa réponse a ses résultats
-   console.log(studentResult[id]);
 
    var answer = $("#" + origin.target.id);
    answer.addClass("flipOutX"); // On lance l'anim
@@ -154,17 +189,9 @@ function onAnswerClick(origin) {
       setTimeout(() => answer.addClass("question-wrong"), 500);
    }
 
+   setTimeout(() => showSolution(actualQuestion), 2000);
+
    // On fait avancer la progress bar 
-   actualQuestion++;
-   var percentage = actualQuestion / questions.length * 100;
-   
-   var progressBar = $("#questionnaire-progress", "#questionnaire-progress-container").css("width", percentage + '%');
-
-
-
-   setTimeout(function() {
-      var question = $("#question");
-      question.css("transform", "translateX(-1500px)");
-   }, 3500);
-   setTimeout(() => newQuestion(actualQuestion), 5200);
+   let percentage = (actualQuestion + 1) / questions.length * 100;
+   $("#questionnaire-progress", "#questionnaire-progress-container").css("width", percentage + '%');
 }
