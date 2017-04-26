@@ -91,11 +91,9 @@
    padding: 0;
    width: 20%;
    height: 100%;
-
    background-color: #e0d318;
    border: 1px solid black;
    border-right: none;
-
    font: 28px bold Roboto;
    color: black;
    text-align: center;
@@ -103,16 +101,13 @@
    vertical-align: middle;
 }
 
-.question-answer-text {   
+.question-answer-text {
    width: 80%;
    height: 100%;
    position: absolute;
-   
    padding: 0;
    margin: 0 0 0 20%;
-
    border: 1px solid black;
-
    font: 28px bold Roboto;
    color: black;
    text-align: center;
@@ -133,36 +128,20 @@
 }
 
 #questionnaire-correction {
+   padding: 20px 20px 20px 20px;
+
    background-color: white;
-   height: 150px;
-}
 
-#questionnaire-next-container {
-   height: 150px;
+   font: 24px bold Helvetica-Light;
    text-align: center;
-   padding-top: 5%;
-    background-color: white;
-    height: 100%;
-    padding: 20px 20px 20px 20px;
-    font-family: Helvetica-Light;
-    font-size: 24px;
-    font-weight: bold;
-    overflow: scroll;
-    text-align: center;
-    -webkit-box-shadow: 10px 10px 16px -2px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 16px -2px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 16px -2px rgba(0,0,0,0.75);
-border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
--webkit-border-radius: 10px 10px 10px 10px;
-border: 0px solid #000000;
+   overflow: scroll;
 }
 
 #questionnaire-next-container {
-    height: 100%;
-    text-align: center;
-    padding-top: 15px;
+   height: 150px;
+   width: 100%;
 }
+
 
 #questionnaire-solution {
    visibility: hidden;
@@ -179,7 +158,6 @@ border: 0px solid #000000;
    -ms-user-select: none;
    user-select: none;
 }
-
 
 /* Fléche de changement de question */
 
