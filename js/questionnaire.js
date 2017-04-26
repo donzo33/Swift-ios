@@ -156,12 +156,9 @@ function onAnswerClick(origin) {
 
    // On fait avancer la progress bar 
    actualQuestion++;
-   var percentage = actualQuestion / questions.length;
+   var percentage = actualQuestion / questions.length * 100;
    
-   var progressBar = $("#questionnaire-progress", "#questionnaire-progress-container")[0];
-   console.log(progressBar);
-   console.log(progressBar.css());
-   progressBar.style.width = percentage + "%";
+   var progressBar = $("#questionnaire-progress", "#questionnaire-progress-container").css("width", percentage + '%');
 
 
 
