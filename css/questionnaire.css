@@ -22,6 +22,34 @@
    height: 40%;
 }
 
+#questionnaire-title {
+   font-family: Helvetica-Light;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+     color:white;
+     margin-bottom : 20px;  
+     font-weight: lighter;
+}
+
+#questionnaire-icon img {
+    height: 120px;
+    width: 120px;
+    position: center;
+    margin-right: 30px;
+}
+
+#questionnaire-progress {
+   width: 0%;
+   text-align: center;
+}
+
+#questionnaire-progress-text {
+   text-align: center;
+   color: black;
+   font-size: 18px;
+
+}
 .question {
    padding: 10px 10px 20px 10px;
 
@@ -102,21 +130,3 @@
     -ms-user-select: none;
     user-select: none;
 }
-
-#questionnaire-title {
-   font-family: Helvetica-Light;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-     color:white;
-     margin-bottom : 20px;  
-     font-weight: lighter;
-}
-
-#questionnaire-icon img {
-    height: 120px;
-    width: 120px;
-    position: center;
-    margin-right : 30px;
-}
-
