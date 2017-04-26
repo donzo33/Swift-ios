@@ -113,6 +113,8 @@
 
 #questionnaire-next-container {
     height: 150px;
+    text-align: center;
+    padding-top: 5%;
 }
 
 #questionnaire-solution {
@@ -138,7 +140,7 @@
 }
 
 /* Fléche de changement de question */
-
+/*
 #arrow {
     -webkit-transition: border 0.2s linear;
     -moz-transition: border 0.2s linear;
@@ -181,3 +183,24 @@
 #arrow:hover>span {
     margin-left: 75px;
 }
+*/
+
+#next {
+    animation: arrow-bounce 1s infinite ease-in-out;
+   transform: translateY(0px);
+   font-size: 50px;
+    color : white;
+}
+
+@keyframes arrow-bounce {
+   0% {
+      transform: translateX(0px);
+   }
+   50% {
+      transform: translateX(-20px);
+   }
+   100% {
+      transform: translateX(0px);
+   }
+}
+
