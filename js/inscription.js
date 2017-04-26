@@ -119,4 +119,5 @@ $('#btn-envoyer').on('click', function (event) {
     var emailBody = "Nom et prénoms : " + $('#name').val() + escape("\n") + "Adresse e-mail : " + $('#mail').val() + escape("\n") + "Numéro de téléphone : " + $('#phon').val() + escape("\n") + "Message : " + $('#message').val();
     //alert("Vous allez être rédiriger vers votre application mail afin d'envoyer votre candidature.");
     window.location = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
+    $('#myModal2').modal('hide');
 });
