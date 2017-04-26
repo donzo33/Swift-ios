@@ -41,15 +41,8 @@
 
 #questionnaire-progress {
    width: 0%;
-   text-align: center;
 }
 
-#questionnaire-progress-text {
-   text-align: center;
-   color: black;
-   font-size: 18px;
-
-}
 .question {
    padding: 10px 10px 20px 10px;
 
