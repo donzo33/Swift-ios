@@ -122,9 +122,12 @@ function createQuestion(i) {
 
    // On parcours le tableau des réponses et on les ajoute (data-answer est utilisé pour retrouver la bonne réponse)
    for (let iA = 0; iA < a.length; iA++) {
-      $(".question-answers", path).append("<div id='q" + i + "a" + iA + "' data-question-id='" + i + "' data-answer='" + a[iA].answer +
-         "' class='question-answer question-answer-alive animated col-xs-6'>" +
-         "<span class='question-answer-text unselectable'>" + a[iA].text + "</span></div>");
+      $(".question-answers", path).append(`
+         <div id='q` + i + `a` + iA + `' data-question-id='` + i + `' data-answer='` + a[iA].answer + `' class='row question-answer question-answer-alive animated col-xs-6'>` +
+            `<div class='question-answer-letter unselectable col-xs-2'>` + "ABCD".charAt(iA) + `</div>` +
+            `<div class='question-answer-text unselectable col-xs-10'>` + a[iA].text + `</div>` +
+        `</div>`
+      );
    }
 
    $(".question-answer").click(onAnswerClick);
