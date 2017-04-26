@@ -13,7 +13,8 @@ var questions = [{
    answers: [
       { text: "Hello World !", answer: false },
       { text: "42", answer: false },
-      { text: "false", answer: true }
+      { text: "false", answer: true },
+      { text: "La Réponse D", answer: false }
    ]
 }, {
    question: "Quelle sera la valeur de la variable resultat après le code [var resultat = 10/3] ?",
@@ -153,7 +154,17 @@ function onAnswerClick(origin) {
       setTimeout(() => answer.addClass("question-wrong"), 500);
    }
 
+   // On fait avancer la progress bar 
    actualQuestion++;
+   var percentage = actualQuestion / questions.length;
+   
+   var progressBar = $("#questionnaire-progress", "#questionnaire-progress-container")[0];
+   console.log(progressBar);
+   console.log(progressBar.css());
+   progressBar.style.width = percentage + "%";
+
+
+
    setTimeout(function() {
       var question = $("#question");
       question.css("transform", "translateX(-1500px)");
