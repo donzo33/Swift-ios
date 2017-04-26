@@ -2,9 +2,9 @@
     font-family: Helvetica-Light;
     background: linear-gradient(to bottom left, rgb(40, 40, 40), rgb(53, 56, 58));
     position: relative;
-    height: 110vh;
+    height: 100vh;
     width: 100%;
-    padding: 10px 10px 10px 10px;
+    padding: 30px 10px 10px 10px;
 }
 
 #questionnaire-container {
@@ -108,13 +108,26 @@
 
 #questionnaire-correction {
     background-color: white;
-    height: 150px;
+    height: 100%;
+    padding: 20px 20px 20px 20px;
+    font-family: Helvetica-Light;
+    font-size: 24px;
+    font-weight: bold;
+    overflow: scroll;
+    text-align: center;
+    -webkit-box-shadow: 10px 10px 16px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 16px -2px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 16px -2px rgba(0,0,0,0.75);
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
 }
 
 #questionnaire-next-container {
-    height: 150px;
+    height: 100%;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 15px;
 }
 
 #questionnaire-solution {
@@ -125,9 +138,7 @@
 }
 
 #questionnaire-correction {
-   padding: 20px 20px 20px 20px;
-   font: 24px bold Roboto;
-   overflow: scroll;
+  
 }
 
 .unselectable {
