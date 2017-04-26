@@ -141,6 +141,27 @@
    height: 150px;
    text-align: center;
    padding-top: 5%;
+    background-color: white;
+    height: 100%;
+    padding: 20px 20px 20px 20px;
+    font-family: Helvetica-Light;
+    font-size: 24px;
+    font-weight: bold;
+    overflow: scroll;
+    text-align: center;
+    -webkit-box-shadow: 10px 10px 16px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 16px -2px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 16px -2px rgba(0,0,0,0.75);
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+}
+
+#questionnaire-next-container {
+    height: 100%;
+    text-align: center;
+    padding-top: 15px;
 }
 
 #questionnaire-solution {
@@ -148,12 +169,6 @@
    animation-duration: 1s;
    margin: 0;
    padding: 20px 20px 20px 20px;
-}
-
-#questionnaire-correction {
-   padding: 20px 20px 20px 20px;
-   font: 24px bold Roboto;
-   overflow: scroll;
 }
 
 .unselectable {
