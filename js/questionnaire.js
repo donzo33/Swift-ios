@@ -49,7 +49,24 @@ var questions = [{
 var studentResult = [],
    actualQuestion = 0;
 
+
+$(function() {
+   createQuestion(0);
+
+   $("#questionnaire-next-container").click(function(e) {
+      newQuestion(actualQuestion);
+   });
+})
+
 function newQuestion(i) {
+   // On lance l'animation et on améne la nouvelle question lorsque l'animation se termine
+   $("#question").css("transform", "translateX(-1500px)");
+   $("#question").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+      createQuestion(i);
+   });
+}
+
+function createQuestion(i) {
    var path = "#questionnaire-questions-container",
       q = questions[i],
       a = q.answers;
@@ -87,12 +104,7 @@ function newQuestion(i) {
 
    $(".question-answer").click(onAnswerClick);
    setTimeout(() => $("#question").css("transform", "translateX(0px)"), 50);
-
 }
-
-$(function() {
-   newQuestion(actualQuestion);
-})
 
 function onAnswerClick(origin) {
    if (!(typeof origin.target.dataset.answer === "string" && typeof origin.target.dataset.questionId === "string")) {
@@ -113,7 +125,6 @@ function onAnswerClick(origin) {
    //----- On peut débuter le traitement------
 
    studentResult[id] = isGoodAnswer ? "right" : "wrong"; // On ajoute sa réponse a ses résultats
-   console.log(studentResult[id]);
 
    var answer = $("#" + origin.target.id);
    answer.addClass("flipOutX"); // On lance l'anim
@@ -154,17 +165,15 @@ function onAnswerClick(origin) {
       setTimeout(() => answer.addClass("question-wrong"), 500);
    }
 
+   setTimeout(() => showSolution(actualQuestion), 2000);
+
    // On fait avancer la progress bar 
    actualQuestion++;
    var percentage = actualQuestion / questions.length * 100;
-   
    var progressBar = $("#questionnaire-progress", "#questionnaire-progress-container").css("width", percentage + '%');
+}
 
-
-
-   setTimeout(function() {
-      var question = $("#question");
-      question.css("transform", "translateX(-1500px)");
-   }, 3500);
-   setTimeout(() => newQuestion(actualQuestion), 5200);
+function showSolution(i) {
+   $("#questionnaire-solution").css('visibility', 'visible');
+   $("#questionnaire-solution").addClass('animated fadeIn');
 }

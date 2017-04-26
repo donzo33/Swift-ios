@@ -3,9 +3,7 @@
     background: linear-gradient(to bottom left, rgb(40, 40, 40), rgb(53, 56, 58));
     position: relative;
     height: 110vh;
-    /* A remplacer % par vh a terme !*/
     width: 100%;
-    padding: 2%;
 }
 
 #questionnaire-container {
@@ -107,21 +105,19 @@
     background-color: #598922 !important;
 }
 
-.responses-validation {
-    text-align: center;
-}
-
-#button-correction {
-    text-align: center;
-    margin-top: 10%;
-}
-
 #questionnaire-correction {
     background-color: white;
+    height: 150px;
 }
 
 #questionnaire-next-container {
     background-color: yellow;
+    height: 150px;
+}
+
+#questionnaire-solution {
+   visibility: hidden;
+   animation-duration: 1.5s;
 }
 
 .unselectable {
