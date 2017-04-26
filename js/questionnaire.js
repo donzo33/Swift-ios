@@ -7,7 +7,8 @@ var questions = [{
       { text: "Une variable (var)", answer: false },
       { text: "Une condition (if)", answer: false },
       { text: "La Réponse D", answer: true }
-   ]
+   ],
+   correction: "Une variable est une association clé valeur et permet de facilement garder et modifier une valeur au cours du temps."
 }, {
    question: "Quel valeur est ici un booléen ?",
    answers: [
@@ -15,7 +16,8 @@ var questions = [{
       { text: "42", answer: false },
       { text: "false", answer: true },
       { text: "La Réponse D", answer: false }
-   ]
+   ],
+   correction: ""
 }, {
    question: "Quelle sera la valeur de la variable resultat après le code [var resultat = 10/3] ?",
    answers: [
@@ -53,16 +55,39 @@ var studentResult = [],
 $(function() {
    createQuestion(0);
 
-   $("#questionnaire-next-container").click(function(e) {
+   $("#arrow").click(function(e) {
+      e.preventDefault();
       newQuestion(actualQuestion);
+   });
+
+   $("#questionnaire-solution").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      if ($("#questionnaire-solution").hasClass('fadeIn')) {
+         $("#questionnaire-solution").removeClass('fadeIn');
+      } else {
+         $("#questionnaire-solution").css('visibility', 'hidden');
+         $("#questionnaire-solution").removeClass('fadeOut');
+      }
    });
 })
 
-function newQuestion(i) {
+function showSolution() {
+   $("#questionnaire-solution").css('visibility', 'visible');
+   $("#questionnaire-solution").addClass('fadeIn');
+   $("#questionnaire-correction").empty();
+   $("#questionnaire-correction").append(questions[actualQuestion].correction || "Désolé nous n'avons pas d'explications pour cette réponse.");
+}
+
+function hideSolution() {
+   $("#questionnaire-solution").addClass('fadeOut');
+}
+
+function newQuestion() {
    // On lance l'animation et on améne la nouvelle question lorsque l'animation se termine
+   actualQuestion++;
+   hideSolution();
    $("#question").css("transform", "translateX(-1500px)");
    $("#question").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-      createQuestion(i);
+      createQuestion(actualQuestion);
    });
 }
 
@@ -123,7 +148,6 @@ function onAnswerClick(origin) {
    }
 
    //----- On peut débuter le traitement------
-
    studentResult[id] = isGoodAnswer ? "right" : "wrong"; // On ajoute sa réponse a ses résultats
 
    var answer = $("#" + origin.target.id);
@@ -168,12 +192,6 @@ function onAnswerClick(origin) {
    setTimeout(() => showSolution(actualQuestion), 2000);
 
    // On fait avancer la progress bar 
-   actualQuestion++;
-   var percentage = actualQuestion / questions.length * 100;
-   var progressBar = $("#questionnaire-progress", "#questionnaire-progress-container").css("width", percentage + '%');
-}
-
-function showSolution(i) {
-   $("#questionnaire-solution").css('visibility', 'visible');
-   $("#questionnaire-solution").addClass('animated fadeIn');
+   let percentage = (actualQuestion + 1) / questions.length * 100;
+   $("#questionnaire-progress", "#questionnaire-progress-container").css("width", percentage + '%');
 }
