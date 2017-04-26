@@ -1,93 +1,127 @@
 #questionnaire {
-   font-family: Helvetica-Light;
-    background:linear-gradient(to bottom left, rgb(40, 40, 40),rgb(53, 56, 58));
-   position: relative;
-   height: 100vh;
-   width: 100%;
-   padding: 2%;
- 
+    font-family: Helvetica-Light;
+    background: linear-gradient(to bottom left, rgb(40, 40, 40), rgb(53, 56, 58));
+    position: relative;
+    height: 110vh;
+    /* A remplacer % par vh a terme !*/
+    width: 100%;
+    padding: 2%;
 }
 
 #questionnaire-container {
-   font-family: Helvetica-Light;
-   height: 100%;
-   width: 100%;
-   align-content: center;
-   position: relative;
-   padding: 20px 10px 20px 10px;
+    font-family: Helvetica-Light;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    position: relative;
+    padding: 20px 10px 20px 10px;
 }
 
-#questionnaire-questions-row {
-   padding: 0 15px 0 15px;
+#questionnaire-questions-container {
+    padding: 0 15px 0 15px;
+    height: 40%;
+}
+
+#questionnaire-title {
+    font-family: Helvetica-Light;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+#questionnaire-icon img {
+    height: 120px;
+    width: 120px;
+    position: center;
+    margin-right: 30px;
+}
+
+#questionnaire-progress {
+    width: 0%;
 }
 
 .question {
-   padding: 10px 10px 20px 10px;
+    padding: 10px 10px 20px 10px;
+    height: 400px;
+    transform: translateX(1500px);
+    transition: transform 1s ease-in;
 }
 
 .question-text {
-   color: black;
-   font-family: Helvetica-Light;
-   font-size: 20px;
-   text-align: center;
-   height:50px;
-   margin-bottom: 15px;
- 
+    color: black;
+    font-family: Helvetica-Light;
+    font-size: 20px;
+    text-align: center;
+    height: 50px;
+    margin-bottom: 15px;
 }
 
 .question-answers {
-   display: block;
-   margin: 0 auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .question-inner {
-   background-color: rgb(159, 233, 252);
-   padding: 15px 15px 15px 15px;  
+    background-color: rgb(159, 233, 252);
+    padding: 15px 15px 15px 15px;
+    border-radius: 10px;
+    height: 100%;
 }
 
 .question-answer {
-   height: 80px;
-   line-height: 60px;
-   font-size: 18px;
-   width: 31%;
-   margin: 0 5px 0 5px;
-   padding: 5px 5px 5px 5px;
-   text-align: center;
-   background-color: white;
-   border-radius: 15px;
-   transition: background-color 400ms;
-   animation-duration: 600ms;
+    height: 80px;
+    line-height: 60px;
+    font-size: 18px;
+    width: 46%;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    transition: background-color 400ms;
+    animation-duration: 600ms;
 }
 
 .question-answer-alive:hover {
-   background-color:lightgray;
+    background-color: lightgray;
 }
 
 .question-answer-text {
-   display: inline-block;
-   vertical-align: middle;
-   line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 .question-wrong {
-   background-color: #d34339 !important;
+    background-color: #d34339 !important;
 }
 
 .question-right {
-   background-color: #91e234 !important;
+    background-color: #91e234 !important;
 }
 
 .question-right-fail {
-   background-color: #598922 !important;
+    background-color: #598922 !important;
 }
 
 .responses-validation {
-   text-align: center;
+    text-align: center;
 }
 
 #button-correction {
-   text-align: center;
-   margin-top: 10%;
+    text-align: center;
+    margin-top: 10%;
+}
+
+#questionnaire-correction {
+    background-color: white;
+}
+
+#questionnaire-next-container {
+    background-color: yellow;
 }
 
 .unselectable {
@@ -98,21 +132,3 @@
     -ms-user-select: none;
     user-select: none;
 }
-
-#questionnaire-title {
-   font-family: Helvetica-Light;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-     color:white;
-     margin-bottom : 20px;  
-     font-weight: lighter;
-}
-
-#questionnaire-icon img {
-    height: 120px;
-    width: 120px;
-    position: center;
-    margin-right : 30px;
-}
-
