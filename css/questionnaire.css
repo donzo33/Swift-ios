@@ -5,7 +5,6 @@
     height: 110vh;
     /* A remplacer % par vh a terme !*/
     width: 100%;
-    padding: 2%;
 }
 
 #questionnaire-container {
@@ -53,15 +52,16 @@
 .question-text {
     color: black;
     font-family: Helvetica-Light;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     height: 50px;
-    margin-bottom: 15px;
+    margin-left: 15px;
 }
 
 .question-answers {
     display: block;
     margin: 0 auto;
+    margin-left: 35px;
 }
 
 .question-inner {
@@ -72,12 +72,12 @@
 }
 
 .question-answer {
-    height: 80px;
+    height: 100px;
     line-height: 60px;
-    font-size: 18px;
+    font-size: 22px;
     width: 46%;
-    margin: 5px 5px 5px 5px;
-    padding: 5px 5px 5px 5px;
+    margin: 25px 25px 25px 7px;
+    padding: 15px 5px 5px 5px;
     text-align: center;
     background-color: white;
     border-radius: 15px;
@@ -118,10 +118,11 @@
 
 #questionnaire-correction {
     background-color: white;
+    height: 150px;
 }
 
 #questionnaire-next-container {
-    background-color: yellow;
+    height: 150px;
 }
 
 .unselectable {
@@ -131,4 +132,50 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+
+/*test arrow*/
+
+#arrow {
+    -webkit-transition: border 0.2s linear;
+    -moz-transition: border 0.2s linear;
+    -ms-transition: border 0.2s linear;
+    -o-transition: border 0.2s linear;
+    transition: border 0.2s linear;
+    text-decoration: none;
+    line-height: 0;
+    margin-top: -30px;
+    font-size: 40px;
+    position: absolute;
+    height: 0;
+    right: 0;
+    top: 50%;
+    border-bottom: 100px solid transparent;
+    border-top: 100px solid transparent;
+    border-right: 150px solid #FB8226;
+}
+
+#arrow>span {
+    -webkit-transition: margin 0.1s linear;
+    -moz-transition: margin 0.1s linear;
+    -ms-transition: margin 0.1s linear;
+    -o-transition: margin 0.1s linear;
+    transition: margin 0.1s linear;
+    font-family: "Open Sans", "Courier New", Courier, monospace;
+    line-height: 0;
+    margin-left: 65px;
+    margin-top: -1px;
+    position: absolute;
+    display: block;
+    color: white;
+    height: 0;
+}
+
+#arrow:hover {
+    border-right-color: #F92F7A;
+}
+
+#arrow:hover>span {
+    margin-left: 75px;
 }
