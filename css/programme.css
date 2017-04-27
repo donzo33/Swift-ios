@@ -6,7 +6,7 @@
 #programme {
    font-family: var(--font);
    /*background-image: url(../img/fondprogramme.png);*/
-   background: linear-gradient(to bottom left, #F2854C, #F3AC01);
+   background: white;
    background-size: auto 100%;
    background-repeat: no-repeat;
    background-position: bottom;
@@ -21,60 +21,39 @@
 }
 
 .programme1-container {
-   height: 420px;
-   padding-right: 2%;
-}
-
-.presentation {
-   padding-top: 5px;
-   padding-left: 50px;
-   height: 410px;
-   width: 290px;
-   
+   height: 100%;
+   width : 100%; 
 }
 
 .presentation1 {
    padding-top: 20px;
-   height: 450px;
-   width: 290px;
-   
- 
+   height: 100%; 
 }
+
 .imgp {
-   width: 130px;
+  width: 130px;
   height: 130px;
-  max-width : 100%;
-  height: auto;
-  display: block;
-  margin-right:auto;
-	margin-left:auto;
+  display: flex;
 }
 
 
 .programme2-container {
-   padding-top: 200px;
-   height: 250px;
-   padding-right: 2%; 
+   height: 100%;
+   width : 100%; 
 }
 
 .presentation2 {
-   height: 250px; 
-}
-
-.programme3-container {  
-   height: 250px;
-   padding-left: 0%;
+   padding-top: 20px;
+   height: 100%;
 }
 
 .custom-counter {
-  margin: 1;
   padding: 0;
   list-style-type: none;
 }
 
 .custom-counter li {
-   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .custom-counter li::before {
   content: counter(step-counter);
