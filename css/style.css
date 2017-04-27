@@ -50,6 +50,11 @@ body {
     padding: 15vh 0px 0px 0px;
 }
 
+#alogo {
+    max-width: 80%;
+    height: auto;
+}
+
 #accueil-title {
     color: white;
     font-size: 70px;
@@ -66,8 +71,9 @@ body {
 }
 
 #page-scroll-container {
-    margin: 0;
+    margin-bottom: 1.5vh;
     width: 100%;
+    padding-top: 40px;
     height: 100px;
     bottom: 0px;
     position: absolute;
@@ -75,8 +81,8 @@ body {
 
 .arrow {
     animation: arrow-bouncing 1s infinite ease-in-out;
-    height: 50px;
-    width: 50px;
+    height: auto;
+    width: 5vh;
     transform: translateY(0px);
     margin-top: 20px;
 }
@@ -92,7 +98,6 @@ body {
         transform: translateY(0px);
     }
 }
-
 
 /* The Modal (background) */
 
@@ -121,7 +126,6 @@ body {
     border: none;
     box-sizing: content-box;
 }
-
 
 /* Modal Content */
 
@@ -176,17 +180,13 @@ textarea {
         padding-left: 45px;
     }
     #accueil {
-        padding-top: 60%;
+        padding-top: 35vh;
     }
     #accueil-title {
-        font-size: 35px;
+        font-size: 5vh;
     }
     #accueil-slogan {
-        font-size: 25px;
-    }
-    #alogo {
-        height: 25%;
-        width: 70%;
+        font-size: 3vh;
     }
 }
 
@@ -195,35 +195,110 @@ textarea {
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
     #accueil {
-        padding-top: 45%;
+        padding-top: 35vh;
     }
     #accueil-title {
-        font-size: 45px;
+        font-size: 5vh;
     }
     #accueil-slogan {
-        font-size: 30px;
-    }
-    #alogo {
-        height: 35%;
-        width: 65%;
+        font-size: 3vh;
     }
 }
 
 
 /* iPad Pro */
 
-@media screen and (min-width: 992px) and (max-width: 1024px) {
+@media screen and (min-width: 993px) and (max-width: 1024px) {
     #accueil {
-        padding-top: 50%;
+        padding-top: 35vh;
     }
     #accueil-title {
-        font-size: 50px;
+        font-size: 5vh;
     }
     #accueil-slogan {
-        font-size: 40px;
+        font-size: 3vh;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    #accueil {
+        padding-top: 35vh;
+    }
+    #accueil-title {
+        font-size: 5vh;
+    }
+    #accueil-slogan {
+        font-size: 3vh;
+    }
+}
+
+
+/* Landscape iPhone 6 plus */
+
+@media screen and (max-height: 414px) {
+    #accueil {
+        padding-top: 30vh;
+    }
+    #accueil-title {
+        font-size: 5vw;
+        margin-top: 1vh;
+    }
+    #accueil-slogan {
+        font-size: 3vw;
+        margin-top: 0.5vh;
     }
     #alogo {
-        height: 35%;
-        width: 65%;
+        max-width: 40%;
+        height: auto;
     }
+    .arrow {
+        width:10vh;
+}
+}
+
+/* Landscape iPhone 6 */
+
+@media screen and (max-height: 375px) {
+    #accueil {
+        padding-top: 30vh;
+    }
+    #accueil-title {
+        font-size: 5vw;
+        margin-top: 1vh;
+    }
+    #accueil-slogan {
+        font-size: 3vw;
+        margin-top: 0.5vh;
+    }
+    #alogo {
+        max-width: 40%;
+        height: auto;
+    }
+      .arrow {
+        width:10vh;
+}
+}
+
+
+/* Landscape iPhone 5 */
+
+@media screen and (max-height: 320px) {
+    #accueil {
+        padding-top: 30vh;
+    }
+    #accueil-title {
+        font-size: 5vw;
+        margin-top: 1vh;
+    }
+    #accueil-slogan {
+        font-size: 3vw;
+        margin-top: 0.5vh;
+    }
+    #alogo {
+        max-width: 40%;
+        height: auto;
+    }
+      .arrow {
+        width:10vh;
+}
 }
