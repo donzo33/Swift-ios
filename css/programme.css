@@ -1,12 +1,12 @@
 #programme {
    font-family: var(--font);
-   /*background-image: url(../img/fondprogramme.png);
+   /*background-image: url(../img/programme.jpg);
    background-size: auto 100%;
    background-repeat: no-repeat;
    background-position: bottom;*/
    background: white;
    position: relative;
-   margin: 20px 5% 20px 10%;
+   padding: 30px 5% 30px 10%;
 }
 
 .imgp {

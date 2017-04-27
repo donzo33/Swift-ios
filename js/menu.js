@@ -27,7 +27,6 @@ $(function() {
       }
    };
 
-   menu.toggleState();
    $("#menu").click(function() {
       menu.toggleState(); // On ouvre/ferme le menu
    });
