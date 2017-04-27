@@ -1,55 +1,98 @@
 // Objet contenant toutes les questions ainsi que leur réponses
 // Il sera ensuite dynamiquement ajouté a la page lors du chargement
 var questions = [{
-   question: "Si une valeur est amenée à être modifiée plusieurs fois,il préférable d’utiliser?",
-   answers: [
-      { text: "Une constante (let)", answer: false },
-      { text: "Une variable (var)", answer: false },
-      { text: "Une condition (if)", answer: false },
-      { text: "La Réponse D", answer: true }
-   ],
-   correction: "Une variable est une association clé valeur et permet de facilement garder et modifier une valeur au cours du temps."
+    question: "1: Si une valeur est amenée à être modifiée plusieurs fois,il préférable d’utiliser?",
+    answers: [
+        { text: "Une constante (let)", answer: false },
+        { text: "Une variable (var)", answer: true },
+        { text: "Une condition (if)", answer: false },
+        { text: "La Réponse D", answer: false }
+    ],
+    correction: "Davy donzo est peut etre un gros noob je ne sais pas je garde un avis réservé il faut faire attention a ce que l'ont dit Davy donzo est peut etre un gros noob je ne sais pas je garde un avis réservé il faut faire attention a ce que l'ont di Davy donzo est peut etre un gros noob je ne sais pas je garde un avis réservé il faut faire attention a ce que l'ont di"
 }, {
-   question: "Quel valeur est ici un booléen ?",
-   answers: [
-      { text: "Hello World !", answer: false },
-      { text: "42", answer: false },
-      { text: "false", answer: true },
-      { text: "La Réponse D", answer: false }
-   ],
-   correction: ""
+    question: "2: Quel valeur est ici un booléen ?",
+    answers: [
+        { text: "Hello World !", answer: false },
+        { text: "42", answer: false },
+        { text: "false", answer: true },
+        { text: "La Réponse D", answer: false }
+    ],
+    correction: "Un booléen ne retourne que deux choses possibles : soit vrai, soit faux. Ici, false signifie faux en français. Les autres réponses sont soit des chaînes de caractères, soit des nombres (entiers ou à virgule)."
 }, {
-   question: "Quelle sera la valeur de la variable resultat après le code [var resultat = 10/3] ?",
-   answers: [
-      { text: "3", answer: true },
-      { text: "3,33", answer: false },
-      { text: "Undefined", answer: false }
-   ]
+    question: "3: Quelle sera la valeur de la variable resultat après le code [var resultat = 10/3] ?",
+    answers: [
+        { text: "3", answer: true },
+        { text: "3,33", answer: false },
+        { text: "Undefined", answer: false },
+        {  text: "0", answer: false  }
+    ],
+    correction: "Souvenez-vous, le résultat d’une division n’est que son quotient. Le modulo, lui, vous permettra d’avoir le reste de la division."
 }, {
-   question: "je dispose d’une variable age qui a pour valeur 18, cette condition est-elle vérifiée ? [if age >= 18]",
-   answers: [
-      { text: "oui", answer: false },
-      { text: "non", answer: true },
-      { text: "La réponse D", answer: false }
-   ]
+    question: "4: Je dispose d’une variable age qui a pour valeur 18, cette condition est-elle vérifiée ? [if age >= 18]",
+    answers: [
+        { text: "oui", answer: false },
+        { text: "non", answer: true },
+        {  text: "Tout dépend de son utilisation",  answer:  false  },    
+        {  text: "les deux",  answer:  false  }
+    ],
+    correction: "Age a pour valeur 18. 18 est bien supérieur ou égal à 18, donc la condition est bien vérifiée et on pourra exécuter les instruction de ce if."
 }, {
-   question: "Quelle est la particularité d’une boucle repeat … while ?",
-   answers: [
-      { text: "Elle a pour particularité de toujours s’exécuter au minimum une fois", answer: true },
-      { text: "Elle ne s’exécutera pas si la condition n’est pas vérifiée dès le départ", answer: false },
-      { text: "Cette boucle n’existe pas dans le langage Swift", answer: false }
-   ]
+    question: "5: Quelle est la particularité d’une boucle repeat … while ?",
+    answers: [
+        { text: "Elle a pour particularité de toujours s’exécuter au minimum une fois", answer: true },
+        { text: "Elle ne s’exécutera pas si la condition n’est pas vérifiée dès le départ", answer: false },
+        {  text: "Cette boucle n’existe pas dans le langage Swift", answer: false  },         {  text: "Les deux", answer: false  }
+    ],
+    correction: "Cette boucle va toujours s'exécuter au moins une fois. Ça veut dire que si l'on fournit une condition fausse dès le départ, on entrera tout de même dans la boucle."
 }, {
-   question: "Laquelle de ces boucles pourrait afficher les multiples de deux de 0 compris à 10 compris (0, 2, 4, 6, 8, 10) ?",
-   answers: [
-      { text: "for i = 1; i < 10; i = i+2", answer: false },
-      { text: "for i = 0; i <= 10; i = i+2", answer: true },
-      { text: "for i = 0; i <= 10; i++", answer: false }
-   ]
-}, ];
+    question: "6 : Laquelle de ces boucles pourrait afficher les multiples de deux de 0 compris à 10 compris (0, 2, 4, 6, 8, 10) ?",
+    answers: [
+        { text: "for i = 1; i < 10; i = i+2", answer: false },
+        { text: "for i = 0; i <= 10; i = i+2", answer: true },
+        { text: "for i = 0; i <= 10; i++", answer: false },
+        { text: "for i = 0; i < 10; i++", answer: false }
+    ],
+    correction: "Cette boucle va toujours s'exécuter au moins une fois. Ça veut dire que si l'on fournit une condition fausse dès le départ, on entrera tout de même dans la boucle."
+}, {
+    question: "7: Par défaut, les tableaux numérotés commencent à la valeur…",
+    answers: [
+        { text: "0", answer: true },
+        { text: "2", answer: false },
+        { text: "-1", answer: false },
+        { text: "1", answer: false }
+    ],
+    correction: "Tous les tableaux numérotés commencent à l’indice 0."
+}, {
+    question: "8: Quelle mot-clé permet de définir une fonction ?",
+    answers: [
+        { text: "function", answer: false },
+        { text: "fonction", answer: false },
+        { text: "func", answer: true },
+        { text: "fonc", answer: false }
+    ],
+    correction: "Il s’agissait tout simplement du mot clé func. Les autres mots clé n’existent tout simplement pas en Swift."
+}, {
+    question: "9: Que va m'afficher le code func hello() -> String {var hello = 'Hello' return hello} helo ()",
+    answers: [
+        { text: "hello", answer: false },
+        { text: "Hello", answer: false },
+        { text: "var=Hello", answer: false },
+        { text: "Rien du tout", answer: true }
+    ],
+    correction: "La fonction hello() ne fait que retourner un String et c’est tout. Pour que cela s’affiche dans la console, il aurait fallu écrire : print(hello())."
+}, {
+    question: "10: Peut-on récupérer la valeur d’une variable déclarée dans une fonction en dehors de cette fonction ?",
+    answers: [
+        { text: "Non", answer: true },
+        { text: "Oui", answer: false },
+        { text: "Tout depend de sa position", answer: false },
+        { text: "Fût un temps oui", answer: false }
+    ],
+    correction: "Tout ce qui se passe dans une fonction, reste dans cette fonction. Ainsi, toute variable créée dans cette fonction, ne le sera que dans cette fonction et pas ailleurs. De même, toute variable déclarée en dehors d’une fonction, n’est pas accessible à l’intérieur de fonctions."
+}];
 
 var studentResult = [],
-   actualQuestion = 0;
+    actualQuestion = 0;
 
 
 $(function() {
@@ -83,17 +126,17 @@ function showSolution() {
 }
 
 function hideSolution() {
-   $("#questionnaire-solution").addClass('fadeOut');
+    $("#questionnaire-solution").addClass('fadeOut');
 }
 
 function newQuestion() {
-   // On lance l'animation et on améne la nouvelle question lorsque l'animation se termine
-   actualQuestion++;
-   hideSolution();
-   $("#question").css("transform", "translateX(-1500px)");
-   $("#question").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
-      createQuestion(actualQuestion);
-   });
+    // On lance l'animation et on améne la nouvelle question lorsque l'animation se termine
+    actualQuestion++;
+    hideSolution();
+    $("#question").css("transform", "translateX(-1500px)");
+    $("#question").one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+        createQuestion(actualQuestion);
+    });
 }
 
 function createQuestion(i) {
@@ -137,8 +180,8 @@ function createQuestion(i) {
       );
    }
 
-   $(".question-answer-text").click(onAnswerClick);
-   setTimeout(() => $("#question").css("transform", "translateX(0px)"), 50);
+    $(".question-answer-text").click(onAnswerClick);
+    setTimeout(() => $("#question").css("transform", "translateX(0px)"), 50);
 }
 
 function onAnswerClick(origin) {

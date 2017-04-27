@@ -100,8 +100,6 @@
    padding: 0;
 
    background-color: #fba858;
-   border: 1px solid black;
-   border-right: none;
 }
 
 .question-answer-text {
@@ -109,8 +107,6 @@
    height: 100%;
    padding: 0;
    margin: 0;
-
-   border: 1px solid black;
 }
 
 .question-answer-font {
@@ -145,21 +141,26 @@
 }
 
 #questionnaire-correction {
-   background-color: white;
-   max-height: 130px;
+   height: 150px;
+   max-width: 100%;
    padding: 20px 20px 20px 20px;
+   
+   overflow-y: scroll;
+
    font-family: var(--font);
    font-size: 24px;
    font-weight: bold;
-   overflow: scroll;
    text-align: center;
+
+   border: 0px solid #000000;
    -webkit-box-shadow: 10px 10px 16px -2px rgba(0, 0, 0, 0.75);
    -moz-box-shadow: 10px 10px 16px -2px rgba(0, 0, 0, 0.75);
    box-shadow: 10px 10px 16px -2px rgba(0, 0, 0, 0.75);
    border-radius: 10px 10px 10px 10px;
    -moz-border-radius: 10px 10px 10px 10px;
    -webkit-border-radius: 10px 10px 10px 10px;
-   border: 0px solid #000000;
+
+   background-color: white;
 }
 
 #questionnaire-next-container {
