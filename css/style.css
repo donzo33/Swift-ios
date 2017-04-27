@@ -1,113 +1,130 @@
 @font-face {
-   font-family: Helvetica-Light;
-   src: url(Font/helvetica-light.ttf);
+    font-family: Helvetica-Light;
+    src: url(Font/helvetica-light.ttf);
 }
 
 @font-face {
-   font-family: RobotoCondensed-Light;
-   src: url(Font/RobotoCondensed-Light.ttf);
+    font-family: RobotoCondensed-Light;
+    src: url(Font/RobotoCondensed-Light.ttf);
 }
 
+@font-face {
+    font-family: Roboto-Light;
+    src: url(Font/Roboto-Light.ttf);
+}
 
 :root {
-    --font : RobotoCondensed-Light;
+    --font: Roboto-Light;
 }
 
 body {
-   font-family: var(--font);
-   width: 100%;
-   height: 100%;
+    font-family: var(--font);
+    width: 100%;
+    height: 100%;
 }
 
 .container-fluid {
-   padding-right: 0;
+    padding-right: 0;
 }
 
 #pages-container {
-   width: 100%;
-   padding-left: 82px;
-   overflow: hidden;
-   /*SE BASE SUR LA TAILLE DU MENU, EVOLUE DANS LES MEDIA QUERIES*/
+    width: 100%;
+    padding-left: 82px;
+    overflow: hidden;
+    /*SE BASE SUR LA TAILLE DU MENU, EVOLUE DANS LES MEDIA QUERIES*/
 }
+
 
 /* Style accueil container */
 
 #accueil {
-   background: -webkit-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
-   background: -moz-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
-   background: -o-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
-   background: linear-gradient(to bottom left, rgb(241, 94, 151), rgb(243, 173, 0));
-   height: 100vh;
-   width: 100%;
-   align-content: center;
-   text-align: center;
-   position: relative;
-   padding: 15vh 0px 0px 0px;
+    background: -webkit-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+    background: -moz-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+    background: -o-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+    background: linear-gradient(to bottom left, rgb(241, 94, 151), rgb(243, 173, 0));
+    height: 100vh;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    padding: 15vh 0px 0px 0px;
 }
 
 #accueil-title {
-   color: white;
-   font-size: 70px;
-   margin-top: 30px;
+    color: white;
+    font-size: 70px;
+    margin-top: 30px;
 }
 
 #accueil-slogan {
-   color: white;
-   margin: 15px 0px 0px 0px;
-   padding: 0px 20px 0px 20px;
-   font-size: 50px;
-   font-weight: lighter;
-   flex-wrap: wrap;
+    color: white;
+    margin: 15px 0px 0px 0px;
+    padding: 0px 20px 0px 20px;
+    font-size: 50px;
+    font-weight: lighter;
+    flex-wrap: wrap;
 }
 
 #page-scroll-container {
-   margin: 0;
-   width: 100%;
-   height: 100px;
-   bottom: 0px;
-   position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+    position: absolute;
 }
 
 .arrow {
-   animation: arrow-bouncing 1s infinite ease-in-out;
-   height: 50px;
-   width: 50px;
-   transform: translateY(0px);
-   margin-top: 20px;
+    animation: arrow-bouncing 1s infinite ease-in-out;
+    height: 50px;
+    width: 50px;
+    transform: translateY(0px);
+    margin-top: 20px;
 }
 
 @keyframes arrow-bouncing {
-   0% {
-      transform: translateY(0px);
-   }
-   50% {
-      transform: translateY(-20px);
-   }
-   100% {
-      transform: translateY(0px);
-   }
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
+
 /* The Modal (background) */
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
 .modal-header {
-   border: none;
-   box-sizing: content-box;
+    border: none;
+    box-sizing: content-box;
 }
 
+
 /* Modal Content */
+
 .modal-content {
     background-color: #fefefe;
     margin: auto;
@@ -125,12 +142,14 @@ body {
 }
 
 #modalphone {
-    color:green;
-    margin : 2%;
+    color: green;
+    margin: 2%;
     font-size: xx-large;
 }
 
+
 /* The Close Button */
+
 .close {
     color: #aaaaaa;
     float: right;
@@ -138,24 +157,73 @@ body {
     font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
 .modal-dialog {
-    z-index:11;
+    z-index: 11;
 }
 
 textarea {
     resize: none;
 }
 
-
 @media screen and (max-width: 768px) {
-   #pages-container  {
-      padding-left: 45px;
-   }
+    #pages-container {
+        padding-left: 45px;
+    }
+    #accueil {
+        padding-top: 60%;
+    }
+    #accueil-title {
+        font-size: 35px;
+    }
+    #accueil-slogan {
+        font-size: 25px;
+    }
+    #alogo {
+        height: 25%;
+        width: 70%;
+    }
+}
+
+
+/* Taille MD */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #accueil {
+        padding-top: 45%;
+    }
+    #accueil-title {
+        font-size: 45px;
+    }
+    #accueil-slogan {
+        font-size: 30px;
+    }
+    #alogo {
+        height: 35%;
+        width: 65%;
+    }
+}
+
+
+/* iPad Pro */
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+    #accueil {
+        padding-top: 50%;
+    }
+    #accueil-title {
+        font-size: 50px;
+    }
+    #accueil-slogan {
+        font-size: 40px;
+    }
+    #alogo {
+        height: 35%;
+        width: 65%;
+    }
 }

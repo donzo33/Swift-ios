@@ -8,7 +8,7 @@ var questions = [{
         { text: "Une condition (if)", answer: false },
         { text: "La Réponse D", answer: false }
     ],
-    correction: "Lorsque je ne souhaite pas changer la valeur d’une variable, j’utilise une constante. Sinon j’utilise une variable. La valeur d’une constante restera toujours la même et on ne pourra jamais lui associer une nouvelle valeur."
+    correction: "Davy donzo est peut etre un gros noob je ne sais pas je garde un avis réservé il faut faire attention a ce que l'ont dit Davy donzo est peut etre un gros noob je ne sais pas je garde un avis réservé il faut faire attention a ce que l'ont di Davy donzo est peut etre un gros noob je ne sais pas je garde un avis réservé il faut faire attention a ce que l'ont di"
 }, {
     question: "2: Quel valeur est ici un booléen ?",
     answers: [
@@ -96,28 +96,33 @@ var studentResult = [],
 
 
 $(function() {
-    createQuestion(0);
+   createQuestion(0);
 
-    $("#arrow").click(function(e) {
-        e.preventDefault();
-        newQuestion(actualQuestion);
-    });
+   var arrow = $("#arrow");
+   arrow.click(function(e) {
+      e.preventDefault();
+      if (!arrow.hasClass('disabled')) {
+         newQuestion(actualQuestion);
+         arrow.addClass('disabled');
+      }
+   });
 
-    $("#questionnaire-solution").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
-        if ($("#questionnaire-solution").hasClass('fadeIn')) {
-            $("#questionnaire-solution").removeClass('fadeIn');
-        } else {
-            $("#questionnaire-solution").css('visibility', 'hidden');
-            $("#questionnaire-solution").removeClass('fadeOut');
-        }
-    });
+   $("#questionnaire-solution").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      if ($("#questionnaire-solution").hasClass('fadeIn')) {
+         $("#questionnaire-solution").removeClass('fadeIn');
+      } else {
+         $("#questionnaire-solution").css('visibility', 'hidden');
+         $("#questionnaire-solution").removeClass('fadeOut');
+      }
+   });
 })
 
 function showSolution() {
-    $("#questionnaire-solution").css('visibility', 'visible');
-    $("#questionnaire-solution").addClass('fadeIn');
-    $("#questionnaire-correction").empty();
-    $("#questionnaire-correction").append(questions[actualQuestion].correction || "Désolé nous n'avons pas d'explications pour cette réponse.");
+   $("#questionnaire-solution").css('visibility', 'visible');
+   $("#questionnaire-solution").addClass('fadeIn');
+   $("#questionnaire-correction").empty();
+   $("#questionnaire-correction").append(questions[actualQuestion].correction || "Désolé nous n'avons pas d'explications pour cette réponse.");
+   $("#arrow").removeClass('disabled');
 }
 
 function hideSolution() {
@@ -135,114 +140,119 @@ function newQuestion() {
 }
 
 function createQuestion(i) {
-    var path = "#questionnaire-questions-container",
-        q = questions[i],
-        a = q.answers;
-    studentResult.push("unanswered"); // On initie les résultats de l'éléve a false
+   var path = "#questionnaire-questions-container",
+      q = questions[i],
+      a = q.answers;
+   studentResult.push("unanswered"); // On initie les résultats de l'éléve a false
 
-    $("#questionnaire-questions-container").empty();
+   $("#questionnaire-questions-container").empty();
 
-    jQuery('<div/>', { // On crée le div de la question
-        id: 'question',
-        class: 'question col-xs-12'
-    }).appendTo(path);
-    path = "#question";
+   jQuery('<div/>', { // On crée le div de la question
+      id: 'question',
+      class: 'question col-xs-12'
+   }).appendTo(path);
+   path = "#question";
 
-    jQuery('<div/>', { // On crée le div de la question
-        id: 'question-inner',
-        class: 'question-inner'
-    }).appendTo(path);
-    path = "#question-inner";
+   jQuery('<div/>', { // On crée le div de la question
+      id: 'question-inner',
+      class: 'question-inner'
+   }).appendTo(path);
+   path = "#question-inner";
 
-    jQuery('<div/>', { // Le div du texte de la question
-        class: 'question-text'
-    }).appendTo(path);
-    $(".question-text", path).append("<span>" + q.question + "</span>");
+   jQuery('<div/>', { // Le div du texte de la question
+      class: 'question-text'
+   }).appendTo(path);
+   $(".question-text", path).append("<span>" + q.question + "</span>");
 
-    jQuery('<div/>', { // Le div qui va contenir les réponses
-        class: 'question-answers row'
-    }).appendTo(path);
+   jQuery('<div/>', { // Le div qui va contenir les réponses
+      class: 'question-answers row'
+   }).appendTo(path);
 
-    // On parcours le tableau des réponses et on les ajoute (data-answer est utilisé pour retrouver la bonne réponse)
-    for (let iA = 0; iA < a.length; iA++) {
-        $(".question-answers", path).append(`
-         <div id='q` + i + `a` + iA + `' data-question-id='` + i + `' data-answer='` + a[iA].answer + `' class='row question-answer question-answer-alive animated col-xs-6'>` +
-            `<div class='question-answer-letter unselectable col-xs-2'>` + "ABCD".charAt(iA) + `</div>` +
-            `<div class='question-answer-text unselectable col-xs-10'>` + a[iA].text + `</div>` +
-            `</div>`
-        );
-    }
+   // On parcours le tableau des réponses et on les ajoute (data-answer est utilisé pour retrouver la bonne réponse)
+   for (let iA = 0; iA < a.length; iA++) {
+      $(".question-answers", path).append(`
+         <div class='question-answer-container row col-xs-12 col-sm-6'>
+            <div id='q` + i + `a` + iA + `' data-question-id='` + i + `' data-answer='` + a[iA].answer + `' class='question-answer question-answer-alive animated'>` +
+               `<div class='question-answer-letter unselectable'>` + "ABCD".charAt(iA) + `</div>` +
+               `<div class='question-answer-text unselectable'>` + a[iA].text + `</div>` +
+            `</div>` +
+         `</div>`
+      );
+   }
 
     $(".question-answer-text").click(onAnswerClick);
     setTimeout(() => $("#question").css("transform", "translateX(0px)"), 50);
 }
 
 function onAnswerClick(origin) {
-    let parent = origin.target.offsetParent;
-    let dataset = parent.dataset;
+   let parent = origin.target.parentNode;
+   let dataset = parent.dataset;
+   
+   // console.log(origin.target.parentNode);
 
-    if (!(typeof dataset.answer === "string" && typeof dataset.questionId === "string")) {
-        return null; // Protection
-    }
+   if (!(typeof dataset.answer === "string" && typeof dataset.questionId === "string")) {
+      return null; // Protection
+   }
 
-    // ---- Déclaration
-    var isGoodAnswer = (dataset.answer == 'true'); // On utilise le dataset pour retrouver l'id et si c une bonne réponse
-    var id = parseInt(dataset.questionId);
-    // ---------------
+   // ---- Déclaration
+   var isGoodAnswer = (dataset.answer == 'true'); // On utilise le dataset pour retrouver l'id et si c une bonne réponse
+   var id = parseInt(dataset.questionId);
+   // ---------------
 
-    if (!(typeof isGoodAnswer === "boolean" && typeof id === "number")) {
-        return null; // Protection
-    } else if (studentResult[id] != "unanswered") { // else if plutot que ou par lisibilité
-        return null; // Si la question a déja été répondue alors on ne fait rien
-    }
+   if (!(typeof isGoodAnswer === "boolean" && typeof id === "number")) {
+      return null; // Protection
+   } else if (studentResult[id] != "unanswered") { // else if plutot que ou par lisibilité
+      return null; // Si la question a déja été répondue alors on ne fait rien
+   }
 
-    //----- On peut débuter le traitement------
-    studentResult[id] = isGoodAnswer ? "right" : "wrong"; // On ajoute sa réponse a ses résultats
+   //----- On peut débuter le traitement------
+   studentResult[id] = isGoodAnswer ? "right" : "wrong"; // On ajoute sa réponse a ses résultats
 
-    var answer = $("#" + parent.id);
-    answer.addClass("flipOutX"); // On lance l'anim
-    answer.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', // On lui ajoute un callback de fin d'anim
-        function(e) {
-            if (answer.hasClass("flipOutX")) {
-                answer.removeClass("flipOutX");
-                answer.addClass("flipInX");
-            } else if (answer.hasClass("flipInX")) {
-                answer.removeClass("flipInX");
-                isGoodAnswer ? answer.addClass("tada") : answer.addClass("jello");
-            } else if (answer.hasClass("tada") || answer.hasClass("jello")) {
-                console.log(parent.offsetParent.firstChild.childNodes[1].childNodes);
-                var qAnswers = parent.offsetParent.firstChild.childNodes[1].childNodes; // Wtf?
-                for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
-                    if (i % 2 == 0) i++;
-                    var node = $("#" + qAnswers[i].id);
-                    if (node[0].dataset.answer == "true" && node[0].id != parent.id) {
-                        // Si on tombe sur une bonne réponse qui n'a pas été choisie par l'utilisateur
-                        setTimeout(() => $("#" + qAnswers[i].id).addClass("question-right-fail"), 100);
-                    } else if (node[0].dataset.answer == "false" && node[0].id != parent.id) {
-                        setTimeout(() => $("#" + qAnswers[i].id).addClass("question-wrong"), 100);
-                    }
-                }
+   var answer = $("#" + parent.id);
+   answer.addClass("flipOutX"); // On lance l'anim
+   answer.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', // On lui ajoute un callback de fin d'anim
+      function(e) {
+         if (answer.hasClass("flipOutX")) {
+            answer.removeClass("flipOutX");
+            answer.addClass("flipInX");
+         } else if (answer.hasClass("flipInX")) {
+            answer.removeClass("flipInX");
+            isGoodAnswer ? answer.addClass("tada") : answer.addClass("jello");
+         } else if (answer.hasClass("tada") || answer.hasClass("jello")) {
+            var qAnswers = parent.parentNode.parentNode.childNodes; // Wtf?
+            for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
+               if (i % 2 == 0) i++;
+               let id = qAnswers[i].childNodes[1].id;
+               var node = $("#" + id);
+               if (node[0].dataset.answer == "true" && node[0].id != parent.id) {
+                  // Si on tombe sur une bonne réponse qui n'a pas été choisie par l'utilisateur
+                  setTimeout(() => $("#" + id).addClass("question-right-fail"), 100);
+               } else if (node[0].dataset.answer == "false" && node[0].id != parent.id) {
+                  setTimeout(() => $("#" + id).addClass("question-wrong"), 100);
+               }
             }
-        }
-    );
+         }
+      }
+   );
 
-    // On enléve la classe 'alive' pour désactiver le hover
-    var qAnswers = $(".question-answers")[0].childNodes; // Wtf? (On récupére la liste des réponses)
-    for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
-        var node = $("#" + qAnswers[i].id);
-        node.removeClass("question-answer-alive");
-    }
+   // On enléve la classe 'alive' pour désactiver le hover
+   var qAnswers = $(".question-answers")[0].childNodes; // Wtf? (On récupére la liste des réponses)
+   for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
+      if (i % 2 == 0) i++;
+      var node = $("#" + qAnswers[i].childNodes[1].id);
+      node.removeClass("question-answer-alive");
+   }
 
-    // On lance les animations de réponse
-    if (isGoodAnswer) {
-        setTimeout(() => answer.addClass("question-right"), 500);
-    } else {
-        setTimeout(() => answer.addClass("question-wrong"), 500);
-    }
+   // On lance les animations de réponse
+   if (isGoodAnswer) {
+      setTimeout(() => answer.addClass("question-right"), 500);
+   } else {
+      setTimeout(() => answer.addClass("question-wrong"), 500);
+   }
 
-    setTimeout(() => showSolution(actualQuestion), 2000);
+   setTimeout(() => showSolution(actualQuestion), 2000);
 
-    // On fait avancer la progress bar 
-    let percentage = (actualQuestion + 1) / questions.length * 100;
-    $("#questionnaire-progress", "#questionnaire-progress-container").css("width", percentage + '%');
+   // On fait avancer la progress bar 
+   let percentage = (actualQuestion + 1) / questions.length * 100;
+   $("#questionnaire-progress", "#questionnaire-progress-container").css("width", percentage + '%');
 }
