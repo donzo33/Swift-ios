@@ -1,9 +1,9 @@
 #dates {
+    font-family: var(--font);
     background-image: url(../img/calendrier.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
      background-position: center;
-    font-family: Helvetica;
     height: 100%;
     width: 100%;
     text-align: center;

@@ -1,80 +1,27 @@
-#programme .text-title {
-   text-align: center;
-   color: white;
-}
-
 #programme {
    font-family: var(--font);
-   /*background-image: url(../img/fondprogramme.png);*/
-   background: linear-gradient(to bottom left, #F2854C, #F3AC01);
+   /*background-image: url(../img/fondprogramme.png);
    background-size: auto 100%;
    background-repeat: no-repeat;
-   background-position: bottom;
-   height: 100%;
-   width: 100%;
-   align-content: center;
+   background-position: bottom;*/
+   background: white;
    position: relative;
-   padding-top: 2%;
-   padding-right: 2%;
-   padding-left: 2%;
-   padding-bottom: 2%;  
+   margin: 20px 5% 20px 10%;
 }
 
-.programme1-container {
-   height: 420px;
-   padding-right: 2%;
-}
-
-.presentation {
-   padding-top: 5px;
-   padding-left: 50px;
-   height: 410px;
-   width: 290px;
-   
-}
-
-.presentation1 {
-   padding-top: 20px;
-   height: 450px;
-   width: 290px;
-   
- 
-}
 .imgp {
-   width: 130px;
+  width: 130px;
   height: 130px;
-  max-width : 100%;
-  height: auto;
-  display: block;
-  margin-right:auto;
-	margin-left:auto;
-}
-
-
-.programme2-container {
-   padding-top: 200px;
-   height: 250px;
-   padding-right: 2%; 
-}
-
-.presentation2 {
-   height: 250px; 
-}
-
-.programme3-container {  
-   height: 250px;
-   padding-left: 0%;
+  display: flex;
 }
 
 .custom-counter {
-  margin: 1;
   padding: 0;
   list-style-type: none;
 }
 
 .custom-counter li {
-   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .custom-counter li::before {
   content: counter(step-counter);
