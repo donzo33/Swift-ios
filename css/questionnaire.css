@@ -69,6 +69,8 @@
 }
 
 .question-answer-container {
+   height: 100px;
+   line-height: 80px;
    margin: 0;
    padding: 10px 10px 10px 10px;
 }
@@ -76,13 +78,15 @@
 .question-answer {
    display: flex;
    flex-direction: row;
+
    width: 100%;
+   height: 100%;
+
    margin: 0;
    padding: 0;
    
    background-color: white;
 
-   line-height: 60px;
    font-size: 22px;
    text-align: center;
 
@@ -141,7 +145,7 @@
 }
 
 #questionnaire-correction {
-   height: 150px;
+   max-height: 150px;
    max-width: 100%;
    padding: 20px 20px 20px 20px;
    
@@ -167,7 +171,6 @@
    padding: 3% 0 0 10%;
    text-align: center;
 }
-
 
 /* Fléche de changement de question */
 
