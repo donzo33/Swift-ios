@@ -10,7 +10,11 @@ $(function() {
             $("#menu-content").removeClass(this.cssStates.opened);
             $("#menu-content").addClass(this.cssStates.closed); // On enléve l'ancienne classe et ajoute la nouvelle
          } else {
-            // Si le menu est fermé (il va s'ouvrir) on lance l'anim des links
+            // Si le menu est fermé (il va s'ouvrir)
+            
+            $("#menu-content").css('visibility', 'visible');
+
+            //on lance l'anim des links
             $(".menu-links-items-left").addClass("animated bounceInLeft");
             $(".menu-links-items-right").addClass("animated bounceInRight");
             
@@ -41,6 +45,7 @@ $(function() {
    $("#menu-content").on('webkitAnimationEnd oanimationend msAnimationEnd animationend',
       function(e) {
          if (!menu.isOpen) {
+            $("#menu-content").css('visibility', 'hidden');
             $(".menu-links-items-left").removeClass("bounceInLeft");
             $(".menu-links-items-right").removeClass("bounceInRight");
          }

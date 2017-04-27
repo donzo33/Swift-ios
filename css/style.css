@@ -1,208 +1,247 @@
 @font-face {
-   font-family: Helvetica-Light;
-   src: url(Font/helvetica-light.ttf);
+    font-family: Helvetica-Light;
+    src: url(Font/helvetica-light.ttf);
+}
+
+@font-face {
+    font-family: RobotoCondensed-Light;
+    src: url(Font/RobotoCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(Font/Roboto-Light.ttf);
+}
+
+:root {
+    --font: Roboto-Light;
 }
 
 body {
-   font-family: Helvetica-Light;
-   width: 100%;
-   height: 100%;
+    font-family: var(--font);
+    width: 100%;
+    height: 100%;
 }
 
+.container-fluid {
+    padding-right: 0;
+}
 
 #pages-container {
-   margin: 0;
-   margin-left: 60px;
-   background: black;
-   width: 100%;
+    width: 100%;
+    padding-left: 82px;
+    overflow: hidden;
+    /*SE BASE SUR LA TAILLE DU MENU, EVOLUE DANS LES MEDIA QUERIES*/
 }
+
 
 /* Style accueil container */
 
-#fond {
-   background: -webkit-linear-gradient(rgb(243, 173, 0), rgb(241, 81, 57));
-   width: 100%;
-   height: 100%;
-   position : fixed;
-   align-content: center;
-   text-align: center;
-   padding-top: 15%;
+#accueil {
+    background: -webkit-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+    background: -moz-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+    background: -o-linear-gradient(top right, rgb(241, 94, 151), rgb(243, 173, 0));
+    background: linear-gradient(to bottom left, rgb(241, 94, 151), rgb(243, 173, 0));
+    height: 100vh;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    position: relative;
+    padding: 15vh 0px 0px 0px;
 }
 
-#accueil-container {
-   height : 100%;
-   width:100%;
-   align-content: center;
-   text-align: center;
-   margin-top:45%;
-   position : relative;
+#alogo {
+    max-width: 80%;
+    height: auto;
 }
-
 #accueil-title {
-   color: white;
-   font-size: 70px;
+    color: white;
+    font-size: 70px;
+    margin-top: 30px;
 }
 
 #accueil-slogan {
-   color: white;
-   font-size: 50px;
-   font-weight: lighter;
+    color: white;
+    margin: 15px 0px 0px 0px;
+    padding: 0px 20px 0px 20px;
+    font-size: 50px;
+    font-weight: lighter;
+    flex-wrap: wrap;
 }
 
-#accueil-fleche {
-   height: 200px;
-   position: relative;
-   width: 200px;
-   align-content: center;
-   text-align: center;
-   margin: auto;
-   padding-bottom: 0;
-}
-
-@keyframes bouncing {
-   0% {
-      bottom: 0;
-   }
-   50% {
-      bottom: 20px;
-   }
-   100% {
-      bottom: 0;
-   }
+#page-scroll-container {
+    margin: 0;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+    position: absolute;
 }
 
 .arrow {
-   animation: bouncing 1s infinite ease-in-out;
-   bottom: 0;
-   display: block;
-   height: 50px;
-   left: 50%;
-   margin-left: -25px;
-   position: absolute;
-   width: 50px;
+    animation: arrow-bouncing 1s infinite ease-in-out;
+    height: 50px;
+    width: 50px;
+    transform: translateY(0px);
+    margin-top: 20px;
 }
 
-/* Style questionnaire container */
-
-#questionnaire-container {
-    font-family: Helvetica-Light;
-    height: 100%;
-    width:100%;
-    align-content: center;
-    background: white;
-    padding:2%;
-    position : relative;
+@keyframes arrow-bouncing {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
+/* The Modal (background) */
 
-#questionnaire {
-    font-family: Helvetica-Light;
-    height :100%;
-    width : 100%;
-    background-color: papayawhip;
-  -webkit-box-shadow: 0px 9px 78px -10px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 9px 78px -10px rgba(0,0,0,0.75);
-box-shadow: 0px 9px 78px -10px rgba(0,0,0,0.75);
-padding : 5%;  
-}
-
-
-.question {
-
-color : black;
-font-family: Helvetica-Light;
-font-size: 20px;
-text-align: center;
-
-}
-
-.questions {
-    width: 50%;
-    
-}
-
-.questionnaire-response {
-    height: 18%;
-    width: 30%;
- border-radius: 20px;
-    transition: background-color 1s;
-    opacity: 0.5;
-}
-
-.questionnaire-response:hover{
-    background-color:#F4A443;
-    opacity: 1;
-}
-
-.responses-validation {
-   text-align: center;
-}
-
-#button-correction {
-    text-align: center;
-    margin-top : 10%;
-}
-
-/* Style programme container */
-
-#programme-container .text-title
-{
-   text-align: center;
-   color: white;
-   
-}
-#programme-container p, h1
-{
-    font-size: 16px;
-    color:white;
-    
-}
-#programme-container
-{
-    padding-top: 18px;
-    height: 100%;
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
     width: 100%;
-
-background : -webkit-linear-gradient(rgb(241, 81, 57), rgb(216, 0, 75));
-
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
 }
 
-.programme1-container
-{
-    
-    height: 315px;
-    width: 1100px;
-    
-}
-.presentation
-{
-    padding-top: 5px;
-    padding-left: 50px;
-    height: 200px;
-    width: 200px;
-    background-color: #FFA53A;
-    
-}
-.presentation1
-{
-    padding-top: 20px;
-    height: 200px;
-    width: 460px;
-    background-color: #FFA53A; 
-    
-}
-.programme2-container
-{
-    
-    height: 320px;
-    width: 1100px;
+.modal-header {
+    border: none;
+    box-sizing: content-box;
 }
 
-.presentation2
-{
-    padding-top: 13px;
-    height: 300px;
-    width: 1000px;
-    background-color: #FFA53A;
-    
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #888;
+    width: 350px;
+}
+
+.modal-content p {
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+    margin: auto;
+}
+
+#modalphone {
+    color: green;
+    margin: 2%;
+    font-size: xx-large;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-dialog {
+    z-index: 11;
+}
+
+textarea {
+    resize: none;
+}
+
+@media screen and (max-width: 768px) {
+    #pages-container {
+        padding-left: 45px;
+    }
+    #accueil {
+        padding-top: 35vh;
+    }
+   #accueil-title {
+        font-size: 5vh;
+    }
+    #accueil-slogan {
+        font-size: 3vh;
+    }
+  /*  #alogo {
+        height: 25%;
+        width: 70%;
+    } */
+}
+
+
+/* Taille MD */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #accueil {
+        padding-top: 35vh;
+    }
+     #accueil-title {
+        font-size: 5vh;
+    }
+    #accueil-slogan {
+        font-size: 3vh;
+    }
+  /*  #alogo {
+        height: 35%;
+        width: 65%;
+    } */
+}
+
+
+/* iPad Pro */
+
+@media screen and (min-width: 993px) and (max-width: 1024px) {
+    #accueil {
+        padding-top: 35vh;
+    }
+   #accueil-title {
+        font-size: 5vh;
+    }
+    #accueil-slogan {
+        font-size: 3vh;
+    }
+ /*   #alogo {
+        height: 45%;
+        width: 50%;
+    } */
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    #accueil {
+        padding-top: 35vh;
+    }
+     #accueil-title {
+        font-size: 5vh;
+    }
+    #accueil-slogan {
+        font-size: 3vh;
+    }
+/*    #alogo {
+        height: 40%;
+        width: 40%;
+    } */
 }
