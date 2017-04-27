@@ -1,12 +1,24 @@
 #programme {
    font-family: var(--font);
-   /*background-image: url(../img/programme.jpg);
-   background-size: auto 100%;
+   background-image: url(../img/programmebgd.jpg);
+   background-size: cover;
+   background-clip : border-box; 
    background-repeat: no-repeat;
-   background-position: bottom;*/
-   background: white;
+   background-position: bottom;
+   color: white;
    position: relative;
-   padding: 30px 5% 30px 10%;
+}
+
+.programme1-container {
+  background-color : rgba(0,0,0,0.5);
+  background-size: 100%;
+  padding: 20px 10px 20px 60px;
+}
+
+.programme2-container {
+  background-color : rgba(0,0,0,0.5);
+  background-size: 100%;
+  padding: 20px 10px 20px 60px;
 }
 
 .imgp {
