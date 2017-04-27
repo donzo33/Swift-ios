@@ -50,6 +50,10 @@ body {
     padding: 15vh 0px 0px 0px;
 }
 
+#alogo {
+    max-width: 80%;
+    height: auto;
+}
 #accueil-title {
     color: white;
     font-size: 70px;
@@ -174,18 +178,18 @@ textarea {
         padding-left: 45px;
     }
     #accueil {
-        padding-top: 60%;
+        padding-top: 35vh;
     }
-    #accueil-title {
-        font-size: 35px;
+   #accueil-title {
+        font-size: 5vh;
     }
     #accueil-slogan {
-        font-size: 25px;
+        font-size: 3vh;
     }
-    #alogo {
+  /*  #alogo {
         height: 25%;
         width: 70%;
-    }
+    } */
 }
 
 
@@ -193,35 +197,51 @@ textarea {
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
     #accueil {
-        padding-top: 45%;
+        padding-top: 35vh;
     }
-    #accueil-title {
-        font-size: 45px;
+     #accueil-title {
+        font-size: 5vh;
     }
     #accueil-slogan {
-        font-size: 30px;
+        font-size: 3vh;
     }
-    #alogo {
+  /*  #alogo {
         height: 35%;
         width: 65%;
-    }
+    } */
 }
 
 
 /* iPad Pro */
 
-@media screen and (min-width: 992px) and (max-width: 1024px) {
+@media screen and (min-width: 993px) and (max-width: 1024px) {
     #accueil {
-        padding-top: 50%;
+        padding-top: 35vh;
     }
-    #accueil-title {
-        font-size: 50px;
+   #accueil-title {
+        font-size: 5vh;
     }
     #accueil-slogan {
-        font-size: 40px;
+        font-size: 3vh;
     }
-    #alogo {
-        height: 35%;
-        width: 65%;
+ /*   #alogo {
+        height: 45%;
+        width: 50%;
+    } */
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    #accueil {
+        padding-top: 35vh;
     }
+     #accueil-title {
+        font-size: 5vh;
+    }
+    #accueil-slogan {
+        font-size: 3vh;
+    }
+/*    #alogo {
+        height: 40%;
+        width: 40%;
+    } */
 }
