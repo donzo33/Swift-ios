@@ -13,8 +13,6 @@
     --font : RobotoCondensed-Light;
 }
 
-
-
 body {
    font-family: var(--font);
    width: 100%;
