@@ -55,9 +55,13 @@ var studentResult = [],
 $(function() {
    createQuestion(0);
 
-   $("#arrow").click(function(e) {
+   var arrow = $("#arrow");
+   arrow.click(function(e) {
       e.preventDefault();
-      newQuestion(actualQuestion);
+      if (!arrow.hasClass('disabled')) {
+         newQuestion(actualQuestion);
+         arrow.addClass('disabled');
+      }
    });
 
    $("#questionnaire-solution").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
@@ -75,6 +79,7 @@ function showSolution() {
    $("#questionnaire-solution").addClass('fadeIn');
    $("#questionnaire-correction").empty();
    $("#questionnaire-correction").append(questions[actualQuestion].correction || "Désolé nous n'avons pas d'explications pour cette réponse.");
+   $("#arrow").removeClass('disabled');
 }
 
 function hideSolution() {
@@ -123,10 +128,12 @@ function createQuestion(i) {
    // On parcours le tableau des réponses et on les ajoute (data-answer est utilisé pour retrouver la bonne réponse)
    for (let iA = 0; iA < a.length; iA++) {
       $(".question-answers", path).append(`
-         <div id='q` + i + `a` + iA + `' data-question-id='` + i + `' data-answer='` + a[iA].answer + `' class='row question-answer question-answer-alive animated col-xs-6'>` +
-            `<div class='question-answer-letter unselectable col-xs-2'>` + "ABCD".charAt(iA) + `</div>` +
-            `<div class='question-answer-text unselectable col-xs-10'>` + a[iA].text + `</div>` +
-        `</div>`
+         <div class='question-answer-container row col-xs-12 col-sm-6'>
+            <div id='q` + i + `a` + iA + `' data-question-id='` + i + `' data-answer='` + a[iA].answer + `' class='question-answer question-answer-alive animated'>` +
+               `<div class='question-answer-letter unselectable'>` + "ABCD".charAt(iA) + `</div>` +
+               `<div class='question-answer-text unselectable'>` + a[iA].text + `</div>` +
+            `</div>` +
+         `</div>`
       );
    }
 
@@ -135,8 +142,10 @@ function createQuestion(i) {
 }
 
 function onAnswerClick(origin) {
-   let parent = origin.target.offsetParent;
+   let parent = origin.target.parentNode;
    let dataset = parent.dataset;
+   
+   // console.log(origin.target.parentNode);
 
    if (!(typeof dataset.answer === "string" && typeof dataset.questionId === "string")) {
       return null; // Protection
@@ -167,16 +176,16 @@ function onAnswerClick(origin) {
             answer.removeClass("flipInX");
             isGoodAnswer ? answer.addClass("tada") : answer.addClass("jello");
          } else if (answer.hasClass("tada") || answer.hasClass("jello")) {
-            console.log(parent.offsetParent.firstChild.childNodes[1].childNodes);
-            var qAnswers = parent.offsetParent.firstChild.childNodes[1].childNodes; // Wtf?
+            var qAnswers = parent.parentNode.parentNode.childNodes; // Wtf?
             for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
                if (i % 2 == 0) i++;
-               var node = $("#" + qAnswers[i].id);
+               let id = qAnswers[i].childNodes[1].id;
+               var node = $("#" + id);
                if (node[0].dataset.answer == "true" && node[0].id != parent.id) {
                   // Si on tombe sur une bonne réponse qui n'a pas été choisie par l'utilisateur
-                  setTimeout(() => $("#" + qAnswers[i].id).addClass("question-right-fail"), 100);
+                  setTimeout(() => $("#" + id).addClass("question-right-fail"), 100);
                } else if (node[0].dataset.answer == "false" && node[0].id != parent.id) {
-                  setTimeout(() => $("#" + qAnswers[i].id).addClass("question-wrong"), 100);
+                  setTimeout(() => $("#" + id).addClass("question-wrong"), 100);
                }
             }
          }
@@ -186,7 +195,8 @@ function onAnswerClick(origin) {
    // On enléve la classe 'alive' pour désactiver le hover
    var qAnswers = $(".question-answers")[0].childNodes; // Wtf? (On récupére la liste des réponses)
    for (let i = 0; i < qAnswers.length; i++) { // On parcours le tableau des réponses de la question
-      var node = $("#" + qAnswers[i].id);
+      if (i % 2 == 0) i++;
+      var node = $("#" + qAnswers[i].childNodes[1].id);
       node.removeClass("question-answer-alive");
    }
 
