@@ -1,9 +1,9 @@
 #dates {
+    font-family: var(--font);
     background-image: url(../img/calendrier.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-     background-position: center;
-    font-family: Helvetica;
+    background-position: center;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -16,7 +16,7 @@
 }
 
 #candidater {
-    font-family: Helvetica-Light;
+    font-family: var(--font);
     background-color: #fba858;
     color: white;
     border-radius : 5px;
@@ -27,3 +27,4 @@
     font-size: large;
     font-weight : bold;
 }
+

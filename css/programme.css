@@ -1,79 +1,39 @@
-#programme .text-title {
-   text-align: center;
-   color: white;
-}
-
 #programme {
-   background-image: url(../img/fondprogramme.png);
-   background-size: auto 100%;
+   font-family: var(--font);
+   background-image: url(../img/programmebgd.jpg);
+   background-size: cover;
+   background-clip : border-box; 
    background-repeat: no-repeat;
    background-position: bottom;
-   height: 100%;
-   width: 100%;
-   align-content: center;
+   color: white;
    position: relative;
-   padding-top: 2%;
-   padding-right: 2%;
-   padding-left: 2%;
-   padding-bottom: 2%;  
 }
 
 .programme1-container {
-   height: 420px;
-   padding-right: 2%;
+  background-color : rgba(0,0,0,0.5);
+  padding: 60px 10px 20px 60px;
 }
-
-.presentation {
-   padding-top: 5px;
-   padding-left: 50px;
-   height: 410px;
-   width: 290px;
-   
-}
-
-.presentation1 {
-   padding-top: 20px;
-   height: 450px;
-   width: 290px;
-   
- 
-}
-.imgp {
-   width: 130px;
-  height: 130px;
-  max-width : 100%;
-  height: auto;
-  display: block;
-  margin-right:auto;
-	margin-left:auto;
-}
-
 
 .programme2-container {
-   padding-top: 200px;
-   height: 250px;
-   padding-right: 2%; 
+  background-color : rgba(0,0,0,0.5);
+  padding: 20px 10px 60px 60px;
 }
 
-.presentation2 {
-   height: 250px; 
-}
-
-.programme3-container {  
-   height: 250px;
-   padding-left: 0%;
+.imgp {
+  width: 130px;
+  height: 130px;
+  display: flex;
 }
 
 .custom-counter {
-  margin: 1;
   padding: 0;
   list-style-type: none;
 }
 
 .custom-counter li {
-   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
+
 .custom-counter li::before {
   content: counter(step-counter);
   margin-right: 5px;
