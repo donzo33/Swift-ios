@@ -4,6 +4,7 @@
 }
 
 #programme {
+   font-family: var(--font);
    background-image: url(../img/fondprogramme.png);
    background-size: auto 100%;
    background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 #questionnaire {
-    font-family: Helvetica-Light;
+    font-family: var(--font);
     background: linear-gradient(to bottom left, rgb(40, 40, 40), rgb(53, 56, 58));
     position: relative;
     height: 100vh;
@@ -8,7 +8,7 @@
 }
 
 #questionnaire-container {
-    font-family: Helvetica-Light;
+    font-family: var(--font);
     height: 100%;
     width: 100%;
     align-content: center;
@@ -21,7 +21,7 @@
 }
 
 #questionnaire-title {
-    font-family: Helvetica-Light;
+    font-family: var(--font);
     display: flex;
     text-align: center;
     justify-content: center;
@@ -50,7 +50,7 @@
 
 .question-text {
     color: black;
-    font-family: Helvetica-Light;
+    font-family: var(--font);
     font-size: 25px;
     text-align: center;
     height: 50px;
@@ -110,7 +110,7 @@
     background-color: white;
     height: 100%;
     padding: 20px 20px 20px 20px;
-    font-family: Helvetica-Light;
+    font-family: var(--font);
     font-size: 24px;
     font-weight: bold;
     overflow: scroll;
