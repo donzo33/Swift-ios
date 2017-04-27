@@ -3,13 +3,8 @@
    --menu-width-positive: 325px;
 }
 
-@font-face {
-   font-family: Helvetica-Light;
-   src: url(Font/helvetica-light.ttf);
-}
-
 body{
-    font-family: Helvetica-Light;
+    font-family: var(--font);
     margin : 0;
 }
 

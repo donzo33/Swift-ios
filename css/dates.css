@@ -16,7 +16,7 @@
 }
 
 #candidater {
-    font-family: Helvetica-Light;
+    font-family: var(--font);
     background-color: #fba858;
     color: white;
     border-radius : 5px;
