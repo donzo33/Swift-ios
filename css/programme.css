@@ -35,6 +35,7 @@
 .custom-counter li {
   margin-bottom: 5px;
 }
+
 .custom-counter li::before {
   content: counter(step-counter);
   margin-right: 5px;

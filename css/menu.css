@@ -1,6 +1,7 @@
 :root {
    --menu-width-negative: -325px;
    --menu-width-positive: 325px;
+   --menu-toggle-width: 88px;
 }
 
 body {
@@ -12,8 +13,8 @@ body {
    background-color: white;
    position: fixed;
    height: 100%;
-   width: 88px;
-   transform: translateX(-8px);
+   width: var(--menu-toggle-width);
+   transform: translateX(0px);
    transition: transform 300ms;
    z-index: 10;
    -webkit-box-shadow: 2px 0px 5px 0px rgba(50, 50, 50, 0.75);
@@ -63,13 +64,13 @@ body {
       transform: translateX(var(--menu-width-negative));
    }
    100% {
-      transform: translateX(80px);
+      transform: translateX(var(--menu-toggle-width));
    }
 }
 
 @keyframes menu-slide-out {
    0% {
-      transform: translateX(80px);
+      transform: translateX(var(--menu-toggle-width));
    }
    100% {
       transform: translateX(var(--menu-width-negative));
@@ -250,6 +251,14 @@ body {
 
 @media screen and (max-width: 768px) {
    :root {
+      --menu-toggle-width: 45px;
+   }
+   #menu-button-container {
+      left: 8px;
+      width: 35px;
+      height: 35px;
+   }
+    :root {
       --menu-width-negative: -150px;
       --menu-width-positive: 150px;
    }
@@ -257,7 +266,13 @@ body {
       width: 50px;
       height: 50px;
    }
+   .menu-links-items {
+      font-size: 16px;
+      text-align: center;
+      line-height: 16px;
+   }
 }
+
 
 /* Taille MD */
 
