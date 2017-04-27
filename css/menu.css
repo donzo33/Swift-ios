@@ -87,7 +87,7 @@ body{
 #menu-links {
    width: 100%;
    overflow: hidden;
-   margin-top: 50px;
+   margin-top: 20px;
 }
 #menu-links a {
     color: grey;
@@ -106,8 +106,6 @@ body{
    color: black;
    transition: color 320ms;
    transform: translateX(0px);
-   
-   
 }
 
 #menu-links a:active {
@@ -157,19 +155,19 @@ body{
    /*animation-fill-mode: forwards;*/
 }
 
-#menu-links-reseaux {
-    display : flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top : 50%;
+#menu-footer {
+   position: absolute;
+   width: 95%;
+   bottom: 20px;
+   margin: 0;
+   text-align: center;
 }
 
-#menu-links-reseaux a{
-    display : flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 100%;
-    width : 100%;
+#menu-footer > a > span:hover {
+  -webkit-animation: bump .25s ease-in-out;
+  -moz-animation: bump .25s ease-in-out;
+  animation: bump .25s ease-in-out;
+  cursor:pointer;
 }
 
 #logo-facebook {
@@ -185,7 +183,6 @@ body{
     border-radius: 5px;
 }
 
-
 #logo-twitter {
     height : 60%;
     width : 60%;
@@ -196,6 +193,18 @@ body{
 .fa {
     font-size : 3vw;
   transition: all .125s ease-in-out;
+}
+
+.fa-facebook:hover {
+  color: #3B5998;
+}
+
+.fa-twitter:hover {
+  color: #55acee;
+}
+
+.fa-phone:hover {
+  color: green;
 }
 
 @-moz-keyframes bump {
@@ -232,23 +241,4 @@ body{
   100% {
     transform: scale(1.0);
   }
-}
-
-.fa-facebook:hover {
-  color: #3B5998;
-}
-
-.fa-twitter:hover {
-  color: #55acee;
-}
-
-.fa-phone:hover {
-  color: green;
-}
-
-#menu-links-reseaux > a > span:hover {
-  -webkit-animation: bump .25s ease-in-out;
-  -moz-animation: bump .25s ease-in-out;
-  animation: bump .25s ease-in-out;
-  cursor:pointer;
 }
