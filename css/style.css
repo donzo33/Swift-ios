@@ -54,6 +54,7 @@ body {
     max-width: 80%;
     height: auto;
 }
+
 #accueil-title {
     color: white;
     font-size: 70px;
@@ -70,8 +71,9 @@ body {
 }
 
 #page-scroll-container {
-    margin: 0;
+    margin-bottom: 1.5vh;
     width: 100%;
+    padding-top: 40px;
     height: 100px;
     bottom: 0px;
     position: absolute;
@@ -79,8 +81,8 @@ body {
 
 .arrow {
     animation: arrow-bouncing 1s infinite ease-in-out;
-    height: 50px;
-    width: 50px;
+    height: auto;
+    width: 5vh;
     transform: translateY(0px);
     margin-top: 20px;
 }
@@ -180,16 +182,12 @@ textarea {
     #accueil {
         padding-top: 35vh;
     }
-   #accueil-title {
+    #accueil-title {
         font-size: 5vh;
     }
     #accueil-slogan {
         font-size: 3vh;
     }
-  /*  #alogo {
-        height: 25%;
-        width: 70%;
-    } */
 }
 
 
@@ -199,16 +197,12 @@ textarea {
     #accueil {
         padding-top: 35vh;
     }
-     #accueil-title {
+    #accueil-title {
         font-size: 5vh;
     }
     #accueil-slogan {
         font-size: 3vh;
     }
-  /*  #alogo {
-        height: 35%;
-        width: 65%;
-    } */
 }
 
 
@@ -218,30 +212,93 @@ textarea {
     #accueil {
         padding-top: 35vh;
     }
-   #accueil-title {
+    #accueil-title {
         font-size: 5vh;
     }
     #accueil-slogan {
         font-size: 3vh;
     }
- /*   #alogo {
-        height: 45%;
-        width: 50%;
-    } */
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
     #accueil {
         padding-top: 35vh;
     }
-     #accueil-title {
+    #accueil-title {
         font-size: 5vh;
     }
     #accueil-slogan {
         font-size: 3vh;
     }
-/*    #alogo {
-        height: 40%;
-        width: 40%;
-    } */
+}
+
+
+/* Landscape iPhone 6 plus */
+
+@media screen and (max-height: 414px) {
+    #accueil {
+        padding-top: 30vh;
+    }
+    #accueil-title {
+        font-size: 5vw;
+        margin-top: 1vh;
+    }
+    #accueil-slogan {
+        font-size: 3vw;
+        margin-top: 0.5vh;
+    }
+    #alogo {
+        max-width: 40%;
+        height: auto;
+    }
+    .arrow {
+        width:10vh;
+}
+}
+
+/* Landscape iPhone 6 */
+
+@media screen and (max-height: 375px) {
+    #accueil {
+        padding-top: 30vh;
+    }
+    #accueil-title {
+        font-size: 5vw;
+        margin-top: 1vh;
+    }
+    #accueil-slogan {
+        font-size: 3vw;
+        margin-top: 0.5vh;
+    }
+    #alogo {
+        max-width: 40%;
+        height: auto;
+    }
+      .arrow {
+        width:10vh;
+}
+}
+
+
+/* Landscape iPhone 5 */
+
+@media screen and (max-height: 320px) {
+    #accueil {
+        padding-top: 30vh;
+    }
+    #accueil-title {
+        font-size: 5vw;
+        margin-top: 1vh;
+    }
+    #accueil-slogan {
+        font-size: 3vw;
+        margin-top: 0.5vh;
+    }
+    #alogo {
+        max-width: 40%;
+        height: auto;
+    }
+      .arrow {
+        width:10vh;
+}
 }
