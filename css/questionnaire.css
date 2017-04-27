@@ -2,7 +2,7 @@
    font-family: Helvetica-Light;
    background: linear-gradient(to bottom left, rgb(40, 40, 40), rgb(53, 56, 58));
    position: relative;
-   height: 110vh;
+   height: 105vh;
    width: 100%;
    padding: 10px 10px 10px 10px;
 }
@@ -43,7 +43,6 @@
 
 .question {
    padding: 10px 10px 20px 10px;
-   height: 400px;
    transform: translateX(1500px);
    transition: transform 1s ease-in;
 }
@@ -53,14 +52,12 @@
    font-family: Helvetica-Light;
    font-size: 25px;
    text-align: center;
-   height: 50px;
-   margin-left: 15px;
+   margin-bottom: 10px;
 }
 
 .question-answers {
    display: block;
-   margin: 0 auto;
-   margin-left: 35px;
+   margin: 0 0 0 10px;
 }
 
 .question-inner {
@@ -127,6 +124,15 @@
    background-color: #598922 !important;
 }
 
+#questionnaire-solution {
+   visibility: hidden;
+   animation-duration: 1s;
+   margin: 0;
+   padding: 20px 20px 20px 20px;
+   max-height: 300px;
+   min-height: 150px;
+}
+
 #questionnaire-correction {
    padding: 20px 20px 20px 20px;
 
@@ -138,16 +144,34 @@
 }
 
 #questionnaire-next-container {
-   height: 150px;
-   width: 100%;
+   padding: 3% 0 0 10%;
+   text-align: center;
 }
 
+/* Fléche de changement de question */
 
-#questionnaire-solution {
-   visibility: hidden;
-   animation-duration: 1s;
-   margin: 0;
-   padding: 20px 20px 20px 20px;
+#next {
+   animation: arrow-bounce 1.3s infinite ease-in-out;
+   transform: translateY(0px);
+   font-size: 50px;
+   color: white;
+   transition: color 500ms;
+}
+
+#next:hover {
+   color: #bec4c2;
+}
+
+@keyframes arrow-bounce {
+   0% {
+      transform: translateX(0px);
+   }
+   50% {
+      transform: translateX(-12px);
+   }
+   100% {
+      transform: translateX(0px);
+   }
 }
 
 .unselectable {
@@ -157,30 +181,4 @@
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
-}
-
-/* Fléche de changement de question */
-
-#next {
-   animation: arrow-bounce 1s infinite ease-in-out;
-   transform: translateY(0px);
-   font-size: 50px;
-   color: white;
-   transition: color 700ms;
-}
-
-#next:hover {
-   color: black;
-}
-
-@keyframes arrow-bounce {
-   0% {
-      transform: translateX(0px);
-   }
-   50% {
-      transform: translateX(-20px);
-   }
-   100% {
-      transform: translateX(0px);
-   }
 }

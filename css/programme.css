@@ -4,7 +4,8 @@
 }
 
 #programme {
-   background-image: url(../img/fondprogramme.png);
+   /*background-image: url(../img/fondprogramme.png);*/
+   background: linear-gradient(to bottom left, #F2854C, #F3AC01);
    background-size: auto 100%;
    background-repeat: no-repeat;
    background-position: bottom;
