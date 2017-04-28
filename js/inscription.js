@@ -114,6 +114,7 @@ $.fn.goValidate = function () {
 $('form').goValidate();
 
 $('#btn-envoyer').on('click', function (event) {
+    debugger;
     var email = 'justine@wildcodeschool.fr';
     var subject = 'Candidature à la formation Swift/iOS Toulouse'
     var emailBody = "Nom et prénoms : " + $('#name').val() + escape("\n") + "Adresse e-mail : " + $('#mail').val() + escape("\n") + "Numéro de téléphone : " + $('#phon').val() + escape("\n") + "Message : " + $('#message').val();
