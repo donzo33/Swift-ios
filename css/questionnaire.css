@@ -1,7 +1,7 @@
 #questionnaire {
     font-family: var(--font);
     /*background: linear-gradient(to bottom left, rgb(40, 40, 40), rgb(53, 56, 58));*/
-    background-image: url(../img/markus-spiske-153537.jpg);
+    background-image: url(../img/dustin-lee-19666.jpg);
     background-size: cover;
     background-clip: border-box;
     background-position: bottom;
@@ -9,16 +9,18 @@
     position: relative;
     height: 100%;
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #questionnaire-container {
     font-family: var(--font);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     height: 100%;
     width: 100%;
     align-content: center;
     position: relative;
-    padding: 20px 10px 20px 10px;
+    padding: 50px 10px 100px 10px;
 }
 
 #questionnaire-questions-container {
@@ -87,7 +89,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.7);
     font-size: 22px;
     text-align: center;
     transition: background-color 400ms;
@@ -207,4 +209,63 @@
 .progress {
     width: 80%;
     margin: 10px auto;
+}
+
+
+@media screen and (max-width: 767px) {
+#questionnaire-icon img {
+    display : none;
+}
+}
+
+
+/* Taille MD */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  
+}
+
+
+/* iPad Pro */
+
+@media screen and (min-width: 993px) and (max-width: 1024px) {
+ 
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+
+}
+
+
+/* Landscape iPhone 6 plus */
+
+@media screen and (max-height: 414px) {
+
+}
+
+/* Landscape iPhone 6 */
+
+@media screen and (max-height: 375px) {
+#questionnaire-icon img {
+    display : none;
+}
+}
+
+
+/* Landscape iPhone 5 */
+
+@media screen and (max-height: 320px) {
+#questionnaire-icon img {
+    display : none;
+}
+}
+
+@media screen and (max-width: 320px) {
+#questionnaire-icon img {
+    display : none;
+}
+
+.questionnaire-title-text h1 {
+    font-size: large;
+}
 }
