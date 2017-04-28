@@ -188,6 +188,9 @@ textarea {
     #accueil-slogan {
         font-size: 3vh;
     }
+    #newsletter, #contact {
+       font-size: 12px;
+    }
 }
 
 
