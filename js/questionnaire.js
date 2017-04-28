@@ -9,7 +9,7 @@ var questions = [{
       { text: "La Réponse D", answer: false }
    ],
    correction: "Lorsque je ne souhaite pas changer la valeur d’une variable, j’utilise une constante. Sinon j’utilise une variable. La valeur d’une constante restera toujours la même et on ne pourra jamais lui associer une nouvelle valeur."
-},/* {
+}, {
    question: "2: Quel valeur est ici un booléen ?",
    answers: [
       { text: "Hello World !", answer: false },
@@ -80,7 +80,7 @@ var questions = [{
       { text: "Rien du tout", answer: true }
    ],
    correction: "La fonction hello() ne fait que retourner un String et c’est tout. Pour que cela s’affiche dans la console, il aurait fallu écrire : print(hello())."
-}, */{
+}, {
    question: "10: Peut-on récupérer la valeur d’une variable déclarée dans une fonction en dehors de cette fonction ?",
    answers: [
       { text: "Non", answer: true },
